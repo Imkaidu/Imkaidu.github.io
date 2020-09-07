@@ -1,0 +1,22 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"runOnSave.commands": [
+			{
+				"match": ".*\\.md$",
+				"command": "cd ${workspaceFolder} ; script/generate.sh ${file}",
+				"runIn": "backend",
+				"runningStatusMessage": "Compiling ${fileBasename}",
+				"finishStatusMessage": "${fileBasename} compiled"
+			}
+		],
+		"files.exclude": {
+			"**/*.pdf": true,
+			"**/*.html": true
+		}
+	},
+}

@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+/* @import url('https://rsms.me/inter/inter.css'); */
+
+:root {
+  --black-color: #222222;
+  --main-color: #888888;
+  --gray-color: #BBBBBB;
+  --lightgray-color: #0000000A;
+  --bg-color: #FFFFFF;
+  /* Cyan 700 */
+  --cyan-color: rgb(12, 132, 196);
+  --magenta-color: rgb(191, 13, 92);
+  --yellow-color: rgb(248, 232, 56);
+  --cyan-light: rgba(12, 132, 196, 0.2);
+  --magenta-light: rgba(191, 13, 92, 0.2);
+  --yellow-light: rgba(248, 232, 56, 0.2);
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  max-width: 600px;
+  margin: auto;
+  color: var(--black-color);
+  background-color: var(--bg-color);
+  padding: 2em;
+  font-size: 0.9em;
+  line-height: 1.5;
+}
+
+figcaption {
+  text-align: center;
+  /* font-size: 0.8em; */
+  color: var(--gray-color);
+}
+
+figure {
+  text-align: center;
+  margin: 0em;
+}
+
+table {
+  border-collapse: collapse;
+  margin: auto;
+}
+
+table, th, td {
+  border: 1px solid var(--gray-color);
+  padding: 0.5em;
+}
+
+code {
+  font-family: "Roboto Mono", monospace;
+  /* font-size: 1.1em; */
+}
+
+pre {
+  /* background-color: var(--lightgray-color); */
+  background: var(--bg-color);
+  border: 1px solid black;
+  padding: 1em;
+  overflow-x: scroll;
+}
+
+blockquote {
+  background: var(--bg-color);
+  border: 1px solid black;
+  /* border-left: 10px solid var(--gray-color); */
+  margin: 0px;
+  margin-bottom: 10px;
+  padding: 10px;
+}
+
+blockquote p {
+  display: inline;
+}
+
+h1, h2, h3 {
+  line-height: 1;  /* letter-spacing: -0.04em; */
+}
+
+h1 {
+  font-size: 2em;
+  display: inline-block;
+  padding: 0.5em;
+  border: 1px solid black;
+  margin-bottom: 0em;
+  /* letter-spacing: -0.02em; */
+}
+
+h2 {
+  font-size: 1.5em;
+}
+
+h3 {
+  color: var(--main-color);
+  font-size: 1em;
+}
+
+.black {
+  color: var(--black-color);
+}
+
+.gray {
+  color: var(--main-color);
+}
+
+h4 {
+  color: var(--main-color);
+  font-size: 1em;
+}
+
+a {
+  font-weight: bold;
+  text-decoration: none;
+  color: inherit;
+}
+
+a:hover {
+  background-color: var(--black-color);
+  color: white;
+}
+
+#nav a {
+  color: var(--main-color);
+  padding: 0.5em;
+}
+
+#nav a:hover {
+  background-color: var(--main-color);
+  color: white;
+}
+
+#nav h3 {
+  display: inline;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+}
+
+@media only screen and (max-width: 480px) {
+  #nav h3 {
+    display: none;
+  }
+
+  .nav-buttons {
+    margin-left: auto;
+  }
+}
+
+small {
+  color: var(--main-color);
+}
+
+#nav {
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  border-left: 2em solid var(--main-color);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 2em;
+  background-color: var(--bg-color);
+  position: sticky;
+}
+
+ul {
+  list-style-type: square;
+  margin-left: 1.2em;
+  padding: 0em;
+}
+
+ul > li > ul > li > a {
+  font-size: 1em;
+  font-weight: 400;
+}
+
+.author {
+  margin-bottom: -1em;
+  color: var(--black-color);
+}
+
+.date {
+  color: var(--main-color);
+}
+
+button {
+  background-color: var(--bg-color);
+  margin-left: auto;
+  margin-right: 0px;
+  border: 1px solid black;
+  border-radius: 0px;
+  padding: 0.5em;
+  font-family: inherit;
+  display: block;
+}
+
+button:hover {
+  cursor: pointer;
+}

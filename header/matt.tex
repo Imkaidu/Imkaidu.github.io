@@ -1,0 +1,22 @@
+\usepackage[a4paper, margin=3cm]{geometry}
+\usepackage{fancyhdr}
+\usepackage{parskip}
+\usepackage{tcolorbox}
+\usepackage{titling}
+\usepackage{cancel}
+\usepackage{framed}
+\usepackage{algorithmicx}
+
+% \usepackage[charter]{mathdesign}
+\usepackage{bm}
+\newtcolorbox{myquote}{colback=black!2, colframe=black!50}
+\renewenvironment{quote}{\vspace{0.5em}\begin{framed}}{\end{framed}}
+\pagestyle{fancy}
+\lhead{\nouppercase{\leftmark}}
+\rhead{Matthew Low}
+
+
+% % Why do I need this?
+% \AtBeginDocument{% to do this after unicode-math has done its work
+%   \renewcommand{\setminus}{\mathbin{\backslash}}%
+% }
