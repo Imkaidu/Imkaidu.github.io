@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="Matthew Low" />
+  <title>The Theoretical Minimum: Classical Mechanics, lecture 1</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+  </style>
+  <link rel="stylesheet" href="/css/custom.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.11.1/katex.min.js"></script>
+  <script>document.addEventListener("DOMContentLoaded", function () {
+   var mathElements = document.getElementsByClassName("math");
+   var macros = [];
+   for (var i = 0; i < mathElements.length; i++) {
+    var texText = mathElements[i].firstChild;
+    if (mathElements[i].tagName == "SPAN") {
+     katex.render(texText.data, mathElements[i], {
+      displayMode: mathElements[i].classList.contains('display'),
+      throwOnError: false,
+      macros: macros,
+      fleqn: false
+     });
+  }}});
+  </script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.11.1/katex.min.css" />
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<header>
+  <div id="nav">
+    <h3 class="gray">Kai Du</h3>
+      <div class="nav-buttons">
+        <a href="/index.html">Home</a>
+        <a href="/blog/blog.html">Blog</a>
+        <a href="https://github.com/ImKaiDu">GitHub</a>  
+      </div>
+  </div>
+</header>
+<header id="title-block-header">
+<h1 class="title">The Theoretical Minimum: Classical Mechanics, lecture 1</h1>
+<p class="author">Matthew Low</p>
+<p class="date">21/07/2020</p>
+</header>
+<nav id="TOC" role="doc-toc">
+<ul>
+<li><a href="#discrete-systems">Discrete systems</a></li>
+<li><a href="#super-basic-math-review">Super basic math review</a></li>
+<li><a href="#particle-motion">Particle motion</a></li>
+</ul>
+</nav>
+<blockquote>
+<p>These notes are from a series of lectures by Leonard Susskind, entitled <a href="https://www.youtube.com/playlist?list=PL47F408D36D4CF129">The Theoretical Minimum: Classical Mechanics</a>. There is also a book based on these lectures, but my notes are a lot more concise and are the result of furious scribbles taken during lectures.</p>
+</blockquote>
+<h2 class="allowframebreaks" id="discrete-systems">Discrete systems</h2>
+<p>For any physical system, we have two main questions:</p>
+<ol type="1">
+<li>What laws are there for a particular type of system?</li>
+<li>What are the rules for the allowable laws?</li>
+</ol>
+<p>Consider a <strong>coin</strong>. It has two states/configurations/values: heads or tails. If we put a coin on a table, its initial condition is either heads or tails, and our law of motion is that it <strong>stays the same</strong>. In other words, at any point in time, we have that</p>
+<p><span class="math display">H \to H, \quad T \to T.</span></p>
+<figure>
+<img src="figures/2020-07-21-21-22-07.png" style="width:25.0%" alt="Staying the same." /><figcaption aria-hidden="true">Staying the same.</figcaption>
+</figure>
+<p>But we could also construct a system where the law of motion is that at any point of time, the coin <strong>switches</strong>; that is,</p>
+<p><span class="math display">H \to T, \quad T \to H.</span></p>
+<figure>
+<img src="figures/2020-07-21-21-22-19.png" style="width:20.0%" alt="Switching." /><figcaption aria-hidden="true">Switching.</figcaption>
+</figure>
+<p>We can define a function <span class="math inline">\sigma(t)</span> that tells us about the side of the coin at the next point in time <span class="math inline">t+1</span> given some time <span class="math inline">t</span> (for our cases, we can assume that <span class="math inline">t \in \mathbb Z</span>). We have</p>
+<p><span class="math display">\sigma(t) = \begin{cases} 1 &amp; \text{heads} \\ 0 &amp; \text{tails} \end{cases}</span></p>
+<p>We can define our first law of motion, the one where we had the coin staying still, with the equation <span class="math inline">\sigma(t+1) = \sigma(t)</span>. Similarly, we can express our second law of motion, the one where the coin switches at every time interval, as <span class="math inline">\sigma(t+1) = -\sigma(t)</span>. Notice that both systems are completely deterministic (predictive). If we intervene, then we are breaking the closed system. In closed systems, laws are entirely deterministic.</p>
+<p>Now consider a <strong>die</strong>. It has a set of configurations <span class="math inline">\{1,2,3,4,5,6\}</span>. We could express any laws of motion we come up with as a graph, such as</p>
+<figure>
+<img src="figures/2020-07-21-21-15-28.png" style="width:70.0%" alt="Dice laws of motion." /><figcaption aria-hidden="true">Dice laws of motion.</figcaption>
+</figure>
+<p>Once again, these laws are completely deterministic. We could also consider</p>
+<figure>
+<img src="figures/2020-07-21-21-15-49.png" style="width:30.0%" alt="Dice laws of motion." /><figcaption aria-hidden="true">Dice laws of motion.</figcaption>
+</figure>
+<p>This is logically equivalent to the above; just relabel the numbers. But one could devise something like this:</p>
+<figure>
+<img src="figures/2020-07-21-21-16-22.png" style="width:30.0%" alt="Dice laws of motion." /><figcaption aria-hidden="true">Dice laws of motion.</figcaption>
+</figure>
+<p>This is <strong>not</strong> logically equivalent, because if you are in one cycle you won’t get to the other one. This is called a <strong>conserved quantity</strong>, and its law is a conservation law. We can put states <span class="math inline">1,2,3</span> into some group A, and states <span class="math inline">4,5,6</span> into some group B. If we are in group A, we stay in group A. Similarly, if we are in group B, we stay in group B.</p>
+<p>We can also consider</p>
+<figure>
+<img src="figures/2020-07-21-21-19-43.png" style="width:30.0%" alt="Dice laws of motion." /><figcaption aria-hidden="true">Dice laws of motion.</figcaption>
+</figure>
+<p>If we let group A <span class="math inline">=\{1\}</span>, group B <span class="math inline">=\{2,3\}</span> and group C <span class="math inline">=\{4,5,6\}</span>, we can also see that these are conserved quantities.</p>
+<p>We can now consider some infinite line, where each point is <span class="math inline">\in \mathbb Z</span>.</p>
+<figure>
+<img src="figures/2020-07-21-21-28-06.png" style="width:80.0%" alt="An infinite number of states." /><figcaption aria-hidden="true">An infinite number of states.</figcaption>
+</figure>
+<p>A particle has an infinite number of states <span class="math inline">\in \mathbb Z</span>. We could invent laws such as:</p>
+<ul>
+<li>wherever we are, move one unit;</li>
+<li>wherever we are, move two units (in fact, in this instance, we have a conserved quantity: oddness and evenness!);</li>
+<li>etc.</li>
+</ul>
+<p>All of the above rules are <strong>allowable laws</strong>. But not all laws are legal. Which are not allowable? Consider a 3-sided coin which can land on its edge, for argument’s sake.</p>
+<figure>
+<img src="figures/2020-07-21-21-30-57.png" style="width:30.0%" alt="“E” means edge." /><figcaption aria-hidden="true">“E” means edge.</figcaption>
+</figure>
+<p>We have a situation of</p>
+<p><span class="math display">H\to T\to E\to T\to E\cdots, \quad T\to E\to T\to E\cdots, E\to T\to E\to T\cdots,</span></p>
+<p>so we can predict into the future…but we <strong>cannot</strong> predict into the past. This means that this is <strong>non-reversible</strong>. How do we check reversibility? Just try reversing each arrow.</p>
+<figure>
+<img src="figures/2020-07-21-21-31-53.png" style="width:30.0%" alt="Reversing…nope." /><figcaption aria-hidden="true">Reversing…nope.</figcaption>
+</figure>
+<p>Now we have two arrows coming out of one state? Where do we go? We don’t know, so this is not deterministic. This sort of law is not allowed in <em>classical</em> physics.</p>
+<p>If we know the initial conditions perfectly, you could predict the future and the past. Otherwise, we would like to quantify how much we can predict. For example, weather forecasters can reasonably predict the weather for 3 days from now, but since the atmosphere is a chaotic system, we might no longer be able to after a few days. The laws of classical mechanics are deterministic into the future and the past.</p>
+<p>How does one determine predictibility concretely? It’s simple: <strong>one input, one output arrow</strong>.</p>
+<p>Let’s finally get into some real world physics: <strong>point particles in space</strong>. What are the configuraions of a point particle?</p>
+<h2 class="allowframebreaks" id="super-basic-math-review">Super basic math review</h2>
+<p>Let’s look at the standard Cartesian coordinate system in 3 dimensions.</p>
+<figure>
+<img src="figures/2020-07-21-21-37-14.png" style="width:35.0%" alt="Cartesian coordinate system." /><figcaption aria-hidden="true">Cartesian coordinate system.</figcaption>
+</figure>
+<p>A point is labelled with coordinates <span class="math inline">(x,y,z)</span>. The standard direction of the <span class="math inline">z</span> is determined by the right-hand-rule.</p>
+<p>A <strong>vector</strong> has both length and direction. Example: position of point relative to origin (but origin-independent). Typically, vectors are denoted <span class="math inline">\vec v</span>. The length is denoted <span class="math inline">|\vec v|</span>, and the direction is harder to write down. We can define the vector as well by connecting each coordinate to the basis vectors:</p>
+<figure>
+<img src="figures/2020-07-21-21-38-32.png" style="width:35.0%" alt="Coordinates." /><figcaption aria-hidden="true">Coordinates.</figcaption>
+</figure>
+<p>For our cases, we denote the components <span class="math inline">v_x, v_y, v_z</span>.</p>
+<p>We now look at some basic facts about the algebra of vectors. If <span class="math inline">c \in \mathbb R</span>, then <span class="math inline">c \vec A</span> is the vector <span class="math inline">\vec A</span>, but <span class="math inline">c</span> times as long. If we take <span class="math inline">-\vec A</span>, it is <span class="math inline">\vec A</span> but in the opposite (negative) direction. We can <strong>add</strong> vectors geometrically:</p>
+<figure>
+<img src="figures/2020-07-21-21-40-14.png" style="width:30.0%" alt="Adding vectors." /><figcaption aria-hidden="true">Adding vectors.</figcaption>
+</figure>
+<p>or algebraically by summing the components,</p>
+<p><span class="math display">C_x = A_x + B_x \quad \implies \quad C_i = A_i + B_i, \quad \forall i.</span></p>
+<p>Can we multiply vectors? Yes, in two main different ways. Can we divide vectors? Uhh…not really well defined. We’ll look at the dot product method of multiplying vectors.</p>
+<figure>
+<img src="figures/2020-07-21-21-41-07.png" style="width:35.0%" alt="Dot product visually" /><figcaption aria-hidden="true">Dot product visually</figcaption>
+</figure>
+<p>The <strong>dot product</strong> is defined as <span class="math inline">\vec A \cdot \vec B = |\vec A| |\vec B| \cos \theta</span>, where <span class="math inline">\theta</span> is the angle between the vectors. The dot product is commutative; that is, <span class="math inline">\vec A \cdot \vec B = \vec B \cdot \vec A</span>. We also have that <span class="math inline">\vec A \cdot \vec A = |\vec A|^2</span>. We can also use the dot product as a nice way to compute the angle between two vectors.</p>
+<p>Now let us prove the law of cosines.</p>
+<figure>
+<img src="figures/2020-07-21-21-50-07.png" style="width:35.0%" alt="Law of cosines" /><figcaption aria-hidden="true">Law of cosines</figcaption>
+</figure>
+<p><span class="math display">
+\begin{aligned}
+    \vec C \cdot \vec C &amp;= (\vec A - \vec B) \cdot (\vec A - \vec B) \\
+    &amp;= \vec A \cdot \vec A + \vec B \cdot \vec B - 2(\vec A \cdot \vec B) \\
+    &amp;= |\vec A|^2 + |\vec B|^2 - 2 |\vec A||\vec B|\cos \theta_{\vec A \vec B}
+\end{aligned}
+</span></p>
+<h2 class="allowframebreaks" id="particle-motion">Particle motion</h2>
+<p>Consider a particle with vector denoted by <span class="math inline">\vec r</span> and coordinates <span class="math inline">x,y,z</span>.</p>
+<figure>
+<img src="figures/2020-07-21-21-53-10.png" style="width:30.0%" alt="Particle." /><figcaption aria-hidden="true">Particle.</figcaption>
+</figure>
+<p>We are generally interested in the motion of particles. The three equations</p>
+<p><span class="math display">\vec r_x(t) = x(t), \quad \vec r_y(t) = y(t), \quad \vec r_z(t) = z(t)</span></p>
+<p>summarise the motion of the particle. We also know that the velocity is the derivative of the particle, so we have</p>
+<p><span class="math display">v_x = \frac{\mathrm d}{\mathrm dt} r_x = \left(\frac{\mathrm dx}{\mathrm dt}, \frac{\mathrm dy}{\mathrm dt}, \frac{\mathrm dz}{\mathrm dt}\right).</span></p>
+<p>We can use Newton’s notation</p>
+<p><span class="math display">\frac{\mathrm df(t)}{\mathrm dt} = \dot f(t), \quad v_i = \frac{\mathrm dx_i}{\mathrm dt} = \dot x_i.</span></p>
+<p>We also have that acceleration is the rate of change of velocity. Acceleration also has direction, so we have</p>
+<p><span class="math display">a_i = \frac{\mathrm d^2 x_i}{\mathrm dt^2} = \ddot x_i = \dot v_i.</span></p>
+<p>We can also write</p>
+<p><span class="math display">\vec v = \frac{\mathrm d}{\mathrm dt} \vec r = \dot{\vec r}, \quad \vec a = \frac{\mathrm d^2}{\mathrm dt^2} \vec r = \ddot{\vec r}.</span></p>
+<p>Now consider simple motion along a line. We have</p>
+<figure>
+<img src="figures/2020-07-21-21-57-50.png" style="width:60.0%" alt="Motion along a line." /><figcaption aria-hidden="true">Motion along a line.</figcaption>
+</figure>
+<p>Suppose that <span class="math inline">x(t) = a+bt+ct^2</span>. We then have that <span class="math inline">v(t) = \dot x = b + 2ct</span>, and <span class="math inline">a = \ddot x = 2c</span>.</p>
+<p>We can also look at circular motion on the unit circle.</p>
+<figure>
+<img src="figures/2020-07-21-22-03-11.png" style="width:30.0%" alt="Circular motion on the unit circle." /><figcaption aria-hidden="true">Circular motion on the unit circle.</figcaption>
+</figure>
+<p>Angle increases with respect to time with rule <span class="math inline">\theta = \omega t</span>. How long does it take to go from <span class="math inline">0</span> to <span class="math inline">2\pi</span>? We can obtain this by solving <span class="math inline">2\pi = \omega t</span>, which implies</p>
+<p><span class="math display">t = \frac{2\pi}{\omega} = \mathrm{period}.</span></p>
+<p><span class="math inline">\omega</span> is called the angular frequency. Parametrising the unit circle, we have</p>
+<p><span class="math display">x = \cos \omega t, \quad y = \sin \omega t</span></p>
+<p>and therefore</p>
+<p><span class="math display">v_x = -\omega \sin(\omega t), \quad v_y = \omega \cos(\omega t).</span></p>
+<p>What is the angle between position and velocity? Intuitively, perpendicular, but we can compute this explicitly using the dot product.</p>
+<p><span class="math display">x \cdot v_x + y \cdot v_y = -\omega \sin \omega t \cos \omega t + \omega \sin \omega t \cos \omega t = 0</span></p>
+<p>therefore the two vectors are orthogonal. For acceleration and position, we can perform a similar calculation:</p>
+<p><span class="math display">a_x = -\omega^2 \cos (\omega t) ,\quad a_y = -\omega^2 \sin (\omega t).</span></p>
+<p>Note that acceleration is parallel to the position vector, but is inwards (as is the case with centrifugal acceleration).</p>
+<script>
+  function pdf() {
+    if (window.location.href.indexOf(".html") > -1) {
+      window.location.href = window.location.href.replace(".html", ".pdf");
+    } else {
+      window.location.href = window.location.href.concat("index.pdf")
+    }
+  }
+</script>
+<button onclick="pdf()">View as PDF</button>
+<small>2020 Kai Du. This site is built with <a href="https://pandoc.org/">Pandoc</a> and <a href="https://pages.github.com/">GitHub Pages</a>.</small>
+</body>
+</html>

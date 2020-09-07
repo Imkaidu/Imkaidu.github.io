@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="Matthew Low" />
+  <meta name="dcterms.date" content="2020-03-07" />
+  <title>A full website setup with Pandoc and GitHub Pages</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      {   }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span.al { color: #ff0000; } /* Alert */
+    code span.an { color: #008000; } /* Annotation */
+    code span.at { } /* Attribute */
+    code span.bu { } /* BuiltIn */
+    code span.cf { color: #0000ff; } /* ControlFlow */
+    code span.ch { color: #008080; } /* Char */
+    code span.cn { } /* Constant */
+    code span.co { color: #008000; } /* Comment */
+    code span.cv { color: #008000; } /* CommentVar */
+    code span.do { color: #008000; } /* Documentation */
+    code span.er { color: #ff0000; font-weight: bold; } /* Error */
+    code span.ex { } /* Extension */
+    code span.im { } /* Import */
+    code span.in { color: #008000; } /* Information */
+    code span.kw { color: #0000ff; } /* Keyword */
+    code span.op { } /* Operator */
+    code span.ot { color: #ff4000; } /* Other */
+    code span.pp { color: #ff4000; } /* Preprocessor */
+    code span.sc { color: #008080; } /* SpecialChar */
+    code span.ss { color: #008080; } /* SpecialString */
+    code span.st { color: #008080; } /* String */
+    code span.va { } /* Variable */
+    code span.vs { color: #008080; } /* VerbatimString */
+    code span.wa { color: #008000; font-weight: bold; } /* Warning */
+  </style>
+  <link rel="stylesheet" href="/css/custom.css" />
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<header>
+  <div id="nav">
+    <h3 class="gray">Kai Du</h3>
+      <div class="nav-buttons">
+        <a href="/index.html">Home</a>
+        <a href="/blog/blog.html">Blog</a>
+        <a href="https://github.com/ImKaiDu">GitHub</a>  
+      </div>
+  </div>
+</header>
+<header id="title-block-header">
+<h1 class="title">A full website setup with Pandoc and GitHub Pages</h1>
+<p class="author">Matthew Low</p>
+<p class="date">03/07/2020</p>
+</header>
+<nav id="TOC" role="doc-toc">
+<ul>
+<li><a href="#part-1-the-structure">Part 1: The structure</a></li>
+<li><a href="#part-2-pandoc">Part 2: Pandoc</a></li>
+<li><a href="#part-3-the-automation">Part 3: The “automation”</a></li>
+<li><a href="#part-4-the-deployment">Part 4: The deployment</a></li>
+</ul>
+</nav>
+<p>One night, after being inspired by a number of <a href="http://wstyler.ucsd.edu/posts/pandoc_website.html">similar</a> <a href="https://blog.lahteenmaki.net/goodbye-blogger-hello-pandoc-and-scripts.html">projects</a> online, I decided to try reworking my personal website into a fully automated Pandoc and GitHub pages system. I had tried similar projects in the past (a full Markdown-based setup with LaTeX output was one of my <a href="https://github.com/mattchrlw/anteckna">attempts</a>) but I never really got to a level with my setup that I was particularly happy with.</p>
+<p>My requirements were very simple:</p>
+<ul>
+<li>A very light &amp; minimal setup process, with little need for constant maintenance</li>
+<li>The ability to save Markdown files in folders, and the website to generate itself</li>
+<li>Most importantly, the ability to write math documents and be able to export them to LaTeX if needed.</li>
+</ul>
+<p>The final requirement naturally led me to <a href="http://pandoc.org/">Pandoc</a>, a fantastic piece of kit which allows conversion between a massive number of formats. It is most commonly used by those wanting to write pretty documents in Markdown and then exporting it to LaTeX, but can also be used to generate HTML from Markdown files (with KaTeX/MathJax support!). This is where I began my journey.</p>
+<p>The setup is now wonderfully functional. With a simple VS Code workspace setup and a very simple shell script, combined with the power of Pandoc, I now have an incredibly simple static site generator which compiles any <code>.md</code> file into <code>.html</code> every time I save. Here’s how I did it.</p>
+<h2 class="allowframebreaks" id="part-1-the-structure">Part 1: The structure</h2>
+<p>This setup relies on essentially three things:</p>
+<ul>
+<li>Pandoc;</li>
+<li>VS Code with the <a href="https://marketplace.visualstudio.com/items?itemName=pucelle.run-on-save">Run On Save</a> extension;</li>
+<li>A shell script called <code>generate.sh</code>.</li>
+</ul>
+<p>Now you just need an empty folder. Setup a directory structure something like this:</p>
+<pre><code>├── blog
+│   ├── blog.html
+│   ├── blog.md
+│   └── posts
+│       ├── pandoc-github.html
+│       └── pandoc-github.md
+├── css
+│   └── custom.css
+├── docs
+├── index.html
+├── index.md
+├── private
+├── script
+│   └── generate.sh
+├── site.code-workspace
+└── template
+    └── matt.html</code></pre>
+<p>What are all of these for? Well, this directory structure is just a suggestion; the whole point of this setup is that I can drop Markdown files <em>anywhere</em> and the setup will automatically compile it into HTML which you can link to anywhere. This is what I <em>personally</em> have setup:</p>
+<ul>
+<li><code>blog</code> is where your blog posts can go;</li>
+<li><code>css</code> is where custom CSS for the websites goes;</li>
+<li><code>docs</code> is where any other Markdown files go; I put notes and other ramblings here;</li>
+<li><code>index.html</code> is the <em>auto-generated</em> home page for my website;</li>
+<li><code>index.md</code> is the source file for my home page;</li>
+<li><code>private</code> is for private files that I don’t want up on my GitHub repo. This is ignored out by my <code>.gitignore</code>;</li>
+<li><code>script</code> is where the <code>generate.sh</code> script is placed;</li>
+<li><code>site.codeworkspace</code> is a VS Code workspace setup that handles auto-compilation;</li>
+<li><code>template</code> is where my Pandoc templates go (currently I only have an HTML one setup, but I plan to add a LaTeX template into my workflow);</li>
+</ul>
+<p>Really, the only key parts of this setup are <code>css</code>, <code>script</code>, <code>site.codeworkspace</code> and <code>template</code>. The rest can be whatever you want.</p>
+<h2 class="allowframebreaks" id="part-2-pandoc">Part 2: Pandoc</h2>
+<p>So how does Pandoc come into this? To get a peek, have a look at <code>generate.sh</code>:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true"></a><span class="co">#!/bin/bash</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true"></a></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true"></a><span class="va">target=</span><span class="st">&quot;index&quot;</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true"></a><span class="kw">if</span><span class="bu"> [</span> <span class="ot">-n</span> <span class="st">&quot;</span><span class="va">$1</span><span class="st">&quot;</span><span class="bu"> ]</span>; <span class="kw">then</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true"></a>  <span class="va">target=$1</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true"></a><span class="kw">fi</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true"></a></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true"></a><span class="va">root=</span><span class="st">&quot;/Users/mattchrlw/Google Drive/Site&quot;</span></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true"></a></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true"></a><span class="bu">cd</span> <span class="st">&quot;</span><span class="va">${root}</span><span class="st">&quot;</span></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true"></a></span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true"></a><span class="ex">pandoc</span> <span class="st">&quot;</span><span class="va">${target}</span><span class="st">&quot;</span> <span class="kw">\</span></span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true"></a>    <span class="ex">-o</span> <span class="st">&quot;</span><span class="va">${target%</span>.*<span class="va">}</span><span class="st">.html&quot;</span> <span class="kw">\</span></span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true"></a>    <span class="ex">--template</span> <span class="st">&quot;template/matt&quot;</span> <span class="kw">\</span></span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true"></a>    <span class="ex">--highlight-style</span> kate <span class="kw">\</span></span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true"></a>    <span class="ex">--standalone</span> <span class="kw">\</span></span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true"></a>    <span class="ex">--toc</span> <span class="kw">\</span></span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true"></a>    <span class="ex">--toc-depth</span>=3 <span class="kw">\</span></span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true"></a>    <span class="ex">--css</span> <span class="st">&quot;/css/custom.css&quot;</span> <span class="kw">\</span></span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true"></a>    <span class="ex">--mathjax</span></span>
+<span id="cb2-21"><a href="#cb2-21" aria-hidden="true"></a></span>
+<span id="cb2-22"><a href="#cb2-22" aria-hidden="true"></a><span class="ex">pandoc</span> <span class="st">&quot;</span><span class="va">${target}</span><span class="st">&quot;</span> <span class="kw">\</span></span>
+<span id="cb2-23"><a href="#cb2-23" aria-hidden="true"></a>    <span class="ex">-t</span> beamer <span class="kw">\</span></span>
+<span id="cb2-24"><a href="#cb2-24" aria-hidden="true"></a>    <span class="ex">-s</span> <span class="kw">\</span></span>
+<span id="cb2-25"><a href="#cb2-25" aria-hidden="true"></a>    <span class="ex">--pdf-engine</span>=xelatex <span class="kw">\</span></span>
+<span id="cb2-26"><a href="#cb2-26" aria-hidden="true"></a>    <span class="ex">--resource-path</span>=<span class="st">&quot;</span><span class="va">$(</span><span class="fu">dirname</span> <span class="st">&quot;</span><span class="va">$target</span><span class="st">&quot;</span><span class="va">)</span><span class="st">&quot;</span> <span class="kw">\</span></span>
+<span id="cb2-27"><a href="#cb2-27" aria-hidden="true"></a>    <span class="ex">-o</span> <span class="st">&quot;</span><span class="va">${target%</span>.*<span class="va">}</span><span class="st">-slides.pdf&quot;</span> <span class="kw">\</span></span></code></pre></div>
+<p>This script takes in some file name, and automatically generates an HTML file in the same directory, using the provided template and CSS files. The <code>--standalone</code> flag is used to ensure every page is generated as its own standalone HTML file. I also use the <code>--katex</code> flag for neat mathematics output.</p>
+<p>The template is the most important part of this setup, and is what allows a permanent header/footer setup across all pages, creating a sense of consistency instead of just being a bunch of Markdown files thrown together. I created my template by just saving the default template</p>
+<pre><code>pandoc -D html &gt; template/matt.html</code></pre>
+<p>and then messing with it. All I added was this:</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true"></a>$if(plain)$</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true"></a>$else$</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true"></a><span class="kw">&lt;header&gt;</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true"></a>  <span class="kw">&lt;div</span><span class="ot"> class=</span><span class="st">&quot;nav&quot;</span><span class="kw">&gt;</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true"></a>    <span class="kw">&lt;h2&gt;</span>Matthew Low<span class="kw">&lt;/h2&gt;</span></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true"></a>      <span class="kw">&lt;div</span><span class="ot"> class=</span><span class="st">&quot;buttons&quot;</span><span class="kw">&gt;</span></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true"></a>        <span class="kw">&lt;a</span><span class="ot"> href=</span><span class="st">&quot;/index.html&quot;</span><span class="kw">&gt;</span>Home<span class="kw">&lt;/a&gt;</span></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true"></a>        <span class="kw">&lt;a</span><span class="ot"> href=</span><span class="st">&quot;/blog/blog.html&quot;</span><span class="kw">&gt;</span>Blog<span class="kw">&lt;/a&gt;</span></span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true"></a>        <span class="kw">&lt;a</span><span class="ot"> href=</span><span class="st">&quot;#&quot;</span><span class="kw">&gt;</span>About<span class="kw">&lt;/a&gt;</span>  </span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true"></a>      <span class="kw">&lt;/div&gt;</span></span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true"></a>  <span class="kw">&lt;/div&gt;</span></span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true"></a><span class="kw">&lt;/header&gt;</span></span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true"></a>$endif$</span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true"></a>...</span>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true"></a>$if(plain)$</span>
+<span id="cb4-16"><a href="#cb4-16" aria-hidden="true"></a>$else$</span>
+<span id="cb4-17"><a href="#cb4-17" aria-hidden="true"></a><span class="kw">&lt;small&gt;</span>(C) 2020 Matthew Low. This site is built with ...<span class="kw">&lt;/small&gt;</span></span>
+<span id="cb4-18"><a href="#cb4-18" aria-hidden="true"></a>$endif$</span></code></pre></div>
+<p>These modifications just add a header and footer to the page if no “plain” flag is specified in the YAML (see below for an example) of a Markdown file. If “plain” is specified, it will just generate the body of the document, no header, no footer.</p>
+<p>The CSS is, of course, what makes this setup polished. CSS can be written the same way you would write CSS for any ordinary website.</p>
+<p>Now, whenever you make a Markdown file in your site folder, just put this YAML in the top:</p>
+<pre><code>---
+title: Blah blah blah
+---
+
+## Here is some content
+
+Blah blah blah</code></pre>
+<h2 class="allowframebreaks" id="part-3-the-automation">Part 3: The “automation”</h2>
+<p>Now we can generate websites just by running <code>script/generate.sh</code> on whatever page we would like to generate. Of course, we would rather do this automatically. This can be done very easily with the aforementioned <a href="https://marketplace.visualstudio.com/items?itemName=pucelle.run-on-save">Run On Save</a> extension for Visual Studio Code (my editor of choice, I’m sure you can find similar tools in other editors). Just set this up in your workspace settings JSON file:</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode json"><code class="sourceCode json"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true"></a><span class="er">&quot;settings&quot;:</span> <span class="fu">{</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true"></a>  <span class="dt">&quot;runOnSave.commands&quot;</span><span class="fu">:</span> <span class="ot">[</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true"></a>    <span class="fu">{</span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true"></a>      <span class="dt">&quot;match&quot;</span><span class="fu">:</span> <span class="st">&quot;.*</span><span class="ch">\\</span><span class="st">.md$&quot;</span><span class="fu">,</span></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true"></a>      <span class="dt">&quot;command&quot;</span><span class="fu">:</span> <span class="st">&quot;cd ${workspaceFolder}; script/generate.sh ${file}&quot;</span><span class="fu">,</span></span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true"></a>      <span class="dt">&quot;runIn&quot;</span><span class="fu">:</span> <span class="st">&quot;backend&quot;</span><span class="fu">,</span></span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true"></a>      <span class="dt">&quot;runningStatusMessage&quot;</span><span class="fu">:</span> <span class="st">&quot;Compiling ${fileBasename}&quot;</span><span class="fu">,</span></span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true"></a>      <span class="dt">&quot;finishStatusMessage&quot;</span><span class="fu">:</span> <span class="st">&quot;${fileBasename} compiled&quot;</span></span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true"></a>    <span class="fu">}</span></span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true"></a>  <span class="ot">]</span></span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true"></a><span class="fu">}</span><span class="er">,</span></span></code></pre></div>
+<p>This will automatically run the <code>script/generate.sh</code> script on any Markdown file that is saved in the workspace, automating the generation process. The <code>"runIn": "backend"</code> combined with the status message files make it so when you compile the website, it will show this in your VSCode status bar:</p>
+<figure>
+<img src="figures/2020-07-04-11-46-18.png" style="width:60.0%" alt="Status bar." /><figcaption aria-hidden="true">Status bar.</figcaption>
+</figure>
+<p>There are plenty of other extensions that can improve your quality-of-life when blogging/writing docs in this setup, including:</p>
+<ul>
+<li><a href="https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer">Live Server</a>, essential for previewing your site as you edit. It will even live reload on save!</li>
+<li><a href="https://marketplace.visualstudio.com/items?itemName=yzhang.markdown-all-in-one">Markdown All In One</a>, for making Markdown editing more pleasant, includes LaTeX syntax highlighting.</li>
+<li><a href="https://marketplace.visualstudio.com/items?itemName=telesoho.vscode-markdown-paste-image">Markdown Paste</a>, for pasting images directly into VS Code and auto-linking to them in Markdown files.</li>
+</ul>
+<h2 class="allowframebreaks" id="part-4-the-deployment">Part 4: The deployment</h2>
+<p>Now we’re ready to put this up on GitHub pages! Connect your Git repository to a GitHub repo (named <code>username.github.io</code>) and follow <a href="https://pages.github.com/">these simple instructions</a>.</p>
+<p><strong>That is all.</strong> You now have a fully functional blogging/documenting/portfolio setup, entirely based on Markdown, Pandoc, GitHub Pages and a very simple shell script.</p>
+<p>You can find the code for this setup in my GitHub pages repository <a href="https://github.com/mattchrlw/mattchrlw.github.io">here</a>.</p>
+<script>
+  function pdf() {
+    if (window.location.href.indexOf(".html") > -1) {
+      window.location.href = window.location.href.replace(".html", ".pdf");
+    } else {
+      window.location.href = window.location.href.concat("index.pdf")
+    }
+  }
+</script>
+<button onclick="pdf()">View as PDF</button>
+<small>2020 Kai Du. This site is built with <a href="https://pandoc.org/">Pandoc</a> and <a href="https://pages.github.com/">GitHub Pages</a>.</small>
+</body>
+</html>

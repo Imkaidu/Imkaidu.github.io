@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="generator" content="pandoc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-  <title>test</title>
+  <title>My blog</title>
   <style>
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
@@ -14,22 +14,6 @@
     ul.task-list{list-style: none;}
   </style>
   <link rel="stylesheet" href="/css/custom.css" />
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.11.1/katex.min.js"></script>
-  <script>document.addEventListener("DOMContentLoaded", function () {
-   var mathElements = document.getElementsByClassName("math");
-   var macros = [];
-   for (var i = 0; i < mathElements.length; i++) {
-    var texText = mathElements[i].firstChild;
-    if (mathElements[i].tagName == "SPAN") {
-     katex.render(texText.data, mathElements[i], {
-      displayMode: mathElements[i].classList.contains('display'),
-      throwOnError: false,
-      macros: macros,
-      fleqn: false
-     });
-  }}});
-  </script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.11.1/katex.min.css" />
   <!--[if lt IE 9]>
     <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
   <![endif]-->
@@ -45,24 +29,14 @@
       </div>
   </div>
 </header>
-<nav id="TOC" role="doc-toc">
+<header id="title-block-header">
+<h1 class="title">My blog</h1>
+</header>
+<p>Here are my blog posts. (There aren’t many yet.)</p>
 <ul>
-<li><a href="#test-heading">Test heading</a>
-<ul>
-<li><a href="#test-headings">Test headings</a></li>
-</ul></li>
+<li><code>21/07/2020</code> <a href="posts/classical-mech-1.html">The Theoretical Minimum: Classical Mechanics, lecture 1</a></li>
+<li><code>03/07/2020</code> <a href="posts/pandoc-github.html">A full website setup with Pandoc and GitHub Pages</a></li>
 </ul>
-</nav>
-<p>Hello. This is a test.</p>
-<p><span class="math inline">\int e^x \mathrm dx = e^x + c</span></p>
-<h2 id="test-heading">Test heading</h2>
-<h3 id="test-headings">Test headings</h3>
-<p><span class="math display">
-\begin{aligned}
-\int x^3 \mathrm dx &amp;= \frac{x^4}{4} + c\\
-&amp;\implies \int_0^1 x^3 \mathrm dx = \frac{1}{4}
-\end{aligned}
-</span></p>
 <script>
   function pdf() {
     if (window.location.href.indexOf(".html") > -1) {
