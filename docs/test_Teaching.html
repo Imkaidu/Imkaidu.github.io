@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="generator" content="pandoc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-  <title>Welcome</title>
+  <title>test_Teaching</title>
   <style>
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
@@ -14,6 +14,22 @@
     ul.task-list{list-style: none;}
   </style>
   <link rel="stylesheet" href="/css/custom.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.11.1/katex.min.js"></script>
+  <script>document.addEventListener("DOMContentLoaded", function () {
+   var mathElements = document.getElementsByClassName("math");
+   var macros = [];
+   for (var i = 0; i < mathElements.length; i++) {
+    var texText = mathElements[i].firstChild;
+    if (mathElements[i].tagName == "SPAN") {
+     katex.render(texText.data, mathElements[i], {
+      displayMode: mathElements[i].classList.contains('display'),
+      throwOnError: false,
+      macros: macros,
+      fleqn: false
+     });
+  }}});
+  </script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.11.1/katex.min.css" />
   <!--[if lt IE 9]>
     <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
   <![endif]-->
@@ -29,12 +45,24 @@
       </div>
   </div>
 </header>
-<header id="title-block-header">
-<h1 class="title">Welcome</h1>
-</header>
-<p>I am a UQ Development Fellow at <a href="https://economics.uq.edu.au">the School of Economics</a> (of <a href="https://www.uq.edu.au/">the University of Queensland</a>). I am very passionate about delivering excellent research and impactful outcomes by acquiring valuable knowledge of how economies work and apply this knowledge to better understand the economies in the world.</p>
-<p>My main research focus is the source of increased labour productivity (using the models of data envelopment analysis and stochastic frontier analysis). I have developed a unique ability to research in the field of productivity and efficiency analysis, as well as its adoption to deal with the pressing social and economic problems, which was evident in his publication in European Journal of Operational Research, Small Business Economics and Journal of Intellectual Capital.</p>
-<p><a href="docs/test_Teaching.html">Teaching</a> <a href="docs/test_Research.html">Research</a></p>
+<nav id="TOC" role="doc-toc">
+<ul>
+<li><a href="#test-heading-teaching">Test heading (Teaching)</a>
+<ul>
+<li><a href="#test-headings">Test headings</a></li>
+</ul></li>
+</ul>
+</nav>
+<p>Hello. This is a test.</p>
+<p><span class="math inline">\int e^x \mathrm dx = e^x + c</span></p>
+<h2 id="test-heading-teaching">Test heading (Teaching)</h2>
+<h3 id="test-headings">Test headings</h3>
+<p><span class="math display">
+\begin{aligned}
+\int x^3 \mathrm dx &amp;= \frac{x^4}{4} + c\\
+&amp;\implies \int_0^1 x^3 \mathrm dx = \frac{1}{4}
+\end{aligned}
+</span></p>
 <script>
   function pdf() {
     if (window.location.href.indexOf(".html") > -1) {
