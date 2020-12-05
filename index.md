@@ -1,7 +1,5 @@
 
----
 title: Kai Du
----
 
 I am a UQ Development Fellow at [the School of Economics](https://economics.uq.edu.au) (of [the University of Queensland](https://www.uq.edu.au/)). I am very passionate about delivering excellent research and impactful outcomes by acquiring valuable knowledge of how economies work and apply this knowledge to better understand the economies in the world.
 
