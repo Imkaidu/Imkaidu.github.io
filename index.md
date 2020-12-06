@@ -7,7 +7,7 @@ I am a [UQ Development Fellow](https://economics.uq.edu.au/profile/6228/kai-du) 
 
 My main research focus is the source of increased labour productivity (using the models of data envelopment analysis and stochastic frontier analysis). I have developed a unique ability to research in the field of productivity and efficiency analysis, as well as its adoption to deal with the pressing social and economic problems, which was evident in his publication in European Journal of Operational Research, Small Business Economics and Journal of Intellectual Capital.
 
-[//]: [Teaching](docs/test_Teaching.html)
+[//]: <[Teaching](docs/test_Teaching.html)>
 
 [Research](docs/test_Research.html)
 
