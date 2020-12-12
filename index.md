@@ -15,5 +15,4 @@ My main research focus is the source of increased labour productivity (using the
 
 After this paragraph is the section of teaching. 
 
-[Teaching](# Teaching)
 So, this section should be about the courses I delivered. 
