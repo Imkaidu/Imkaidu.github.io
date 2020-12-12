@@ -11,13 +11,12 @@ My main research focus is the source of increased labour productivity (using the
 
 [Research](docs/test_Research.html)
 
-[Teaching](# Teaching)
+
 
 [MATLAB Code](docs/matlab_code/matlab_code.html)
 
 
 After this paragraph is the section of teaching. 
 
-# Teaching
-
+[Teaching](# Teaching)
 So, this section should be about the courses I delivered. 
