@@ -25,17 +25,19 @@ Du, K. and Sim, N. (2016). Emerging Countries, Mergers and Acquisitions, Bank Ef
 
 O’Connor, A., Du, K. and Roos, G. (2015). The Intellectual Capital Needs of A Transitioning Economy, Journal of Intellectual Capital, 16(3): 466 – 489. (Corresponding author, ABDC B)
 
-**Working Paper**
+<font size="+1"> <b> Working Paper </b> </font>
 
 Wang, Y., Du, K. and O’Connor, A. (2018). Knowledge Spill-Over Entrepreneurship, Trade Dynamics and Economic Growth: Cross Country Evidence. (Corresponding author)
 
-**Teaching**
+<font size="+1"> <b> Teaching </b> </font>
 
-ECON7310 Elements of Econometrics, Lecturer and course coordinator (2020 Semester 1, 220 postgraduates)
+[ECON7310](https://course-profiles.uq.edu.au/student_section_loader/section_1/103617?_ga=2.228176029.1899490403.1608693058-1611039615.1607827389) Elements of Econometrics, Lecturer and course coordinator (2020 Semester 1, 220 postgraduates)
+
+<font size="+1"> <b> Teaching </b> </font>
 
 **Referee Service**
 
-European Journal of Operational Research; Journal of Productivity Analysis; Annals of Operations Research; Pacific-Basin Finance Journal; Economic Modelling; International Review of Economics & Finance and Emerg- ing Markets Finance and Trade
+*European Journal of Operational Research*; *Journal of Productivity Analysis*; *Annals of Operations Research*; *Pacific-Basin Finance Journal*; *Economic Modelling*; *International Review of Economics & Finance* and *Emerging Markets Finance and Trade*
 
 [//]: <[Teaching](docs/test_Teaching.html)>
 
