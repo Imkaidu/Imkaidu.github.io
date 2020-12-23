@@ -11,7 +11,9 @@ I am a [UQ Development Fellow](https://economics.uq.edu.au/profile/6228/kai-du) 
 
 I am very passionate about delivering excellent research and impactful outcomes by acquiring valuable knowledge of how firms (or economies) work and apply this knowledge to make our world better. My research focus is data envelopment analysis and stochastic frontier analysis. I have developed a unique ability to research in the field of productivity and efficiency analysis, as well as its adoption to deal with the pressing social and economic problems.
 
-**Publication**
+<bold>
+<font size="+1"> Publication </font>
+</bold>
 
 Du, K. and O’Connor, A. (2019). Examining Economic Complexity as a Holistic Innovation System Effect, Small Business Economics, DOI: 10.1007/s11187-019-00215-z. (Corresponding author, ABDC A)
 
@@ -34,6 +36,7 @@ Wang, Y., Du, K. and O’Connor, A. (2018). Knowledge Spill-Over Entrepreneurshi
 ECON7310 Elements of Econometrics, Lecturer and course coordinator (2020 Semester 1, 220 postgraduates)
 
 **Referee Service**
+
 European Journal of Operational Research; Journal of Productivity Analysis; Annals of Operations Research; Pacific-Basin Finance Journal; Economic Modelling; International Review of Economics & Finance and Emerg- ing Markets Finance and Trade
 
 [//]: <[Teaching](docs/test_Teaching.html)>
