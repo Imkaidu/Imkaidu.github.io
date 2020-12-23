@@ -6,11 +6,12 @@ title: Curriculum vitae
 I am a [UQ Development Fellow](https://economics.uq.edu.au/profile/6228/kai-du) at the [School of Economics](https://economics.uq.edu.au) (of [the University of Queensland](https://www.uq.edu.au/)). 
 
 **Add.** Level 6, Colin Clark Bld (#39), School of Economics, University of Queensland, QLD (4072), Australia
+
 **E-mail:** Mail@Imkaidu.net
 
 I am very passionate about delivering excellent research and impactful outcomes by acquiring valuable knowledge of how firms (or economies) work and apply this knowledge to make our world better. My research focus is data envelopment analysis and stochastic frontier analysis. I have developed a unique ability to research in the field of productivity and efficiency analysis, as well as its adoption to deal with the pressing social and economic problems.
 
-### Publication
+**Publication**
 
 Du, K. and O’Connor, A. (2019). Examining Economic Complexity as a Holistic Innovation System Effect, Small Business Economics, DOI: 10.1007/s11187-019-00215-z. (Corresponding author, ABDC A)
 
@@ -24,25 +25,21 @@ Du, K. and Sim, N. (2016). Emerging Countries, Mergers and Acquisitions, Bank Ef
 
 O’Connor, A., Du, K. and Roos, G. (2015). The Intellectual Capital Needs of A Transitioning Economy, Journal of Intellectual Capital, 16(3): 466 – 489. (Corresponding author, ABDC B)
 
-### Working Paper
+**Working Paper**
 
 Wang, Y., Du, K. and O’Connor, A. (2018). Knowledge Spill-Over Entrepreneurship, Trade Dynamics and Economic Growth: Cross Country Evidence. (Corresponding author)
 
-### Teaching
+**Teaching**
 
 ECON7310 Elements of Econometrics, Lecturer and course coordinator (2020 Semester 1, 220 postgraduates)
 
-### Referee Service
+**Referee Service**
 European Journal of Operational Research; Journal of Productivity Analysis; Annals of Operations Research; Pacific-Basin Finance Journal; Economic Modelling; International Review of Economics & Finance and Emerg- ing Markets Finance and Trade
 
-
 [//]: <[Teaching](docs/test_Teaching.html)>
-
 
 [//]:<[Research](docs/test_Research.html)>
 
 [//]:<[MATLAB Code](docs/matlab_code/matlab_code.html)>
-
-After this paragraph is the section of teaching. So, this section should be about the courses I delivered. 
 
 
