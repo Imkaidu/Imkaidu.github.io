@@ -15,19 +15,21 @@ Wang, Y., Du, K. and O’Connor, A. (2018). Diversity in Entrepreneurship: Why i
 
 Du K. And Mahadevan, R. (2020) Promoting Green Growth: Empirical Evidence and Lessons Using Dynamic Two-Stage Data Envelopment Analysis. (Corresponding author)
 
-<font size="+1"> <b> Publication </b> </font>
+<font size="+1"> <b> Journal Articles </b> </font>
 
-Du, K. and O’Connor, A. (2019). Examining Economic Complexity as a Holistic Innovation System Effect, Small Business Economics, DOI: 10.1007/s11187-019-00215-z. (Corresponding author, ABDC A)
+Du, K. and O’Connor, A. (2019). Examining Economic Complexity as a Holistic Innovation System Effect, *Small Business Economics*, DOI: 10.1007/s11187-019-00215-z. (Corresponding author, ABDC A)
 
-Du, K., Worthington, A.C. and Zelenyuk, V. (2018). DEA with Truncated Regression and Double-Bootstrap for Panel Data with Application to Chinese Banking, European Journal of Operational Research, 265: 748 – 64. (Corresponding author, ABDC A*)
+Du, K., Worthington, A.C. and Zelenyuk, V. (2018). DEA with Truncated Regression and Double-Bootstrap for Panel Data with Application to Chinese Banking, *European Journal of Operational Research*, 265: 748 – 64. (Corresponding author, ABDC A*)
 
-Du, K. and O’Connor, A. (2018). Entrepreneurship and Advancing National Level Economic Efficiency, Small Business Economics, 50: 91 – 111. (Corresponding author, ABDC A)
+Du, K. and O’Connor, A. (2018). Entrepreneurship and Advancing National Level Economic Efficiency, *Small Business Economics*, 50: 91 – 111. (Corresponding author, ABDC A)
+
+Du, K. and Sim, N. (2016). Emerging Countries, Mergers and Acquisitions, Bank Efficiency, *Research in International Business and Finance*, 36: 499 – 510. (ABDC B)
+
+O’Connor, A., Du, K. and Roos, G. (2015). The Intellectual Capital Needs of A Transitioning Economy, *Journal of Intellectual Capital*, 16(3): 466 – 489. (Corresponding author, ABDC B)
+
+<font size="+1"> <b> Book Chapter </b> </font>
 
 Du, K. (2016). Did Efficiency of Chinese Commercial Banks Increase after WTO Accession? Bias Corrected Analysis from 2000 to 2009, Chapter 6 in Andressen, C.A. (ed.) China’s Changing Economy: Trends, Impacts and the Future, Routledge.
-
-Du, K. and Sim, N. (2016). Emerging Countries, Mergers and Acquisitions, Bank Efficiency, Research in International Business and Finance, 36: 499 – 510. (ABDC B)
-
-O’Connor, A., Du, K. and Roos, G. (2015). The Intellectual Capital Needs of A Transitioning Economy, Journal of Intellectual Capital, 16(3): 466 – 489. (Corresponding author, ABDC B)
 
 <font size="+1"> <b> Teaching </b> </font>
 
