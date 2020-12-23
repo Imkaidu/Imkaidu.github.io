@@ -3,13 +3,11 @@
 title: Welcome
 ---
 
-I am a [UQ Development Fellow](https://economics.uq.edu.au/profile/6228/kai-du) at the [School of Economics](https://economics.uq.edu.au) (of [the University of Queensland](https://www.uq.edu.au/)). 
+I am a [UQ Development Fellow](https://economics.uq.edu.au/profile/6228/kai-du) at the [School of Economics](https://economics.uq.edu.au) (of [the University of Queensland](https://www.uq.edu.au/)). I am very passionate about delivering excellent research and impactful outcomes by acquiring valuable knowledge of how firms (or economies) work and apply this knowledge to make our community better. My research focus is data envelopment analysis and stochastic frontier analysis. I have developed a unique ability to research in the field of productivity and efficiency analysis, as well as its adoption to deal with the pressing social and economic problems.
 
 **Add.** Level 6, Colin Clark Bld (#39), School of Economics, University of Queensland, QLD (4072)
 
 **E-mail:** Mail@Imkaidu.net
-
-I am very passionate about delivering excellent research and impactful outcomes by acquiring valuable knowledge of how firms (or economies) work and apply this knowledge to make our community better. My research focus is data envelopment analysis and stochastic frontier analysis. I have developed a unique ability to research in the field of productivity and efficiency analysis, as well as its adoption to deal with the pressing social and economic problems.
 
 <font size="+1"> <b> Publication </b> </font>
 
@@ -33,9 +31,7 @@ Wang, Y., Du, K. and O’Connor, A. (2018). Knowledge Spill-Over Entrepreneurshi
 
 [ECON7310](https://course-profiles.uq.edu.au/student_section_loader/section_1/103617?_ga=2.228176029.1899490403.1608693058-1611039615.1607827389) Elements of Econometrics, Lecturer and course coordinator (2020 Semester 1, 220 postgraduates)
 
-<font size="+1"> <b> Teaching </b> </font>
-
-**Referee Service**
+<font size="+1"> <b> Referee Service </b> </font>
 
 *European Journal of Operational Research*; *Journal of Productivity Analysis*; *Annals of Operations Research*; *Pacific-Basin Finance Journal*; *Economic Modelling*; *International Review of Economics & Finance* and *Emerging Markets Finance and Trade*
 
