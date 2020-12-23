@@ -35,6 +35,20 @@ Du, K. (2016). Did Efficiency of Chinese Commercial Banks Increase after WTO Acc
 
 [ECON7310](https://course-profiles.uq.edu.au/student_section_loader/section_1/103617?_ga=2.228176029.1899490403.1608693058-1611039615.1607827389) Elements of Econometrics, Lecturer and course coordinator (2020 Semester 1, 220 postgraduates)
 
+<font size="+1"> <b> Grant and Awards </b> </font>
+
+2020 ASSA-CASS Joint Action Program ($7,700 from Academy of The Social Sciences in Australia with A/Prof. Renuka Mahadevan)
+
+2019 UQ New Staff Research Start-Up Fund ($5,000 from UQ BEL Faculty)
+
+2018 UQ Development Fellow of the University of Queensland
+
+2017 Vice-Chancellor’s Postdoctoral Fellow of RMIT University
+
+2013 Write-Up Fund for young researchers (to cover half an year accommodation), University of Adelaide
+
+2009 PhD scholarship, University of Adelaide
+
 <font size="+1"> <b> Referee Service </b> </font>
 
 *European Journal of Operational Research*; *Journal of Productivity Analysis*; *Annals of Operations Research*; *Pacific-Basin Finance Journal*; *Economic Modelling*; *International Review of Economics & Finance* and *Emerging Markets Finance and Trade*
