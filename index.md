@@ -9,6 +9,12 @@ I am a [UQ Development Fellow](https://economics.uq.edu.au/profile/6228/kai-du) 
 
 **E-mail:** Mail@Imkaidu.net
 
+<font size="+1"> <b> Working Paper </b> </font>
+
+Wang, Y., Du, K. and O’Connor, A. (2018). Diversity in Entrepreneurship: Why it Matters for Public Policy, Trade Dynamics and Economic Growth. (Corresponding author)
+
+Du K. And Mahadevan, R. (2020) Promoting Green Growth: Empirical Evidence and Lessons Using Dynamic Two-Stage Data Envelopment Analysis. (Corresponding author)
+
 <font size="+1"> <b> Publication </b> </font>
 
 Du, K. and O’Connor, A. (2019). Examining Economic Complexity as a Holistic Innovation System Effect, Small Business Economics, DOI: 10.1007/s11187-019-00215-z. (Corresponding author, ABDC A)
@@ -22,10 +28,6 @@ Du, K. (2016). Did Efficiency of Chinese Commercial Banks Increase after WTO Acc
 Du, K. and Sim, N. (2016). Emerging Countries, Mergers and Acquisitions, Bank Efficiency, Research in International Business and Finance, 36: 499 – 510. (ABDC B)
 
 O’Connor, A., Du, K. and Roos, G. (2015). The Intellectual Capital Needs of A Transitioning Economy, Journal of Intellectual Capital, 16(3): 466 – 489. (Corresponding author, ABDC B)
-
-<font size="+1"> <b> Working Paper </b> </font>
-
-Wang, Y., Du, K. and O’Connor, A. (2018). Knowledge Spill-Over Entrepreneurship, Trade Dynamics and Economic Growth: Cross Country Evidence. (Corresponding author)
 
 <font size="+1"> <b> Teaching </b> </font>
 
