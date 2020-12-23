@@ -5,11 +5,11 @@ title: Welcome
 
 I am a [UQ Development Fellow](https://economics.uq.edu.au/profile/6228/kai-du) at the [School of Economics](https://economics.uq.edu.au) (of [the University of Queensland](https://www.uq.edu.au/)). 
 
-**Add.** Level 6, Colin Clark Bld (#39), School of Economics, University of Queensland, QLD (4072), Australia
+**Add.** Level 6, Colin Clark Bld (#39), School of Economics, University of Queensland, QLD (4072)
 
 **E-mail:** Mail@Imkaidu.net
 
-I am very passionate about delivering excellent research and impactful outcomes by acquiring valuable knowledge of how firms (or economies) work and apply this knowledge to make our world better. My research focus is data envelopment analysis and stochastic frontier analysis. I have developed a unique ability to research in the field of productivity and efficiency analysis, as well as its adoption to deal with the pressing social and economic problems.
+I am very passionate about delivering excellent research and impactful outcomes by acquiring valuable knowledge of how firms (or economies) work and apply this knowledge to make our community better. My research focus is data envelopment analysis and stochastic frontier analysis. I have developed a unique ability to research in the field of productivity and efficiency analysis, as well as its adoption to deal with the pressing social and economic problems.
 
 <font size="+1"> <b> Publication </b> </font>
 
