@@ -17,11 +17,11 @@ Du K. And Mahadevan, R. (2020) Promoting Green Growth: Empirical Evidence and Le
 
 <font size="+1"> <b> Journal Articles </b> </font>
 
-Du, K. and O’Connor, A. (2019). Examining Economic Complexity as a Holistic Innovation System Effect, *Small Business Economics*, DOI: 10.1007/s11187-019-00215-z. (Corresponding author, ABDC A)
+Du, K. and O’Connor, A. (2019). Examining Economic Complexity as a Holistic Innovation System Effect, *Small Business Economics*, DOI: [10.1007/s11187-019-00215-z](https://link.springer.com/article/10.1007/s11187-019-00215-z). (Corresponding author, ABDC A)
 
-Du, K., Worthington, A.C. and Zelenyuk, V. (2018). DEA with Truncated Regression and Double-Bootstrap for Panel Data with Application to Chinese Banking, *European Journal of Operational Research*, 265: 748 – 64. (Corresponding author, ABDC A*)
+Du, K., Worthington, A.C. and Zelenyuk, V. (2018). DEA with Truncated Regression and Double-Bootstrap for Panel Data with Application to Chinese Banking, *European Journal of Operational Research*, 265: 748 – 64, DOI: [10.1016/j.ejor.2017.08.005](https://doi.org/10.1016/j.ejor.2017.08.005) (Corresponding author, ABDC A*)
 
-Du, K. and O’Connor, A. (2018). Entrepreneurship and Advancing National Level Economic Efficiency, *Small Business Economics*, 50: 91 – 111. (Corresponding author, ABDC A)
+Du, K. and O’Connor, A. (2018). Entrepreneurship and Advancing National Level Economic Efficiency, *Small Business Economics*, 50: 91 – 111, DOI: [10.1007/s11187-017-9904-4](https://doi.org/10.1007/s11187-017-9904-4) (Corresponding author, ABDC A)
 
 Du, K. and Sim, N. (2016). Emerging Countries, Mergers and Acquisitions, Bank Efficiency, *Research in International Business and Finance*, 36: 499 – 510. (ABDC B)
 
