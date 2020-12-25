@@ -19,13 +19,13 @@ Du K. And Mahadevan, R. (2020) Promoting Green Growth: Empirical Evidence and Le
 
 Du, K. and O’Connor, A. (2019). Examining Economic Complexity as a Holistic Innovation System Effect, *Small Business Economics*, DOI: [10.1007/s11187-019-00215-z](https://link.springer.com/article/10.1007/s11187-019-00215-z). (Corresponding author, ABDC A)
 
-Du, K., Worthington, A.C. and Zelenyuk, V. (2018). DEA with Truncated Regression and Double-Bootstrap for Panel Data with Application to Chinese Banking, *European Journal of Operational Research*, 265: 748 – 64, DOI: [10.1016/j.ejor.2017.08.005](https://doi.org/10.1016/j.ejor.2017.08.005) (Corresponding author, ABDC A*)
+Du, K., Worthington, A.C. and Zelenyuk, V. (2018). Data envelopment analysis, truncated regression and double-bootstrap for panel data with application to Chinese banking, *European Journal of Operational Research*, 265: 748 – 64, DOI: [10.1016/j.ejor.2017.08.005](https://doi.org/10.1016/j.ejor.2017.08.005) (Corresponding author, ABDC A*)
 
 Du, K. and O’Connor, A. (2018). Entrepreneurship and Advancing National Level Economic Efficiency, *Small Business Economics*, 50: 91 – 111, DOI: [10.1007/s11187-017-9904-4](https://doi.org/10.1007/s11187-017-9904-4) (Corresponding author, ABDC A)
 
-Du, K. and Sim, N. (2016). Emerging Countries, Mergers and Acquisitions, Bank Efficiency, *Research in International Business and Finance*, 36: 499 – 510. (ABDC B)
+Du, K. and Sim, N. (2016). Emerging Countries, Mergers and Acquisitions, Bank Efficiency, *Research in International Business and Finance*, 36: 499 – 510, DOI:[10.1016/j.ribaf.2015.10.005](https://doi.org/10.1016/j.ribaf.2015.10.005) (ABDC B)
 
-O’Connor, A., Du, K. and Roos, G. (2015). The Intellectual Capital Needs of A Transitioning Economy, *Journal of Intellectual Capital*, 16(3): 466 – 489. (Corresponding author, ABDC B)
+O’Connor, A., Du, K. and Roos, G. (2015). The Intellectual Capital Needs of A Transitioning Economy, *Journal of Intellectual Capital*, 16(3): 466 – 489, DOI:[10.1108/JIC-08-2014-0097](https://doi.org/10.1108/JIC-08-2014-0097) (Corresponding author, ABDC B)
 
 <font size="+1"> <b> Book Chapter </b> </font>
 
