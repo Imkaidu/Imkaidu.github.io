@@ -8,6 +8,7 @@ date: 21/12/2020
 
 However, there are some options to use it (e.g. *parfeval*, *parfor* and even *spmd*), such as
 
+
 n = 100;
 parfor (or parfeval) i = 1:n
    output(i)=Function(input(i)) 
