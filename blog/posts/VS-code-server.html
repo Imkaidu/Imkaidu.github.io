@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="Kai Du" />
+  <title>Setting up Visual Studio Code Server</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+  </style>
+  <link rel="stylesheet" href="/css/custom.css" />
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<header>
+  <div id="nav">
+    <h3 class="gray">Kai Du</h3>
+      <div class="nav-buttons">
+        <a href="/index.html">Home</a>
+        <a href="/blog/blog.html">Blog</a>
+        <a href="https://github.com/ImKaiDu">GitHub</a>  
+      </div>
+  </div>
+</header>
+<header id="title-block-header">
+<h1 class="title">Setting up Visual Studio Code Server</h1>
+<p class="author">Kai Du</p>
+<p class="date">21/12/2020</p>
+</header>
+<blockquote>
+<p>This blog will explain how to set up a visual studio code server in an AWS instance (Ubuntu 18.04). The steps mentioned here are basically the commands I executed in my instance (launched using ami-0dba2cb6798deb6d8 64-bit x86) with security group rules allowing port 22,80 and 443 for all.</p>
+</blockquote>
+<p><strong>Step1:</strong> sudo apt update <strong>Step2:</strong> wget https://github.com/cdr/code-server/releases/download/3.4.1/code-server-3.4.1-linux-x86_64.tar.gz <strong>Step3:</strong> tar xvzf code-server-3.4.1-linux-x86_64.tar.gz <strong>Step4:</strong> sudo mkdir -p ~/.config/code-server <strong>Step5:</strong> sudo nano ~/.config/code-server/config.yaml - - -&gt;sudo cat ~/.config/code-server/config.yaml</p>
+<p>Output: ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ bind-addr: 127.0.0.1:8080 auth: password<br />
+password: Test1234<br />
+cert: false ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</p>
+<p><strong>Step6:</strong> cd ~/code-server-3.4.1-linux-x86_64/bin <strong>Step7:</strong> ./code-server</p>
+<p>Output:~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ info Using config file ~/.config/code-server/config.yaml info Using user-data-dir ~/.local/share/code-server info code-server 3.4.1 48f7c2724827e526eeaa6c2c151c520f48a61259 info HTTP server listening on http://127.0.0.1:8080 info - Using password from ~/.config/code-server/config.yaml info - To disable use <code>--auth none</code> info - Not serving HTTPS ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ [Ctrl+C to stope this service]</p>
+<p><strong>Step8:</strong> sudo nano /lib/systemd/system/code-server.service - - -&gt; sudo cat /lib/systemd/system/code-server.service</p>
+<p>Output:~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ [Unit] Description=code-server After=nginx.service</p>
+<p>[Service] Type=simple Environment=PASSWORD=Test1234 ExecStart=/home/ubuntu/code-server-3.4.1-linux-x86_64/bin/code-server –bind-addr 127.0.0.1:8080 –user-data-dir /var/lib/code-server –auth password Restart=always</p>
+<p>[Install] WantedBy=multi-user.target ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</p>
+<p><strong>Step9:</strong> sudo mkdir /var/lib/code-server <strong>Step10:</strong> sudo systemctl daemon-reload <strong>Step11:</strong> sudo systemctl start code-server <strong>Step12:</strong> sudo systemctl enable code-server</p>
+<p>Output:~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Created symlink /etc/systemd/system/multi-user.target.wants/code-server.service → /lib/systemd/system/code-server.service. ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</p>
+<p><strong>Step13:</strong> sudo systemctl status code-server</p>
+<p>Output:~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ● code-server.service - code-server Loaded: loaded (/lib/systemd/system/code-server.service; enabled; vendor preset: enabled) Active: active (running) since Wed 2020-10-07 03:06:01 UTC; 22s ago Main PID: 2209 (node) Tasks: 22 (limit: 1164) Memory: 23.8M CGroup: /system.slice/code-server.service ├─2209 /home/ubuntu/code-server-3.4.1-linux-x86_64/lib/node /home/ubuntu/code-server-3.4.1-linux-x86_64 –bind-addr 127.0.0.1:8080 –user-data-d&gt; └─2237 /home/ubuntu/code-server-3.4.1-linux-x86_64/lib/node /home/ubuntu/code-server-3.4.1-linux-x86_64 –bind-addr 127.0.0.1:8080 –user-data-d&gt;</p>
+<p>Oct 07 03:06:01 ip-172-31-18-5 systemd[1]: Started code-server. Oct 07 03:06:01 ip-172-31-18-5 code-server[2209]: info Wrote default config file to ~/.config/code-server/config.yaml Oct 07 03:06:01 ip-172-31-18-5 code-server[2209]: info Using config file ~/.config/code-server/config.yaml Oct 07 03:06:01 ip-172-31-18-5 code-server[2237]: info Using user-data-dir /var/lib/code-server Oct 07 03:06:01 ip-172-31-18-5 code-server[2237]: info code-server 3.4.1 48f7c2724827e526eeaa6c2c151c520f48a61259 Oct 07 03:06:01 ip-172-31-18-5 code-server[2237]: info HTTP server listening on http://127.0.0.1:8080 Oct 07 03:06:01 ip-172-31-18-5 code-server[2237]: info - Using password from $PASSWORD Oct 07 03:06:01 ip-172-31-18-5 code-server[2237]: info - To disable use <code>--auth none</code> Oct 07 03:06:01 ip-172-31-18-5 code-server[2237]: info - Not serving HTTPS ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</p>
+<p><strong>Step14:</strong> sudo apt install nginx -y <strong>Step15:</strong> sudo nano /etc/nginx/sites-available/code-server.conf - - - -&gt;sudo cat /etc/nginx/sites-available/code-server.conf</p>
+<p>Output:~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ server { listen 80; listen [::]:80; server_name 54.XXX.XX.253; location / { proxy_pass http://localhost:8080/; proxy_set_header Host $host; proxy_set_header Upgrade $http_upgrade; proxy_set_header Connection upgrade; proxy_set_header Accept-Encoding gzip; } } ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ [ <em>NOTE:</em> Remember to change “54.XXX.XX.253” to the public IP of your instance ]</p>
+<p><strong>Step16:</strong> cd /etc/nginx/sites-available/ <strong>Step17:</strong> (OPTIONAL) sudo mv default BackUp_default <strong>Step18:</strong> sudo rm /etc/nginx/sites-enabled/default <strong>Step19:</strong> sudo ln -s /etc/nginx/sites-available/code-server.conf /etc/nginx/sites-enabled/code-server.conf <strong>Step20:</strong> sudo systemctl start nginx <strong>Step21:</strong> sudo systemctl enable nginx</p>
+<p>Output:~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Synchronizing state of nginx.service with SysV service script with /lib/systemd/systemd-sysv-install. Executing: /lib/systemd/systemd-sysv-install enable nginx ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</p>
+<p><strong>Step22:</strong> sudo systemctl status nginx</p>
+<p>Output:~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ● nginx.service - A high performance web server and a reverse proxy server Loaded: loaded (/lib/systemd/system/nginx.service; enabled; vendor preset: enabled) Active: active (running) since Wed 2020-10-07 03:06:47 UTC; 3min 12s ago Docs: man:nginx(8) Main PID: 2696 (nginx) Tasks: 2 (limit: 1164) Memory: 6.6M CGroup: /system.slice/nginx.service ├─2696 nginx: master process /usr/sbin/nginx -g daemon on; master_process on; └─2697 nginx: worker process</p>
+<p>Oct 07 03:06:46 ip-172-31-18-5 systemd[1]: Starting A high performance web server and a reverse proxy server… Oct 07 03:06:47 ip-172-31-18-5 systemd[1]: Started A high performance web server and a reverse proxy server. ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</p>
+<p><strong>Step23:</strong> sudo systemctl daemon-reload <strong>Step24:</strong> Refresh both the services by starting and stopping them. You can follow the below commands in order:- sudo systemctl stop nginx sudo systemctl stop code-server sudo systemctl daemon-reload sudo systemctl start code-server sudo systemctl start nginx sudo systemctl enable code-server sudo systemctl enable nginx sudo systemctl status nginx &lt;=== To check if nginx is running sudo systemctl status code-server &lt;=== To check if the code-server is active</p>
+<p><strong>Step25:</strong> Open browser and try accessing the Public IP of the instance</p>
+<p><em>Then</em>, the VS code server should work now.</p>
+<script>
+  function pdf() {
+    if (window.location.href.indexOf(".html") > -1) {
+      window.location.href = window.location.href.replace(".html", ".pdf");
+    } else {
+      window.location.href = window.location.href.concat("index.pdf")
+    }
+  }
+</script>
+<button onclick="pdf()">View as PDF</button>
+<small>2020 Kai Du. This site is built with <a href="https://pandoc.org/">Pandoc</a> and <a href="https://pages.github.com/">GitHub Pages</a>.</small>
+</body>
+</html>

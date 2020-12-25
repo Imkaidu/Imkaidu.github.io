@@ -29,8 +29,6 @@ O’Connor, A., Du, K. and Roos, G. (2015). The Intellectual Capital Needs of A 
 
 *Note*: [Ranking of Australian Business Deans Council](https://abdc.edu.au/research/abdc-journal-list/) (ABDC) is a ranking of journal quality (2013 version) , in which A* means an academic journal in the top 6.9% (A: top 20.8% and B: top 28.4%) of 2,767 journals.
 
-
-
 <font size="+1"> <b> Book Chapter </b> </font>
 
 Du, K. (2016). Did Efficiency of Chinese Commercial Banks Increase after WTO Accession? Bias Corrected Analysis from 2000 to 2009, Chapter 6 in Andressen, C.A. (ed.) China’s Changing Economy: Trends, Impacts and the Future, Routledge.
