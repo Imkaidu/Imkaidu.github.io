@@ -27,6 +27,10 @@ Du, K. and Sim, N. (2016). Emerging Countries, Mergers and Acquisitions, Bank Ef
 
 O’Connor, A., Du, K. and Roos, G. (2015). The Intellectual Capital Needs of A Transitioning Economy, *Journal of Intellectual Capital*, 16(3): 466 – 489, DOI:[10.1108/JIC-08-2014-0097](https://doi.org/10.1108/JIC-08-2014-0097) (Corresponding author, ABDC B)
 
+*Note*: [Ranking of Australian Business Deans Council](https://abdc.edu.au/research/abdc-journal-list/) (ABDC) is a ranking of journal quality (2013 version) , in which A* means an academic journal in the top 6.9% (A: top 20.8% and B: top 28.4%) of 2,767 journals.
+
+
+
 <font size="+1"> <b> Book Chapter </b> </font>
 
 Du, K. (2016). Did Efficiency of Chinese Commercial Banks Increase after WTO Accession? Bias Corrected Analysis from 2000 to 2009, Chapter 6 in Andressen, C.A. (ed.) China’s Changing Economy: Trends, Impacts and the Future, Routledge.
