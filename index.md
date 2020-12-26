@@ -67,6 +67,8 @@ Du, K. (2016). Did Efficiency of Chinese Commercial Banks Increase after WTO Acc
 
 [Materials](docs/matlab_code/matlab_code.html)
 
+[MaterialsII](docs/ECON7310/Materials.html)
+
 [//]: <[Teaching](docs/test_Teaching.html)>
 
 [//]: <[Research](docs/test_Research.html)>
