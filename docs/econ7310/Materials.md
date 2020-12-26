@@ -1,8 +1,8 @@
 ---
-title: "MATLAB Code"
+title: "Teaching Materials"
 ---
 
-On this page you will find a number of different MATLAB programs.
+On this page you will find the teaching materials.
 
 ![Picture of a dog.](Picture_1.jpg)
 
