@@ -2,7 +2,7 @@
 title: "Teaching Materials"
 ---
 
-On this page you will find the teaching materials.
+On this page you will find the teaching materials:
 
 ![Picture of a dog.](Picture_1.jpg)
 
