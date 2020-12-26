@@ -6,7 +6,7 @@ On this page you will find a number of different MATLAB programs.
 
 ![Picture of a dark hole](dark_hole.jpg =100x)
 
-<img src = "dark_hole.jpg" width="300" align=right>
+<img src = "dark_hole.jpg" width="300">
 
 Week 1
 - [Download `test.m`](test.m)
