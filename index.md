@@ -63,11 +63,11 @@ Du, K. (2016). Did Efficiency of Chinese Commercial Banks Increase after WTO Acc
 
 *European Journal of Operational Research*; *Journal of Productivity Analysis*; *Annals of Operations Research*; *Pacific-Basin Finance Journal*; *Economic Modelling*; *International Review of Economics & Finance* and *Emerging Markets Finance and Trade*
 
-[Teaching](docs/test_Teaching.html)
+[//]: <[Teaching](docs/test_Teaching.html)>
 
-[Materials](docs/matlab_code/matlab_code.html)
+[//]: <[Materials](docs/matlab_code/matlab_code.html)>
 
-[MaterialsII](docs/econ_7310_2020/materialist.html)
+[//]: <[MaterialsII](docs/econ_7310_2020/materialist.html)>
 
 [//]: <[Teaching](docs/test_Teaching.html)>
 
