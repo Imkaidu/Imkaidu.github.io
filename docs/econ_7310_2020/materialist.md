@@ -4,6 +4,7 @@ title: "Teaching Materials"
 
 <img src = "dark_hole.jpg" width="600" align="right">
 
+
 On this page you will find the slides used in the previous semesters:
 
 **Week 1**
