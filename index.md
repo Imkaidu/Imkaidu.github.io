@@ -37,11 +37,11 @@ Du K. And Mahadevan, R. (2020) Promoting Green Growth: Empirical Evidence and Le
 
 <font size="+1"> <b> Book Chapter </b> </font>
 
-Du, K. (2016). Did Efficiency of Chinese Commercial Banks Increase after WTO Accession? Bias Corrected Analysis from 2000 to 2009, Chapter 6 in Andressen, C.A. (ed.) China’s Changing Economy: Trends, Impacts and the Future, Routledge.
+Du, K. (2016). Did Efficiency of Chinese Commercial Banks Increase after WTO Accession? Bias Corrected Analysis from 2000 to 2009, Chapter 6 in Andressen, C.A. (ed.) [China’s Changing Economy: Trends, Impacts and the Future](https://www.routledge.com/Chinas-Changing-Economy-Trends-Impacts-and-the-Future/Andressen/p/book/9780367026721), Routledge.
 
 <font size="+1"> <b> Recent Teaching </b> </font>
 
-[ECON7310](https://course-profiles.uq.edu.au/student_section_loader/section_1/103617?_ga=2.228176029.1899490403.1608693058-1611039615.1607827389) *Elements of Econometrics*, Lecturer and course coordinator (2020 Semester 1, 220 postgraduates, [MATLAB Code](docs/matlab_code/matlab_code.html))
+[ECON7310](https://course-profiles.uq.edu.au/student_section_loader/section_1/103617?_ga=2.228176029.1899490403.1608693058-1611039615.1607827389) *Elements of Econometrics*, Lecturer and course coordinator (2020 Semester 1, 220 postgraduates, [Teaching Materials](docs/ECON7310/Semester_1_2020.html))
 
 [ECON7310](https://course-profiles.uq.edu.au/student_section_loader/section_1/103617?_ga=2.228176029.1899490403.1608693058-1611039615.1607827389) *Elements of Econometrics*, Lecturer and course coordinator (2021 Semester 1, N.A. postgraduates)
 
