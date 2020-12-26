@@ -4,7 +4,7 @@ title: "MATLAB Code"
 
 On this page you will find a number of different MATLAB programs.
 
-![Picture of a dog.](dark_hole.jpg)
+![Picture of a dark hole](dark_hole.jpg=100x)
 
 Week 1
 - [Download `test.m`](test.m)
