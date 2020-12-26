@@ -8,37 +8,37 @@ title: "Teaching Materials"
 On this page you will find the slides used in the previous semesters:
 
 **Week 1**
-- [Download `test.m`](test.m)
+[\\] <- [Download `test.m`](test.m)>
 
 **Week 2**
-- [Download `test.m`](test.m)
+- [Download slides](Lecture2SLR_1.pdf)
 
 **Week 3**
-- [Download `test.m`](test.m)
+- [Download slides](Lecture3SLR_2.pdf)
 
 **Week 4**
-- [Download `test.m`](test.m)
+- [Download slides](Lecture4MLR_1.pdf)
 
 **Week 5**
-- [Download `test.m`](test.m)
+- [Download slides](Lecture5MLR_2.pdf)
 
 **Week 6**
-- [Download `test.m`](test.m)
+- [Download slides](Lecture6NonLinear.pdf)
 
 **Week 7**
-- [Download `test.m`](test.m)
+- [Download slides](Lecture7Validity.pdf)
 
 **Week 8**
-- [Download `test.m`](test.m)
+- [Download slides](Lecture8Panel.pdf)
 
 **Week 9**
-- [Download `test.m`](test.m)
+- [Download slides](Lecture9Binary.pdf)
 
 **Week 10**
-- [Download `test.m`](test.m)
+- [Download slides](Lecture10IV.pdf)
 
 **Week 11**
-- [Download `test.m`](test.m)
+- [Download slides](Lecture11TimeSeries.pdf)
 
 **Week 12**
-- [Download `test.m`](test.m)
+- [Download slides](Lecture12BigData.pdf)
