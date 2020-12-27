@@ -43,7 +43,7 @@ Du, K. (2016). Did Efficiency of Chinese Commercial Banks Increase after WTO Acc
 
 [ECON7310](https://course-profiles.uq.edu.au/student_section_loader/section_1/103617?_ga=2.228176029.1899490403.1608693058-1611039615.1607827389) *Elements of Econometrics*, Lecturer and course coordinator (2020 Semester 1, 220 postgraduates)
 
-[ECON7310](https://course-profiles.uq.edu.au/student_section_loader/section_1/103617?_ga=2.228176029.1899490403.1608693058-1611039615.1607827389) *Elements of Econometrics*, Lecturer and course coordinator (2021 Semester 1, N.A. postgraduates, [Teaching Materials Draft](docs/econ_7310_2020/materialist.html))
+[ECON7310](https://course-profiles.uq.edu.au/student_section_loader/section_1/103617?_ga=2.228176029.1899490403.1608693058-1611039615.1607827389) *Elements of Econometrics*, Lecturer and course coordinator (2021 Semester 1, N.A. postgraduates) [Teaching Materials Draft](docs/econ_7310_2020/materialist.html)
 
 <font size="+1"> <b> Grant and Awards </b> </font>
 
