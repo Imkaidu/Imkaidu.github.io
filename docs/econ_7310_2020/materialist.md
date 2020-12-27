@@ -7,7 +7,7 @@ title: "Teaching Materials"
 On this page you will find the slides used in the previous semesters:
 
 **Week 1**
-[\\]: < - [Download `test.m`](test.m)>
+[//]: < - [Download `test.m`](test.m)>
 
 **Week 2**
 - [Download slides](Lecture2SLR_1.pdf)
