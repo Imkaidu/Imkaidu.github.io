@@ -4,11 +4,9 @@ title: Welcome
 ---
 
 <div style="text-align: justify"> 
+I am a [UQ Development Fellow](https://economics.uq.edu.au/profile/6228/kai-du) at the [School of Economics](https://economics.uq.edu.au) (of the [University of Queensland](https://www.uq.edu.au/)). I am very passionate about delivering excellent research and impactful outcomes by acquiring valuable knowledge of how firms (or economies) work and apply this knowledge to make our community better. 
 
-I am a [UQ Development Fellow](https://economics.uq.edu.au/profile/6228/kai-du) at the [School of Economics](https://economics.uq.edu.au) (of the [University of Queensland](https://www.uq.edu.au/)). I am very passionate about delivering excellent research and impactful outcomes by acquiring valuable knowledge of how firms (or economies) work and apply this knowledge to make our community better. My research focus is data envelopment analysis and stochastic frontier analysis. 
-
-I obtained my PhD in Economics from the [University of Adelaide](https://economics.adelaide.edu.au) in 2014 and have developed a unique ability to research in the field of productivity and efficiency analysis, as well as its adoption to deal with the pressing social and economic problems. My CV is available on request and you might find more information on my research via my [Google Scholar profile](https://scholar.google.com.au/citations?user=Z0H3AvQAAAAJ&hl=en).
-
+I obtained my PhD in Economics from the [University of Adelaide](https://economics.adelaide.edu.au) in 2014 and my research focus is data envelopment analysis and stochastic frontier analysis. I have developed a unique ability to research in the field of productivity and efficiency analysis, as well as its adoption to deal with the pressing social and economic problems. My CV is available on request and you might find more information on my research via my [Google Scholar profile](https://scholar.google.com.au/citations?user=Z0H3AvQAAAAJ&hl=en).
 </div>
 
 **E-mail:** Mail@Imkaidu.net
