@@ -19,7 +19,7 @@ I obtained my PhD in Economics from the [University of Adelaide](https://economi
 
 Wang, Y., Du, K. and O’Connor, A. (2018). Diversity in Entrepreneurship: Why it Matters for Public Policy, Trade Dynamics and Economic Growth. (Corresponding author)
 
-Du K. And Mahadevan, R. (2020) Promoting Green Growth: Empirical Evidence and Lessons Using Dynamic Two-Stage Data Envelopment Analysis. (Corresponding author)
+Du K. And Mahadevan, R. (2020). Promoting Green Growth: Empirical Evidence and Lessons Using Dynamic Two-Stage Data Envelopment Analysis. (Corresponding author)
 
 <font size="+1"> <b> Journal Articles </b> </font>
 
@@ -43,7 +43,7 @@ Du, K. (2016). Did Efficiency of Chinese Commercial Banks Increase after WTO Acc
 
 [ECON7310](https://course-profiles.uq.edu.au/student_section_loader/section_1/103617?_ga=2.228176029.1899490403.1608693058-1611039615.1607827389) *Elements of Econometrics*, Lecturer and course coordinator (2020 Semester 1, 220 postgraduates)
 
-[ECON7310](https://course-profiles.uq.edu.au/student_section_loader/section_1/103617?_ga=2.228176029.1899490403.1608693058-1611039615.1607827389) *Elements of Econometrics*, Lecturer and course coordinator (2021 Semester 1, N.A. postgraduates, [Teaching Materials](docs/econ_7310_2020/materialist.html))
+[ECON7310](https://course-profiles.uq.edu.au/student_section_loader/section_1/103617?_ga=2.228176029.1899490403.1608693058-1611039615.1607827389) *Elements of Econometrics*, Lecturer and course coordinator (2021 Semester 1, N.A. postgraduates, [Teaching Materials Draft](docs/econ_7310_2020/materialist.html))
 
 <font size="+1"> <b> Grant and Awards </b> </font>
 
@@ -61,7 +61,7 @@ Du, K. (2016). Did Efficiency of Chinese Commercial Banks Increase after WTO Acc
 
 <font size="+1"> <b> Referee Service </b> </font>
 
-*European Journal of Operational Research*; *Journal of Productivity Analysis*; *Annals of Operations Research*; *Pacific-Basin Finance Journal*; *Economic Modelling*; *International Review of Economics & Finance* and *Emerging Markets Finance and Trade*
+*European Journal of Operational Research*; *Journal of Productivity Analysis*; *Annals of Operations Research*; *Pacific-Basin Finance Journal*; *Economic Modelling*; *International Review of Economics & Finance* as well as  *Emerging Markets Finance and Trade*
 
 [//]: <[Teaching](docs/test_Teaching.html)>
 
