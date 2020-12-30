@@ -6,10 +6,10 @@ title: "Teaching Materials"
 
 On this page you will find the slides used in the previous semesters:
 
-- [A mind map of ECON7310](https://padletuq.padlet.org/David/vbx00vez1iu9ayjn)
+[A mind map of ECON7310](https://padletuq.padlet.org/David/vbx00vez1iu9ayjn)
 
 **Week 1**
-- Not Available
+- Introduction and Housekeeping
 
 [//]: < - [Download `test.m`](test.m) >
 
