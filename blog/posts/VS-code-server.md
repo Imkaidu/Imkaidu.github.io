@@ -4,7 +4,7 @@ author: Kai Du
 date: 10/12/2020
 ---
 
-![Structure](figures/structure.jpg){width=25%}
+![Structure](figures/structure.jpg){width=60%}
 
 > This blog will explain how to set up a visual studio code server in an AWS instance (Ubuntu 18.04). The steps mentioned here are basically the commands I executed in my instance (launched using ami-0dba2cb6798deb6d8 64-bit x86) with security group rules allowing port 22,80 and 443 for all.
 
