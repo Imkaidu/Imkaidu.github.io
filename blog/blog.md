@@ -1,9 +1,8 @@
 ---
-title: My blog
+title: My Blog
 ---
 
 Here are my blog posts. (There aren't many yet.)
-
 
 - `10/12/2020` [Setting up Visual Studio Code Server](posts/VS-code-server.html)
 

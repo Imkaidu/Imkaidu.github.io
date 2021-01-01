@@ -1,5 +1,5 @@
 ---
-title: "Setting up Visual Studio Code Server "
+title: "Setting up Visual Studio Code Server"
 author: Kai Du
 date: 10/12/2020
 ---
