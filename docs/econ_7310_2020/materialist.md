@@ -2,7 +2,7 @@
 title: "Teaching Materials"
 ---
 
-<img src = "steam_power.png" width="600" align="right">
+<img src = "steam_power.jpg" width="600" align="right">
 
 On this page you will find the slides used in the previous semesters:
 
