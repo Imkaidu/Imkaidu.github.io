@@ -4,6 +4,8 @@ author: Kai Du
 date: 21/12/2020
 ---
 
+![Structure](figures/structure1.jpg){width=100%}
+
 > Parallel computing toolbox enables researchers to harness a multicore computer, GPU, cluster and even cloud to solve computationally and data-intensive problems.
 
 However, there are some options to use it (e.g. *parfeval*, *parfor* and even *spmd*), such as
