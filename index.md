@@ -11,7 +11,7 @@ I obtained my [PhD in Economics](https://economics.adelaide.edu.au) from the Uni
 
 **ORCID iD:** [0000-0003-4109-4835](https://orcid.org/0000-0003-4109-4835)
 
-**E-mail:** Mail@Imkaidu.net
+**E-mail:** mail@imkaidu.net
 
 **Add.** Level 6, Colin Clark Bld (#39), School of Economics, University of Queensland, QLD (4072)
 
