@@ -4,7 +4,7 @@ author: Kai Du
 date: 21/12/2020
 ---
 
-![Structure](figures/structure1.jpg){width=100%}
+![](figures/structure1.jpg){width=100%}
 
 > Parallel computing toolbox enables researchers to harness a multicore computer, GPU, cluster and even cloud to solve computationally and data-intensive problems.
 
