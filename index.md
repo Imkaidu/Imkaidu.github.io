@@ -4,9 +4,9 @@ title: Welcome
 ---
 
 <div style="text-align: justify"> 
-I am a [UQ Development Fellow](https://economics.uq.edu.au/profile/6228/kai-du) at the [School of Economics](https://economics.uq.edu.au) (of the [University of Queensland](https://www.uq.edu.au/)) and very passionate about delivering excellent research and impactful outcomes by acquiring valuable knowledge of how firms (or economies) work and apply this knowledge to make our community better. 
+I am a [UQ Development Fellow](https://economics.uq.edu.au/profile/6228/kai-du) at the [School of Economics](https://economics.uq.edu.au) (of the [University of Queensland](https://www.uq.edu.au/)) and very passionate about delivering excellent research and impactful outcomes by acquiring valuable knowledge of how firms (or economies) work and applying this knowledge to make our community better. 
 
-I obtained my [PhD in Economics](https://economics.adelaide.edu.au) from the University of Adelaide in 2014 and my research focus is data envelopment analysis and stochastic frontier analysis. I have developed a unique ability to research in the field of productivity and efficiency analysis, as well as its adoption to deal with the pressing social and economic problems. My CV is available on request and you might find more information on my research via my [Google Scholar profile](https://scholar.google.com.au/citations?user=Z0H3AvQAAAAJ&hl=en) and [Scopus profile](https://www.scopus.com/authid/detail.uri?authorId=56697897900).
+I obtained my [PhD in Economics](https://economics.adelaide.edu.au) from the University of Adelaide in 2014 and my research focus is data envelopment analysis and stochastic frontier analysis. I have developed a unique ability to research in the field of productivity and efficiency analysis, as well as its adoption to deal with the pressing social and economic problems, such as efficiency of healthcare system and sustainable economic growth. My CV is available on request and you might find more information on my research via my [Google Scholar profile](https://scholar.google.com.au/citations?user=Z0H3AvQAAAAJ&hl=en) and [Scopus profile](https://www.scopus.com/authid/detail.uri?authorId=56697897900).
 </div>
 
 **ORCID iD:** [0000-0003-4109-4835](https://orcid.org/0000-0003-4109-4835)
@@ -41,9 +41,11 @@ Du, K. (2016). Did Efficiency of Chinese Commercial Banks Increase after WTO Acc
 
 <font size="+1"> <b> Recent Teaching </b> </font>
 
-[ECON7310](https://course-profiles.uq.edu.au/student_section_loader/section_1/103617?_ga=2.228176029.1899490403.1608693058-1611039615.1607827389) *Elements of Econometrics*, Lecturer and course coordinator (2020 Semester 1, 220 postgraduates)
+I teach introductory econometrics to postgraduate students (from 2020), and this is the link of my [teaching philosophy](docs/Teaching_Philosophy.html). 
 
 [ECON7310](https://course-profiles.uq.edu.au/student_section_loader/section_1/103617?_ga=2.228176029.1899490403.1608693058-1611039615.1607827389) *Elements of Econometrics*, Lecturer and course coordinator (2021 Semester 1, N.A. postgraduates) [Lesson Plan (Draft)](docs/econ_7310_2020/materialist.html)
+
+[ECON7310](https://course-profiles.uq.edu.au/student_section_loader/section_1/103617?_ga=2.228176029.1899490403.1608693058-1611039615.1607827389) *Elements of Econometrics*, Lecturer and course coordinator (2020 Semester 1, 220 postgraduates) 
 
 <font size="+1"> <b> Grant and Awards </b> </font>
 
