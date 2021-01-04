@@ -3,6 +3,8 @@
 title: "Teaching Philosophy"
 ---
 
+![](machine.jpg){width=100%}
+
 <div style="text-align: justify"> 
 I started teaching in 2013 when I was a PhD candidate at the University of Adelaide (UOA), as a tutor and tutor coordinator for the course of *Intermediate Econometrics*. My training and most of my teaching practice have been related to microeconomics and micro-econometrics (K1). I have delivered ‘core’ courses for students in the field of economics and business, such as Quantitative Methods (CORPFIN7033) for the UOA Business School (288 undergraduate/postgraduate students) and Elements of Econometrics (ECON7310) for the UQ School of Economics (230 postgraduate students). I have also delivered elective courses of these programs, such as Wealth Management in China for the UOA Business School (50 postgraduate students) and China: Emergence, Implications & Challenges (235 undergraduate students) for the UQ School of Economics. Moreover, I delivered an industry-focused workshop in 2014 (two hours and around 200 attendants) for the Small and Medium Enterprises Bureau in Tianjin, China.
 
