@@ -41,7 +41,7 @@ Du, K. (2016). Did Efficiency of Chinese Commercial Banks Increase after WTO Acc
 
 <font size="+1"> <b> Recent Teaching </b> </font>
 
-I teach introductory econometrics to postgraduate students (from 2020). This is the link of my [teaching philosophy](docs/Teaching_Philosophy.html) and the course profiles.
+I introduce students (with basic economic statistics) to how empirical researchers think about and apply [econometric methods](https://www.amazon.com.au/Introduction-Econometrics-Global-James-Stock/dp/1292264454/ref=asc_df_1292264454/?tag=googleshopdsk-22&linkCode=df0&hvadid=361164490305&hvpos=&hvnetw=g&hvrand=8780685880543615614&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9069264&hvtargid=pla-738083680938&psc=1) with the practical approach (from 2020). This is the link of my [teaching philosophy](docs/Teaching_Philosophy.html) and the course profiles.
 
 [ECON7310](https://course-profiles.uq.edu.au/student_section_loader/section_1/103617?_ga=2.228176029.1899490403.1608693058-1611039615.1607827389) *Elements of Econometrics*, Lecturer and course coordinator (2021 Semester 1, N.A. postgraduates) [Lesson Plan (Draft)](docs/econ_7310_2020/materialist.html)
 
