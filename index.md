@@ -9,7 +9,12 @@ I am a [UQ Development Fellow](https://economics.uq.edu.au/profile/6228/kai-du) 
 I obtained my [PhD in Economics](https://economics.adelaide.edu.au) from the University of Adelaide in 2014 and my research focus is data envelopment analysis and stochastic frontier analysis. I have developed a unique ability to research in the field of productivity and efficiency analysis, as well as its adoption to deal with the pressing social and economic problems, such as efficiency of healthcare system and sustainable economic growth. My CV is available on request and you might find more information on my research via my [Google Scholar profile](https://scholar.google.com.au/citations?user=Z0H3AvQAAAAJ&hl=en) and [Scopus profile](https://www.scopus.com/authid/detail.uri?authorId=56697897900).
 </div>
 
-**ORCID iD:** [0000-0003-4109-4835](https://orcid.org/0000-0003-4109-4835)
+[//]: <**ORCID iD:** [0000-0003-4109-4835](https://orcid.org/0000-0003-4109-4835)>
+
+<a href="https://orcid.org/0000-0001-2345-6789">
+<img alt="ORCID logo" src="https://info.orcid.org/wp-content/uploads/2019/11/orcid_16x16.png" width="16" height="16" />
+0000-0003-4109-4835
+</a>
 
 **E-mail:** mail@imkaidu.net
 
