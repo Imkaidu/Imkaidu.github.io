@@ -38,7 +38,7 @@ Du K. And Mahadevan, R. (2020). Promoting Green Growth: Empirical Evidence and L
 
 5. O’Connor, A., Du, K. and Roos, G. (2015). The Intellectual Capital Needs of A Transitioning Economy, *Journal of Intellectual Capital*, 16(3): 466 – 489, DOI:[10.1108/JIC-08-2014-0097](https://doi.org/10.1108/JIC-08-2014-0097) (Corresponding author, ABDC B)
 
-*Note*: [Ranking of Australian Business Deans Council](https://abdc.edu.au/research/abdc-journal-list/) (ABDC) is a ranking of journal quality (2013 version) , in which A* means an academic journal in the top 6.9% (A: top 20.8% and B: top 28.4%) of 2,767 journals. The Citation of my publication is summarised using the [scite Dashboard](https://scite.ai/dashboard/test-2021-ydR).
+*Note*: [Ranking of Australian Business Deans Council](https://abdc.edu.au/research/abdc-journal-list/) (ABDC) is a ranking of journal quality (2013 version) , in which A* means an academic journal in the top 6.9% (A: top 20.8% and B: top 28.4%) of 2,767 journals. The Citation of my publication is summarised using the [scite Dashboard](https://scite.ai/dashboard/citations-in-summaries-8bG).
 
 <font size="+1"> <b> Book Chapter </b> </font>
 
