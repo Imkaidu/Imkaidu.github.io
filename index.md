@@ -6,7 +6,7 @@ title: Welcome
 <div style="text-align: justify"> 
 I am a [UQ Development Fellow](https://economics.uq.edu.au/profile/6228/kai-du) at the [School of Economics](https://economics.uq.edu.au) (of the [University of Queensland](https://www.uq.edu.au/)) and very passionate about delivering excellent research and impactful outcomes by acquiring valuable knowledge of how firms (or economies) work and applying this knowledge to make our community better. 
 
-I obtained my [PhD in Economics](https://economics.adelaide.edu.au) from the University of Adelaide in 2014 and my research focus is data envelopment analysis and stochastic frontier analysis. I have developed a unique ability to research in the field of productivity and efficiency analysis, as well as its adoption to deal with the pressing social and economic problems, such as efficiency of healthcare system and sustainable economic growth. My CV is available on request and you might find more information on my research via my [Google Scholar profile](https://scholar.google.com.au/citations?user=Z0H3AvQAAAAJ&hl=en) and [Scopus profile](https://www.scopus.com/authid/detail.uri?authorId=56697897900).
+I obtained my [PhD in Economics](https://economics.adelaide.edu.au) from the University of Adelaide in 2014 and my research focus is data envelopment analysis and stochastic frontier analysis. I have developed a unique ability to research in the field of productivity and efficiency analysis, as well as its adoption to deal with the pressing social and economic problems, such as efficiency of healthcare system and sustainable economic growth. My CV is available on request and you might find more information on my research via my [Google Scholar profile](https://scholar.google.com.au/citations?user=Z0H3AvQAAAAJ&hl=en) and [Scopus profile](https://www.scopus.com/authid/detail.uri?authorId=56697897900). The Citation of my publication is summarised using the [scite Dashboard](https://scite.ai/dashboard/citations-in-summaries-8bG).
 </div>
 
 **E-mail:** mail@imkaidu.net
@@ -38,7 +38,7 @@ Du K. And Mahadevan, R. (2020). Promoting Green Growth: Empirical Evidence and L
 
 5. O’Connor, A., Du, K. and Roos, G. (2015). The Intellectual Capital Needs of A Transitioning Economy, *Journal of Intellectual Capital*, 16(3): 466 – 489, DOI:[10.1108/JIC-08-2014-0097](https://doi.org/10.1108/JIC-08-2014-0097) (Corresponding author, ABDC B)
 
-*Note*: [Ranking of Australian Business Deans Council](https://abdc.edu.au/research/abdc-journal-list/) (ABDC) is a ranking of journal quality (2013 version) , in which A* means an academic journal in the top 6.9% (A: top 20.8% and B: top 28.4%) of 2,767 journals. The Citation of my publication is summarised using the [scite Dashboard](https://scite.ai/dashboard/citations-in-summaries-8bG).
+*Note*: [Ranking of Australian Business Deans Council](https://abdc.edu.au/research/abdc-journal-list/) (ABDC) is a ranking of journal quality (2013 version) , in which A* means an academic journal in the top 6.9% (A: top 20.8% and B: top 28.4%) of 2,767 journals. 
 
 <font size="+1"> <b> Book Chapter </b> </font>
 
