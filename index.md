@@ -28,7 +28,7 @@ Du K. And Mahadevan, R. (2020). Promoting Green Growth: Empirical Evidence and L
 
 <font size="+1"> <b> Journal Articles </b> </font>
 
-1. Du, K. and O’Connor, A. (2019). Examining Economic Complexity as a Holistic Innovation System Effect, *Small Business Economics*, DOI: [10.1007/s11187-019-00215-z](https://link.springer.com/article/10.1007/s11187-019-00215-z). (Corresponding author, ABDC A)
+1. Du, K. and O’Connor, A. (2019). Examining Economic Complexity as a Holistic Innovation System Effect, *Small Business Economics*, DOI: [10.1007/s11187-019-00215-z](https://link.springer.com/article/10.1007/s11187-019-00215-z) (Corresponding author, ABDC A)
 
 2. Du, K., Worthington, A.C. and Zelenyuk, V. (2018). Data envelopment analysis, truncated regression and double-bootstrap for panel data with application to Chinese banking, *European Journal of Operational Research*, 265: 748 – 64, DOI: [10.1016/j.ejor.2017.08.005](https://doi.org/10.1016/j.ejor.2017.08.005) (Corresponding author, ABDC A*)
 
@@ -38,7 +38,7 @@ Du K. And Mahadevan, R. (2020). Promoting Green Growth: Empirical Evidence and L
 
 5. O’Connor, A., Du, K. and Roos, G. (2015). The Intellectual Capital Needs of A Transitioning Economy, *Journal of Intellectual Capital*, 16(3): 466 – 489, DOI:[10.1108/JIC-08-2014-0097](https://doi.org/10.1108/JIC-08-2014-0097) (Corresponding author, ABDC B)
 
-*Note*: [Ranking of Australian Business Deans Council](https://abdc.edu.au/research/abdc-journal-list/) (ABDC) is a ranking of journal quality (2013 version) , in which A* means an academic journal in the top 6.9% (A: top 20.8% and B: top 28.4%) of 2,767 journals.
+*Note*: [Ranking of Australian Business Deans Council](https://abdc.edu.au/research/abdc-journal-list/) (ABDC) is a ranking of journal quality (2013 version) , in which A* means an academic journal in the top 6.9% (A: top 20.8% and B: top 28.4%) of 2,767 journals. The Citation of my publication is summarised using the [scite Dashboard](https://scite.ai/dashboard/test-2021-ydR).
 
 <font size="+1"> <b> Book Chapter </b> </font>
 
