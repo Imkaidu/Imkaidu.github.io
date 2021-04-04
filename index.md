@@ -22,7 +22,7 @@ I obtained my [PhD in Economics](https://economics.adelaide.edu.au) from the Uni
 
 <font size="+1"> <b> Membership </b> </font>
 
-HEA fellowship (Higher Education Academy) and ISEaPA Membership (International Society for Efficiency and Productivity Analysis)
+[HEA fellowship](https://itali.uq.edu.au/awards-grants/fellowships/hea) (Higher Education Academy) and [ISEaPA](https://iseapa.org) Membership (International Society for Efficiency and Productivity Analysis)
 
 <font size="+1"> <b> Working Paper </b> </font>
 
