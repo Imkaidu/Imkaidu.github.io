@@ -28,7 +28,7 @@ HEA fellowship (Higher Education Academy) and ISEaPA Membership (International S
 
 Wang, Y., Du, K. and O’Connor, A. (2018). Diversity in Entrepreneurship: Why it Matters for Public Policy, Trade Dynamics and Economic Growth. (Corresponding author)
 
-Du K. And Mahadevan, R. (2020). Promoting Green Growth: Empirical Evidence and Lessons Using Dynamic Two-Stage Data Envelopment Analysis. (Corresponding author)
+Du K. and Mahadevan, R. (2020). Promoting Green Growth: Empirical Evidence and Lessons Using Dynamic Two-Stage Data Envelopment Analysis. (Corresponding author)
 
 <font size="+1"> <b> Journal Articles </b> </font>
 
