@@ -20,6 +20,10 @@ I obtained my [PhD in Economics](https://economics.adelaide.edu.au) from the Uni
 
 **Add.** Level 6, Colin Clark Bld (#39), School of Economics, University of Queensland, QLD (4072)
 
+<font size="+1"> <b> Membership </b> </font>
+
+HEA fellowship (Higher Education Academy) and ISEaPA Membership (International Society for Efficiency and Productivity Analysis)
+
 <font size="+1"> <b> Working Paper </b> </font>
 
 Wang, Y., Du, K. and O’Connor, A. (2018). Diversity in Entrepreneurship: Why it Matters for Public Policy, Trade Dynamics and Economic Growth. (Corresponding author)
