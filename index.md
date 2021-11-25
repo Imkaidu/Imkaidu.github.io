@@ -28,7 +28,9 @@ I obtained my [PhD in Economics](https://economics.adelaide.edu.au) from the Uni
 
 Wang, Y., Du, K. and O’Connor, A. (2018). Diversity in Entrepreneurship: Why it Matters for Public Policy, Trade Dynamics and Economic Growth. (Corresponding author)
 
-Du K. and Mahadevan, R. (2020). Promoting Green Growth: Empirical Evidence and Lessons Using Dynamic Two-Stage Data Envelopment Analysis. (Corresponding author)
+Du K. and Mahadevan, R. (2020). Promoting Green Technical Efficiency: A Regional and Urban Agglomeration Cluster Analysis. (Corresponding author)
+
+Mahadevan, R., Du, K., Preciados, L. and Schmidt, S. (2021). Managing Nitrogen Environmental Impacts to Improve Green Technical Efficiency in Philippines Rice Cultivation. (Corresponding author)
 
 <font size="+1"> <b> Journal Articles </b> </font>
 
