@@ -5,7 +5,7 @@ if [ -n "$1" ]; then
   target=$1
 fi
 
-root="/Users/kdu/Dropbox/Imkaidu.github.io"
+root="/Users/kdu/Library/CloudStorage/Dropbox/Imkaidu.github.io"
 
 cd "${root}"
 
@@ -25,7 +25,7 @@ pandoc "${target}" \
     -o "${target%.*}.pdf" \
     -H "${root}/header/latex.tex" \
     --resource-path="$(dirname "$target")" \
-    --template default.tex \
+    --template="${root}/templates/default.tex" \
     --highlight-style haddock \
     --shift-heading=-1
 

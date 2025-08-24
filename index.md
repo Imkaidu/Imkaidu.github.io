@@ -1,7 +1,25 @@
 
 ---
 title: Welcome
----
+--<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>$title$</title>
+    $if(css)$
+    <link rel="stylesheet" href="$css$">
+    $endif$
+</head>
+<body>
+$if(title)$
+<header>
+<h1>$title$</h1>
+</header>
+$endif$
+$body$
+</body>
+</html>-
 
 <div style="text-align: justify"> 
 

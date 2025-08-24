@@ -1,9 +1,31 @@
-\documentclass{article}
+\documentclass[12pt,a4paper]{article}
 \usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
 \usepackage{hyperref}
+\usepackage{graphicx}
+% \usepackage{fontspec}
+% \usepackage{xunicode}
+% \usepackage{xltxtra}
+\usepackage{listings}
+\usepackage{textcomp}
 
-\title{$title$}
+\usepackage{enumitem}
+
+% Unicode character definitions
+\usepackage{newunicodechar}
+\newunicodechar{●}{\textbullet}
+\newunicodechar{├}{\textbar}
+
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
 
 \begin{document}
+$if(title)$
+\title{$title$}
+\maketitle
+$endif$
+
 $body$
+
 \end{document}

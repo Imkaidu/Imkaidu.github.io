@@ -1,47 +1,29 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<html>
 <head>
-  <meta charset="utf-8" />
-  <meta name="generator" content="pandoc" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-  <meta name="author" content="Kai Du" />
-  <title>Tips to use MATLAB parallel computing toolbox</title>
-  <style>
-    code{white-space: pre-wrap;}
-    span.smallcaps{font-variant: small-caps;}
-    span.underline{text-decoration: underline;}
-    div.column{display: inline-block; vertical-align: top; width: 50%;}
-    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
-    ul.task-list{list-style: none;}
-  </style>
-  <link rel="stylesheet" href="/css/custom.css" />
-  <!--[if lt IE 9]>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
-  <![endif]-->
-</head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tips to use MATLAB parallel computing toolbox</title>
+        <link rel="stylesheet" href="/css/custom.css">
+    </head>
 <body>
 <header>
-  <div id="nav">
-    <h3 class="gray">Kai Du</h3>
-      <div class="nav-buttons">
-        <a href="/index.html">Home</a>
-        <a href="/blog/blog.html">Blog</a>
-        <a href="https://github.com/ImKaiDu">GitHub</a>  
-      </div>
-  </div>
-</header>
-<header id="title-block-header">
-<h1 class="title">Tips to use MATLAB parallel computing toolbox</h1>
-<p class="author">Kai Du</p>
-<p class="date">21/12/2020</p>
+<h1>Tips to use MATLAB parallel computing toolbox</h1>
 </header>
 <p><img src="figures/structure1.jpg" style="width:100.0%" /></p>
 <blockquote>
-<p>Parallel computing toolbox enables researchers to harness a multicore computer, GPU, cluster and even cloud to solve computationally and data-intensive problems.</p>
+<p>Parallel computing toolbox enables researchers to harness a multicore
+computer, GPU, cluster and even cloud to solve computationally and
+data-intensive problems.</p>
 </blockquote>
-<p>However, there are some options to use it (e.g. <em>parfeval</em>, <em>parfor</em> and even <em>spmd</em>), such as</p>
-<p>n = 100; parfor (or parfeval) i = 1:n output(i)=Function(input(i)) end</p>
-<p>As <a href="https://www.mathworks.com/help/parallel-computing/choose-spmd-parfor-parfeval.html">MATLAB</a> suggested, <em>parfor</em> and <em>parfeval</em> usually perform better than <em>spmd</em> for a set of tasks under these conditions:</p>
+<p>However, there are some options to use it (e.g. <em>parfeval</em>,
+<em>parfor</em> and even <em>spmd</em>), such as</p>
+<p>n = 100; parfor (or parfeval) i = 1:n output(i)=Function(input(i))
+end</p>
+<p>As <a
+href="https://www.mathworks.com/help/parallel-computing/choose-spmd-parfor-parfeval.html">MATLAB</a>
+suggested, <em>parfor</em> and <em>parfeval</em> usually perform better
+than <em>spmd</em> for a set of tasks under these conditions:</p>
 <ul>
 <li>The computational time taken per task is not deterministic.</li>
 <li>The computational time taken per task is not uniform.</li>
@@ -52,18 +34,21 @@
 <li>You want to run computations in the background.</li>
 <li>Each task is dependent on other tasks.</li>
 </ul>
-<p>In this post, I share my experience to use these three commands. The general rule is the tradeoff between the time to deploy the codes in each worker and the time to run the codes in each worker. It might be more reasonable to fully use all workers <em>first</em> and <em>then</em> keep them running as long as possible. Thus, I prefer to use <em>parfor</em>, rather than <em>parfeval</em> if the number of tasks is less than the number of workers. When the number of tasks is more than (or equals to) the number of workers, <em>parfeval</em> works faster than <em>parfor</em>. Second, <em>parfor</em> only works when the tasks are independent but <em>parfeval</em> works for the `dependent’ tasks.</p>
-<p>Finally, it does not mean we have to use both of <em>parfor</em> and <em>parfeval</em> when the time to finish each task is very small. In fact, it might not a bad idea to use <em>for</em> for some very small jobs and then use <em>parfor</em> or <em>parfeval</em> for its `parent’ loops.</p>
-<script>
-  function pdf() {
-    if (window.location.href.indexOf(".html") > -1) {
-      window.location.href = window.location.href.replace(".html", ".pdf");
-    } else {
-      window.location.href = window.location.href.concat("index.pdf")
-    }
-  }
-</script>
-<button onclick="pdf()">View as PDF</button>
-<small>2020 Kai Du. This site is built with <a href="https://pandoc.org/">Pandoc</a> and <a href="https://pages.github.com/">GitHub Pages</a>.</small>
+<p>In this post, I share my experience to use these three commands. The
+general rule is the tradeoff between the time to deploy the codes in
+each worker and the time to run the codes in each worker. It might be
+more reasonable to fully use all workers <em>first</em> and
+<em>then</em> keep them running as long as possible. Thus, I prefer to
+use <em>parfor</em>, rather than <em>parfeval</em> if the number of
+tasks is less than the number of workers. When the number of tasks is
+more than (or equals to) the number of workers, <em>parfeval</em> works
+faster than <em>parfor</em>. Second, <em>parfor</em> only works when the
+tasks are independent but <em>parfeval</em> works for the `dependent’
+tasks.</p>
+<p>Finally, it does not mean we have to use both of <em>parfor</em> and
+<em>parfeval</em> when the time to finish each task is very small. In
+fact, it might not a bad idea to use <em>for</em> for some very small
+jobs and then use <em>parfor</em> or <em>parfeval</em> for its `parent’
+loops.</p>
 </body>
 </html>
