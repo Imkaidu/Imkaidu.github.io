@@ -5,7 +5,7 @@ if [ -n "$1" ]; then
   target=$1
 fi
 
-root="/Users/uqkdu1/Dropbox/Imkaidu.github.io"
+root="/Users/kdu/Dropbox/Imkaidu.github.io"
 
 cd "${root}"
 
