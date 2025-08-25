@@ -31,19 +31,23 @@ Wang, Y., Du, K. and O’Connor, A. (2018). Diversity in Entrepreneurship: Why i
 
 Du K. and Mahadevan, R. (2020). Promoting Green Technical Efficiency: A Regional and Urban Agglomeration Cluster Analysis. (Corresponding author)
 
-Mahadevan, R., Du, K., Preciados, L. and Schmidt, S. (2021). Managing Nitrogen Environmental Impacts to Improve Green Technical Efficiency in Philippines Rice Cultivation. (Corresponding author)
-
 <font size="+1"> <b> Journal Articles </b> </font>
 
-1. Du, K. and O’Connor, A. (2019). Examining Economic Complexity as a Holistic Innovation System Effect, *Small Business Economics*, DOI: [10.1007/s11187-019-00215-z](https://link.springer.com/article/10.1007/s11187-019-00215-z) (Corresponding author, ABDC A)
+1. Du, K. and Zelenyuk, V. (2024). Likelihood-Ratio Test for Technological Differences in Two-Stage Data Envelopment Analysis for Panel Data, European Journal of Operational Research, 321(2): 644–663. (Corresponding author, ABDC A*)
 
-2. Du, K., Worthington, A.C. and Zelenyuk, V. (2018). Data envelopment analysis, truncated regression and double-bootstrap for panel data with application to Chinese banking, *European Journal of Operational Research*, 265: 748 – 64, DOI: [10.1016/j.ejor.2017.08.005](https://doi.org/10.1016/j.ejor.2017.08.005) (Corresponding author, ABDC A*)
+2. Mahadevan, R., Du, K., Preciados, L. and Schmidt, S. (2022). Managing Nitrogen Environmental Impacts to Improve Green Technical Efficiency in Philippines Rice Cultivation, Journal of Environmental Management, DOI: 10.1016/j.jenvman.2022.116529. (Corresponding author, ABDC A)
 
-3. Du, K. and O’Connor, A. (2018). Entrepreneurship and Advancing National Level Economic Efficiency, *Small Business Economics*, 50: 91 – 111, DOI: [10.1007/s11187-017-9904-4](https://doi.org/10.1007/s11187-017-9904-4) (Corresponding author, ABDC A)
+3. Peng, Q.N., Du, K., and Wang, C. (2022). How Mitigation Efforts Moderate the Impact of Climate Change on AgriculturalEfficiency: APreliminaryAnalysisfromChina,AppliedEconomics Letters,DOI:10.1080/13504851. (ABDC B)
 
-4. Du, K. and Sim, N. (2016). Emerging Countries, Mergers and Acquisitions, Bank Efficiency, *Research in International Business and Finance*, 36: 499 – 510, DOI:[10.1016/j.ribaf.2015.10.005](https://doi.org/10.1016/j.ribaf.2015.10.005) (ABDC B)
+4. Du, K. and O’Connor, A. (2019). Examining Economic Complexity as a Holistic Innovation System Effect, *Small Business Economics*, DOI: [10.1007/s11187-019-00215-z](https://link.springer.com/article/10.1007/s11187-019-00215-z) (Corresponding author, ABDC A)
 
-5. O’Connor, A., Du, K. and Roos, G. (2015). The Intellectual Capital Needs of A Transitioning Economy, *Journal of Intellectual Capital*, 16(3): 466 – 489, DOI:[10.1108/JIC-08-2014-0097](https://doi.org/10.1108/JIC-08-2014-0097) (Corresponding author, ABDC B)
+5. Du, K., Worthington, A.C. and Zelenyuk, V. (2018). Data envelopment analysis, truncated regression and double-bootstrap for panel data with application to Chinese banking, *European Journal of Operational Research*, 265: 748 – 64, DOI: [10.1016/j.ejor.2017.08.005](https://doi.org/10.1016/j.ejor.2017.08.005) (Corresponding author, ABDC A*)
+
+6. Du, K. and O’Connor, A. (2018). Entrepreneurship and Advancing National Level Economic Efficiency, *Small Business Economics*, 50: 91 – 111, DOI: [10.1007/s11187-017-9904-4](https://doi.org/10.1007/s11187-017-9904-4) (Corresponding author, ABDC A)
+
+7. Du, K. and Sim, N. (2016). Emerging Countries, Mergers and Acquisitions, Bank Efficiency, *Research in International Business and Finance*, 36: 499 – 510, DOI:[10.1016/j.ribaf.2015.10.005](https://doi.org/10.1016/j.ribaf.2015.10.005) (ABDC B)
+
+8. O’Connor, A., Du, K. and Roos, G. (2015). The Intellectual Capital Needs of A Transitioning Economy, *Journal of Intellectual Capital*, 16(3): 466 – 489, DOI:[10.1108/JIC-08-2014-0097](https://doi.org/10.1108/JIC-08-2014-0097) (Corresponding author, ABDC B)
 
 *Note*: [Ranking of Australian Business Deans Council](https://abdc.edu.au/research/abdc-journal-list/) (ABDC) is a ranking of journal quality (2013 version) , in which A* means an academic journal in the top 6.9% (A: top 20.8% and B: top 28.4%) of 2,767 journals. 
 
@@ -55,11 +59,27 @@ Du, K. (2016). Did Efficiency of Chinese Commercial Banks Increase after WTO Acc
 
 I introduce students (with basic economic statistics) to how empirical researchers think about and apply [econometric methods](https://www.amazon.com.au/Introduction-Econometrics-Global-James-Stock/dp/1292264454/ref=asc_df_1292264454/?tag=googleshopdsk-22&linkCode=df0&hvadid=361164490305&hvpos=&hvnetw=g&hvrand=8780685880543615614&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9069264&hvtargid=pla-738083680938&psc=1) with the practical approach (from 2020). This is the link of my [teaching philosophy](docs/Teaching_Philosophy.html) and the course profiles.
 
-[ECON7310](https://course-profiles.uq.edu.au/student_section_loader/section_1/103617?_ga=2.228176029.1899490403.1608693058-1611039615.1607827389) *Elements of Econometrics*, Lecturer and course coordinator (2021 Semester 1, N.A. postgraduates) [Lesson Plan (Draft)](docs/econ_7310_2020/materialist.html)
+[University of Wollongong](https://www.uow.edu.au)
 
-[ECON7310](https://course-profiles.uq.edu.au/student_section_loader/section_1/103617?_ga=2.228176029.1899490403.1608693058-1611039615.1607827389) *Elements of Econometrics*, Lecturer and course coordinator (2020 Semester 1, 220 postgraduates) 
+ECON940 (*Business Statistics*) 2025 Trimester 1, 2 and 3; ECON910 (*Economics for Professionals*) 2025 Trimester 3; ECON361 (*Explorations in Microeconomics*) 2025 Autumn Semester; 
+
+ECON802 (*Economics of Global Business Challenges*) 2024 Trimester 1; ECON102 (*Economics and Society*) 2024 Spring Semester; ECON910 (*Economics for Professionals*) 2024 Trimester 2; 
+
+ECON910 (*Economics for Professionals*) 2023 Trimester 1 and 3; ECON102 (*Economics and Society*) 2023 Autumn Semester
+
+[University of Queensland](https://www.uq.edu.au) 
+
+ECON7310 (*Elements of Econometrics*) 2021 Semester 1; ECON7310 (*Elements of Econometrics*) 2020 Semester 1 [Lesson Plan (Draft)](docs/econ_7310_2020/materialist.html)
 
 <font size="+1"> <b> Grant and Awards </b> </font>
+
+2025 UOW Staff Internal Research Fund ($3,000 from UOW BAL Faculty)
+
+2024 UOW Staff Internal Research Fund ($3,000 from UOW BAL Faculty)
+
+2023 UOW Staff Internal Research Fund ($3,000 from UOW BAL Faculty)
+
+2021 UQ Staff Research Fund ($4,000 from the School of Economics)
 
 2020 [ASSA-CASS Joint Action Program](http://www.csaa.org.au/2018/04/assa-cass-joint-action-program/) ($7,700 from Academy of The Social Sciences in Australia with A/Prof. Renuka Mahadevan)
 
