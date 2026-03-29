@@ -4,10 +4,13 @@ title: Welcome
 layout: default
 ---
 
-<div style="text-align: justify"> 
-I am a [senior lecturer](https://scholars.uow.edu.au/kaidavid-du) at the [School of Business](https://www.uow.edu.au/business-law/schools-entities/business/) (of the [University of Wollongong](https://www.uow.edu.au/)) and very passionate about delivering excellent research and impactful outcomes by acquiring valuable knowledge of how firms (or economies) work and applying this knowledge to make our community better. 
+<div style="display: flex; gap: 20px; align-items: flex-start;">
+<img src="photo.jpg" alt="Kai Du" style="width: 160px; border-radius: 4px; flex-shrink: 0;" />
+<div style="text-align: justify">
+I am a [senior lecturer](https://scholars.uow.edu.au/kaidavid-du) at the [School of Business](https://www.uow.edu.au/business-law/schools-entities/business/) (of the [University of Wollongong](https://www.uow.edu.au/)) and very passionate about delivering excellent research and impactful outcomes by acquiring valuable knowledge of how firms (or economies) work and applying this knowledge to make our community better.
 
 I obtained my [PhD in Economics](https://economics.adelaide.edu.au) from the University of Adelaide in 2014 and my research focus is data envelopment analysis and stochastic frontier analysis. I have developed a unique ability to research in the field of productivity and efficiency analysis, as well as its adoption to deal with the pressing social and economic problems, such as efficiency of healthcare system and sustainable economic growth. My CV is available on request and you might find more information on my research via my [Google Scholar profile](https://scholar.google.com.au/citations?user=Z0H3AvQAAAAJ&hl=en) and [Scopus profile](https://www.scopus.com/authid/detail.uri?authorId=56697897900). Mentioning of my research in the peer-reviewed papers is also summarised using my [scite Dashboard](https://scite.ai/dashboard/citations-in-summaries-8bG).
+</div>
 </div>
 
 **E-mail:** mail@imkaidu.net
@@ -37,7 +40,7 @@ Wang, Y., Du, K. and O’Connor, A. (2018). Diversity in Entrepreneurship: Why i
 
 2. Mahadevan, R., Du, K., Preciados, L. and Schmidt, S. (2022). Managing Nitrogen Environmental Impacts to Improve Green Technical Efficiency in Philippines Rice Cultivation, Journal of Environmental Management, DOI: 10.1016/j.jenvman.2022.116529. (Corresponding author, ABDC A)
 
-3. Peng, Q.N., Du, K., and Wang, C. (2022). How Mitigation Efforts Moderate the Impact of Climate Change on AgriculturalEfficiency: APreliminaryAnalysisfromChina,AppliedEconomics Letters,DOI:10.1080/13504851. (ABDC B)
+3. Peng, Q.N., Du, K., and Wang, C. (2022). How Mitigation Efforts Moderate the Impact of Climate Change on Agricultural Efficiency: A Preliminary Analysis from China, Applied Economics Letters, DOI: 10.1080/13504851. (ABDC B)
 
 4. Du, K. and O’Connor, A. (2019). Examining Economic Complexity as a Holistic Innovation System Effect, *Small Business Economics*, DOI: [10.1007/s11187-019-00215-z](https://link.springer.com/article/10.1007/s11187-019-00215-z) (Corresponding author, ABDC A)
 
