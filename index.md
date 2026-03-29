@@ -27,9 +27,9 @@ I obtained my [PhD in Economics](https://economics.adelaide.edu.au) from the Uni
 
 <font size="+1"> <b> Working Paper </b> </font>
 
-Wang, Y., Du, K. and O’Connor, A. (2018). Diversity in Entrepreneurship: Why it Matters for Public Policy, Trade Dynamics and Economic Growth. (Corresponding author)
+Du K. (2024). [Promoting Green Technical Efficiency: A Regional and Urban Agglomeration Cluster Analysis](docs/Green_Technical_Eff_Final_24032026.pdf). [Supplemental Materials (PDF)](docs/Supplemental_Materials_Final_24032026.pdf)
 
-Du K. and Mahadevan, R. (2020). Promoting Green Technical Efficiency: A Regional and Urban Agglomeration Cluster Analysis. (Corresponding author)
+Wang, Y., Du, K. and O’Connor, A. (2018). Diversity in Entrepreneurship: Why it Matters for Public Policy, Trade Dynamics and Economic Growth. (Corresponding author)
 
 <font size="+1"> <b> Journal Articles </b> </font>
 
