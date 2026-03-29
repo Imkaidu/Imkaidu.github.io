@@ -5,7 +5,7 @@ layout: default
 ---
 
 <div style="text-align: justify"> 
-I am a [lecturer](https://scholars.uow.edu.au/kaidavid-du) at the [School of Business](https://www.uow.edu.au/business-law/schools-entities/business/) (of the [University of Wollongong](https://www.uow.edu.au/)) and very passionate about delivering excellent research and impactful outcomes by acquiring valuable knowledge of how firms (or economies) work and applying this knowledge to make our community better. 
+I am a [senior lecturer](https://scholars.uow.edu.au/kaidavid-du) at the [School of Business](https://www.uow.edu.au/business-law/schools-entities/business/) (of the [University of Wollongong](https://www.uow.edu.au/)) and very passionate about delivering excellent research and impactful outcomes by acquiring valuable knowledge of how firms (or economies) work and applying this knowledge to make our community better. 
 
 I obtained my [PhD in Economics](https://economics.adelaide.edu.au) from the University of Adelaide in 2014 and my research focus is data envelopment analysis and stochastic frontier analysis. I have developed a unique ability to research in the field of productivity and efficiency analysis, as well as its adoption to deal with the pressing social and economic problems, such as efficiency of healthcare system and sustainable economic growth. My CV is available on request and you might find more information on my research via my [Google Scholar profile](https://scholar.google.com.au/citations?user=Z0H3AvQAAAAJ&hl=en) and [Scopus profile](https://www.scopus.com/authid/detail.uri?authorId=56697897900). Mentioning of my research in the peer-reviewed papers is also summarised using my [scite Dashboard](https://scite.ai/dashboard/citations-in-summaries-8bG).
 </div>
@@ -19,7 +19,7 @@ I obtained my [PhD in Economics](https://economics.adelaide.edu.au) from the Uni
 0000-0003-4109-4835
 </a>
 
-**Add.** Building 40, Faculty of Business and Law (BAL), University of Wollongong NSW 2522 Australia
+**Add.** Building 40, The Faculty of Arts, Society, and Business (ASB), University of Wollongong NSW 2522 Australia
 
 <font size="+1"> <b> Membership </b> </font>
 
