@@ -4,7 +4,7 @@ title: Welcome
 layout: default
 ---
 
-<div style="display: flex; gap: 20px; align-items: flex-start;">
+<div style="display: flex; gap: 20px; align-items: flex-start; margin-top: 1.5em;">
 <img src="photo.jpg" alt="Kai Du" style="width: 160px; border-radius: 4px; flex-shrink: 0;" />
 <div style="text-align: justify">
 I am a [senior lecturer](https://scholars.uow.edu.au/kaidavid-du) at the [School of Business](https://www.uow.edu.au/business-law/schools-entities/business/) (of the [University of Wollongong](https://www.uow.edu.au/)) and very passionate about delivering excellent research and impactful outcomes by acquiring valuable knowledge of how firms (or economies) work and applying this knowledge to make our community better.
