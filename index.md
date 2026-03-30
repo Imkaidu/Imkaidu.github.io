@@ -4,13 +4,11 @@ title: Welcome
 layout: default
 ---
 
-<div style="display: flex; gap: 20px; align-items: flex-start; margin-top: 1.5em;">
-<img src="photo.jpg" alt="Kai Du" style="width: 160px; border-radius: 4px; flex-shrink: 0;" />
 <div style="text-align: justify">
+<img src="photo.jpg" alt="Kai Du" style="width: 140px; border-radius: 4px; float: left; margin: 0.3em 1em 0.5em 0;" />
 I am a [senior lecturer](https://scholars.uow.edu.au/kaidavid-du) at the [School of Business](https://www.uow.edu.au/business-law/schools-entities/business/) (of the [University of Wollongong](https://www.uow.edu.au/)) and very passionate about delivering excellent research and impactful outcomes by acquiring valuable knowledge of how firms (or economies) work and applying this knowledge to make our community better.
 
 I obtained my [PhD in Economics](https://economics.adelaide.edu.au) from the University of Adelaide in 2014 and my research focus is data envelopment analysis and stochastic frontier analysis. I have developed a unique ability to research in the field of productivity and efficiency analysis, as well as its adoption to deal with the pressing social and economic problems, such as efficiency of healthcare system and sustainable economic growth. My CV is available on request and you might find more information on my research via my [Google Scholar profile](https://scholar.google.com.au/citations?user=Z0H3AvQAAAAJ&hl=en) and [Scopus profile](https://www.scopus.com/authid/detail.uri?authorId=56697897900). Mentioning of my research in the peer-reviewed papers is also summarised using my [scite Dashboard](https://scite.ai/dashboard/citations-in-summaries-8bG).
-</div>
 </div>
 
 **E-mail:** mail@imkaidu.net
@@ -26,11 +24,13 @@ I obtained my [PhD in Economics](https://economics.adelaide.edu.au) from the Uni
 
 <font size="+1"> <b> Membership </b> </font>
 
-[HEA fellowship](https://itali.uq.edu.au/awards-grants/fellowships/hea) (Higher Education Academy) and [ISEaPA](https://iseapa.org) membership (International Society for Efficiency and Productivity Analysis)
+[HEA fellowship](https://www.uow.edu.au/about/learning-teaching/wattle/members/) (Higher Education Academy) and [ISEaPA](https://iseapa.org) membership (International Society for Efficiency and Productivity Analysis)
 
 <font size="+1"> <b> Working Paper </b> </font>
 
-Du K. (2024). [Promoting Green Technical Efficiency: A Regional and Urban Agglomeration Cluster Analysis (PDF)](docs/Green_Technical_Eff_Final_24032026.pdf). [Supplemental Materials (PDF)](docs/Supplemental_Materials_Final_24032026.pdf)
+Du, K., Prokhorov, A. and Tran, K.C. (2025). Spatial Stochastic Frontier Model with Latent Classes
+
+Du K. (2024). [Promoting Green Technical Efficiency: A Regional and Urban Agglomeration Cluster Analysis (PDF)](docs/Green_Technical_Eff_Final_24032026.pdf). [Supplemental Materials (PDF)](docs/Supplemental_Material_Final.pdf)
 
 Wang, Y., Du, K. and O’Connor, A. (2018). Diversity in Entrepreneurship: Why it Matters for Public Policy, Trade Dynamics and Economic Growth. (Corresponding author)
 
