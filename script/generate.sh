@@ -5,7 +5,7 @@ if [ -n "$1" ]; then
   target=$1
 fi
 
-root="/Users/kdu/Library/CloudStorage/Dropbox/Imkaidu.github.io"
+root="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 
 cd "${root}"
 
