@@ -100,15 +100,9 @@ ECON7310 (*Elements of Econometrics*) 2021 Semester 1; ECON7310 (*Elements of Ec
 
 *European Journal of Operational Research*; *Journal of Productivity Analysis*; *Annals of Operations Research*; *Pacific-Basin Finance Journal*; *Economic Modelling*; *International Review of Economics & Finance* as well as  *Emerging Markets Finance and Trade*
 
-[//1]: <[Teaching](docs/test_Teaching.html)>
-
 [//2]: <[Materials](docs/matlab_code/matlab_code.html)>
 
 [//3]: <[MaterialsII](docs/econ_7310_2020/materialist.html)>
-
-[//4]: <[Teaching](docs/test_Teaching.html)>
-
-[//5]: <[Research](docs/test_Research.html)>
 
 
 
