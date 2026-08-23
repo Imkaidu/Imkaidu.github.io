@@ -1,1 +1,10 @@
 private/
+
+# macOS
+.DS_Store
+
+# build logs
+results.out
+
+# editor backups
+*.bak
