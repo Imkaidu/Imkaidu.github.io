@@ -30,7 +30,7 @@ I obtained my [PhD in Economics](https://economics.adelaide.edu.au) from the Uni
 
 Du, K., Prokhorov, A. and Tran, K.C. (2025). Spatial Stochastic Frontier Model with Latent Classes
 
-Du K. (2024). [Promoting Green Technical Efficiency: A Regional and Urban Agglomeration Cluster Analysis (PDF)](docs/Green_Technical_Eff_Final_24032026.pdf). [Supplemental Materials (PDF)](docs/Supplemental_Material_Final.pdf)
+Du K. (2024). [Promoting Green Technical Efficiency: A Regional and Urban Agglomeration Cluster Analysis (PDF)](docs/Green_Technical_Eff_Final_24032026.pdf). [Supplemental Materials (PDF)](docs/Supplemental_Materials_Final_24032026.pdf)
 
 Wang, Y., Du, K. and O’Connor, A. (2018). Diversity in Entrepreneurship: Why it Matters for Public Policy, Trade Dynamics and Economic Growth. (Corresponding author)
 
