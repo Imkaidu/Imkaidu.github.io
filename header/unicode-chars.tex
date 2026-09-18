@@ -1,0 +1,11 @@
+% Unicode character fallbacks for pdflatex, shared by both the PDF and
+% slides builds (script/generate.sh) so a character mapped here does not
+% need to be re-added separately for beamer. Kept out of header/latex.tex
+% because that file also loads fancyhdr/pagestyle content that beamer
+% does not want.
+\usepackage{newunicodechar}
+\newunicodechar{●}{\textbullet}
+\newunicodechar{├}{\textbar}
+\newunicodechar{└}{\textbar}
+\newunicodechar{─}{-}
+\newunicodechar{→}{\ensuremath{\rightarrow}}

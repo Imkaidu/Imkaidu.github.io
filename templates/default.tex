@@ -14,10 +14,17 @@
 
 \usepackage{enumitem}
 
-% Unicode character definitions
+% Unicode character definitions. Kept inline (rather than in the shared
+% header/unicode-chars.tex) because this template has no $header-includes$
+% placeholder, so pandoc's -H content is silently dropped for the PDF
+% build -- see header/unicode-chars.tex for the fuller explanation and the
+% copy the slides build uses via -H. Keep the two lists in sync by hand.
 \usepackage{newunicodechar}
 \newunicodechar{●}{\textbullet}
 \newunicodechar{├}{\textbar}
+\newunicodechar{└}{\textbar}
+\newunicodechar{─}{-}
+\newunicodechar{→}{\ensuremath{\rightarrow}}
 
 \providecommand{\tightlist}{%
   \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}

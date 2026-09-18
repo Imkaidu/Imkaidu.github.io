@@ -64,9 +64,11 @@ script/generate.sh index.md     # one page -> .html + .pdf + -slides.pdf
 script/generate-all.sh          # every *.md, max depth 4; log to results.out
 ```
 
-- Templates: `templates/default.tex` (PDF), `default.html` (web),
+- Templates: `templates/default.tex` (PDF), `templates/default.html` (web),
   `header/latex.tex` (PDF preamble). Styling: `css/custom.css`, KaTeX for
-  maths.
+  maths. The web template lives under `templates/` rather than at the repo
+  root because anything named `*.html` at the root is served as a public
+  page — `/default.html` used to return raw pandoc template syntax.
 - **Never hand-edit a generated `.html`, `.pdf`, or `-slides.pdf`.** Edit the
   `.md` and re-run `script/generate.sh`. This is the same
   never-edit-generated-output rule the research repos apply to `.tex` tables

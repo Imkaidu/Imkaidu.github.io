@@ -101,8 +101,12 @@ h2 {
   margin-bottom: 0.6em;
 }
 
+/* Body-size and bold already (bold comes from the browser default), so these
+   read exactly like the `**Bold label**` paragraphs they replace. Black rather
+   than grey for that parity; the nav's own h3 keeps the grey via .gray, which
+   outranks this element selector. */
 h3 {
-  color: var(--main-color);
+  color: var(--black-color);
   font-size: 1em;
 }
 
