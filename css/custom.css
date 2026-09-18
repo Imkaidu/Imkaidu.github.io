@@ -1,10 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400;1,700&display=swap');
-/* @import url('https://rsms.me/inter/inter.css'); */
+/* Roboto and Roboto Mono are loaded from default.html, not @import-ed here --
+   see the comment in that file. */
 
 :root {
   --black-color: #222222;
-  --main-color: #888888;
+  /* Secondary *text* colour. #888888 gave only 3.5:1 on white, below the 4.5:1
+     WCAG AA minimum; #6B6B6B is 5.3:1 and reads as the same soft grey. */
+  --main-color: #6B6B6B;
+  /* Decorative rules and borders only -- never text. Contrast minimums do not
+     apply to these, so the original shade is kept. */
+  --rule-color: #888888;
   --gray-color: #BBBBBB;
   --lightgray-color: #0000000A;
   --bg-color: #FFFFFF;
@@ -31,7 +35,8 @@ body {
 figcaption {
   text-align: center;
   /* font-size: 0.8em; */
-  color: var(--gray-color);
+  /* Was --gray-color (#BBBBBB), only 1.9:1 on white -- unreadable for captions. */
+  color: var(--main-color);
 }
 
 figure {
@@ -88,8 +93,12 @@ h1 {
   /* letter-spacing: -0.02em; */
 }
 
+/* Sized to match the `<font size="+1"><b>` section labels these headings
+   replaced, so switching to real markup changed the semantics, not the look. */
 h2 {
-  font-size: 1.5em;
+  font-size: 1.25em;
+  margin-top: 1.6em;
+  margin-bottom: 0.6em;
 }
 
 h3 {
@@ -154,7 +163,7 @@ small {
 #nav {
   margin-top: 0.5em;
   margin-bottom: 0.5em;
-  border-left: 2em solid var(--main-color);
+  border-left: 2em solid var(--rule-color);
   display: flex;
   align-items: center;
   justify-content: space-between;
