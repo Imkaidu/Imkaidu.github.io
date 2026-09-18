@@ -43,7 +43,7 @@ Wang, Y., Du, K. and O’Connor, A. (2018). Diversity in Entrepreneurship: Why i
 
 2. Mahadevan, R., Du, K., Preciados, L. and Schmidt, S. (2022). Managing Nitrogen Environmental Impacts to Improve Green Technical Efficiency in Philippines Rice Cultivation, Journal of Environmental Management, DOI: 10.1016/j.jenvman.2022.116529. (Corresponding author, ABDC A)
 
-3. Peng, Q.N., Du, K., and Wang, C. (2022). How Mitigation Efforts Moderate the Impact of Climate Change on Agricultural Efficiency: A Preliminary Analysis from China, Applied Economics Letters, DOI: 10.1080/13504851. (ABDC B)
+3. Peng, Q.N., Du, K., and Wang, C. (2022). How Mitigation Efforts Moderate the Impact of Climate Change on Agricultural Efficiency: A Preliminary Analysis from China, Applied Economics Letters, DOI: 10.1080/13504851.2022.2124227. (ABDC B)
 
 4. Du, K. and O’Connor, A. (2019). Examining Economic Complexity as a Holistic Innovation System Effect, *Small Business Economics*, DOI: [10.1007/s11187-019-00215-z](https://link.springer.com/article/10.1007/s11187-019-00215-z) (Corresponding author, ABDC A)
 
