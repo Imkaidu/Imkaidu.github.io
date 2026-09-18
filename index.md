@@ -11,7 +11,7 @@ layout: default
 <img src="photo.jpg" alt="Kai Du" style="width: 140px; border-radius: 4px; float: left; margin: 0.3em 1em 0.5em 0;" />
 I am a [senior lecturer](https://scholars.uow.edu.au/kaidavid-du) at the [School of Business](https://www.uow.edu.au/business-law/schools-entities/business/) (of the [University of Wollongong](https://www.uow.edu.au/)) and very passionate about delivering excellent research and impactful outcomes by acquiring valuable knowledge of how firms (or economies) work and applying this knowledge to make our community better.
 
-I obtained my [PhD in Economics](https://economics.adelaide.edu.au) from the University of Adelaide in 2014 and my research focus is data envelopment analysis and stochastic frontier analysis. I have developed a unique ability to research in the field of productivity and efficiency analysis, as well as its adoption to deal with the pressing social and economic problems, such as efficiency of healthcare system and sustainable economic growth. My CV is available on request and you might find more information on my research via my [Google Scholar profile](https://scholar.google.com.au/citations?user=Z0H3AvQAAAAJ&hl=en) and [Scopus profile](https://www.scopus.com/authid/detail.uri?authorId=56697897900). Mentioning of my research in the peer-reviewed papers is also summarised using my [scite Dashboard](https://scite.ai/dashboard/citations-in-summaries-8bG).
+I obtained my [PhD in Economics](https://economics.adelaide.edu.au) from the University of Adelaide in 2014 and my research focus is data envelopment analysis and stochastic frontier analysis. I have developed a strong track record of research in productivity and efficiency analysis, and its application to pressing problems such as healthcare efficiency and sustainable economic growth. My CV is available on request and you might find more information on my research via my [Google Scholar profile](https://scholar.google.com.au/citations?user=Z0H3AvQAAAAJ&hl=en) and [Scopus profile](https://www.scopus.com/authid/detail.uri?authorId=56697897900). Mentions of my research in peer-reviewed papers are also summarised using my [scite Dashboard](https://scite.ai/dashboard/citations-in-summaries-8bG).
 </div>
 
 **E-mail:** mail@imkaidu.net
@@ -33,7 +33,7 @@ I obtained my [PhD in Economics](https://economics.adelaide.edu.au) from the Uni
 
 Du, K., Prokhorov, A. and Tran, K.C. (2025). Spatial Stochastic Frontier Model with Latent Classes
 
-Du K. (2024). [Promoting Green Technical Efficiency: A Regional and Urban Agglomeration Cluster Analysis (PDF)](docs/Green_Technical_Eff_Final_24032026.pdf). [Supplemental Materials (PDF)](docs/Supplemental_Materials_Final_24032026.pdf)
+Du, K. (2024). [Promoting Green Technical Efficiency: A Regional and Urban Agglomeration Cluster Analysis (PDF)](docs/Green_Technical_Eff_Final_24032026.pdf). [Supplemental Materials (PDF)](docs/Supplemental_Materials_Final_24032026.pdf)
 
 Wang, Y., Du, K. and O’Connor, A. (2018). Diversity in Entrepreneurship: Why it Matters for Public Policy, Trade Dynamics and Economic Growth. (Corresponding author)
 
@@ -47,15 +47,15 @@ Wang, Y., Du, K. and O’Connor, A. (2018). Diversity in Entrepreneurship: Why i
 
 4. Du, K. and O’Connor, A. (2019). Examining Economic Complexity as a Holistic Innovation System Effect, *Small Business Economics*, DOI: [10.1007/s11187-019-00215-z](https://link.springer.com/article/10.1007/s11187-019-00215-z) (Corresponding author, ABDC A)
 
-5. Du, K., Worthington, A.C. and Zelenyuk, V. (2018). Data envelopment analysis, truncated regression and double-bootstrap for panel data with application to Chinese banking, *European Journal of Operational Research*, 265: 748 – 64, DOI: [10.1016/j.ejor.2017.08.005](https://doi.org/10.1016/j.ejor.2017.08.005) (Corresponding author, ABDC A*)
+5. Du, K., Worthington, A.C. and Zelenyuk, V. (2018). Data envelopment analysis, truncated regression and double-bootstrap for panel data with application to Chinese banking, *European Journal of Operational Research*, 265: 748–64, DOI: [10.1016/j.ejor.2017.08.005](https://doi.org/10.1016/j.ejor.2017.08.005) (Corresponding author, ABDC A*)
 
-6. Du, K. and O’Connor, A. (2018). Entrepreneurship and Advancing National Level Economic Efficiency, *Small Business Economics*, 50: 91 – 111, DOI: [10.1007/s11187-017-9904-4](https://doi.org/10.1007/s11187-017-9904-4) (Corresponding author, ABDC A)
+6. Du, K. and O’Connor, A. (2018). Entrepreneurship and Advancing National Level Economic Efficiency, *Small Business Economics*, 50: 91–111, DOI: [10.1007/s11187-017-9904-4](https://doi.org/10.1007/s11187-017-9904-4) (Corresponding author, ABDC A)
 
-7. Du, K. and Sim, N. (2016). Emerging Countries, Mergers and Acquisitions, Bank Efficiency, *Research in International Business and Finance*, 36: 499 – 510, DOI:[10.1016/j.ribaf.2015.10.005](https://doi.org/10.1016/j.ribaf.2015.10.005) (ABDC B)
+7. Du, K. and Sim, N. (2016). Emerging Countries, Mergers and Acquisitions, Bank Efficiency, *Research in International Business and Finance*, 36: 499–510, DOI: [10.1016/j.ribaf.2015.10.005](https://doi.org/10.1016/j.ribaf.2015.10.005) (ABDC B)
 
-8. O’Connor, A., Du, K. and Roos, G. (2015). The Intellectual Capital Needs of A Transitioning Economy, *Journal of Intellectual Capital*, 16(3): 466 – 489, DOI:[10.1108/JIC-08-2014-0097](https://doi.org/10.1108/JIC-08-2014-0097) (Corresponding author, ABDC B)
+8. O’Connor, A., Du, K. and Roos, G. (2015). The Intellectual Capital Needs of A Transitioning Economy, *Journal of Intellectual Capital*, 16(3): 466–489, DOI: [10.1108/JIC-08-2014-0097](https://doi.org/10.1108/JIC-08-2014-0097) (Corresponding author, ABDC B)
 
-*Note*: [Ranking of Australian Business Deans Council](https://abdc.edu.au/research/abdc-journal-list/) (ABDC) is a ranking of journal quality (2013 version) , in which A* means an academic journal in the top 6.9% (A: top 20.8% and B: top 28.4%) of 2,767 journals. 
+*Note*: [Ranking of Australian Business Deans Council](https://abdc.edu.au/research/abdc-journal-list/) (ABDC) is a ranking of journal quality (2013 version), in which A* means an academic journal in the top 6.9% (A: top 20.8% and B: top 28.4%) of 2,767 journals. 
 
 ## Book Chapter
 
@@ -63,19 +63,19 @@ Du, K. (2016). Did Efficiency of Chinese Commercial Banks Increase after WTO Acc
 
 ## Recent Teaching
 
-I introduce students (with basic economic statistics) to how empirical researchers think about and apply [econometric methods](https://www.amazon.com.au/Introduction-Econometrics-Global-James-Stock/dp/1292264454/ref=asc_df_1292264454/?tag=googleshopdsk-22&linkCode=df0&hvadid=361164490305&hvpos=&hvnetw=g&hvrand=8780685880543615614&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9069264&hvtargid=pla-738083680938&psc=1) with the practical approach (from 2020). This is the link of my [teaching philosophy](docs/Teaching_Philosophy.html) and the course profiles.
+I introduce students with a basic grounding in economic statistics to how empirical researchers think about and apply [econometric methods](https://www.amazon.com.au/Introduction-Econometrics-Global-James-Stock/dp/1292264454/ref=asc_df_1292264454/?tag=googleshopdsk-22&linkCode=df0&hvadid=361164490305&hvpos=&hvnetw=g&hvrand=8780685880543615614&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9069264&hvtargid=pla-738083680938&psc=1) with a practical approach (from 2020). This is a link to my [teaching philosophy](docs/Teaching_Philosophy.html) and the course profiles.
 
 [University of Wollongong](https://www.uow.edu.au)
 
-ECON940 (*Business Statistics*) 2025 Trimester 1, 2 and 3; ECON910 (*Economics for Professionals*) 2025 Trimester 3; ECON361 (*Explorations in Microeconomics*) 2025 Autumn Semester; 
+ECON940 (*Business Statistics*) 2025 Trimester 1, 2 and 3; ECON910 (*Economics for Professionals*) 2025 Trimester 3; ECON361 (*Explorations in Microeconomics*) 2025 Autumn Semester. 
 
-ECON802 (*Economics of Global Business Challenges*) 2024 Trimester 1; ECON102 (*Economics and Society*) 2024 Spring Semester; ECON910 (*Economics for Professionals*) 2024 Trimester 2; 
+ECON802 (*Economics of Global Business Challenges*) 2024 Trimester 1; ECON102 (*Economics and Society*) 2024 Spring Semester; ECON910 (*Economics for Professionals*) 2024 Trimester 2. 
 
-ECON910 (*Economics for Professionals*) 2023 Trimester 1 and 3; ECON102 (*Economics and Society*) 2023 Autumn Semester
+ECON910 (*Economics for Professionals*) 2023 Trimester 1 and 3; ECON102 (*Economics and Society*) 2023 Autumn Semester.
 
 [University of Queensland](https://www.uq.edu.au) 
 
-ECON7310 (*Elements of Econometrics*) 2021 Semester 1; ECON7310 (*Elements of Econometrics*) 2020 Semester 1 [Lesson Plan (Draft)](docs/econ_7310_2020/materialist.html)
+ECON7310 (*Elements of Econometrics*) 2021 Semester 1; ECON7310 (*Elements of Econometrics*) 2020 Semester 1 [Lesson Plan (Draft)](docs/econ_7310_2020/materialist.html).
 
 ## Grant and Awards
 
@@ -87,7 +87,7 @@ ECON7310 (*Elements of Econometrics*) 2021 Semester 1; ECON7310 (*Elements of Ec
 
 2021 UQ Staff Research Fund ($4,000 from the School of Economics)
 
-2020 [ASSA-CASS Joint Action Program](http://www.csaa.org.au/2018/04/assa-cass-joint-action-program/) ($7,700 from Academy of The Social Sciences in Australia with A/Prof. Renuka Mahadevan)
+2020 [ASSA-CASS Joint Action Program](http://www.csaa.org.au/2018/04/assa-cass-joint-action-program/) ($7,700 from Academy of the Social Sciences in Australia with A/Prof. Renuka Mahadevan)
 
 2019 UQ New Staff Research Start-Up Fund ($5,000 from UQ BEL Faculty)
 
@@ -95,13 +95,13 @@ ECON7310 (*Elements of Econometrics*) 2021 Semester 1; ECON7310 (*Elements of Ec
 
 2017 Vice-Chancellor’s Postdoctoral Fellow of RMIT University
 
-2013 Write-Up Fund for young researchers (to cover half an year accommodation), University of Adelaide
+2013 Write-Up Fund for young researchers (to cover half a year's accommodation), University of Adelaide
 
 2009 PhD scholarship, University of Adelaide
 
 ## Referee Service
 
-*European Journal of Operational Research*; *Journal of Productivity Analysis*; *Annals of Operations Research*; *Pacific-Basin Finance Journal*; *Economic Modelling*; *International Review of Economics & Finance* as well as  *Emerging Markets Finance and Trade*
+*European Journal of Operational Research*; *Journal of Productivity Analysis*; *Annals of Operations Research*; *Pacific-Basin Finance Journal*; *Economic Modelling*; *International Review of Economics & Finance* as well as *Emerging Markets Finance and Trade*
 
 [//3]: <[MaterialsII](docs/econ_7310_2020/materialist.html)>
 
