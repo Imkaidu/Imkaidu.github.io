@@ -1,5 +1,7 @@
 ---
 title: My Blog
+pagetitle: "Blog - Kai Du"
+description: "Notes by Kai Du on research computing: Visual Studio Code Server and the MATLAB parallel computing toolbox."
 ---
 
 Here are my blog posts. (There aren't many yet.)

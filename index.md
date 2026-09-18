@@ -1,6 +1,9 @@
 
 ---
 title: Welcome
+pagetitle: "Kai Du - Senior Lecturer in Economics, University of Wollongong"
+description: "Kai Du is a senior lecturer at the University of Wollongong School of Business. Research in productivity and efficiency analysis: data envelopment analysis and stochastic frontier analysis."
+toc: false
 layout: default
 ---
 
@@ -22,11 +25,11 @@ I obtained my [PhD in Economics](https://economics.adelaide.edu.au) from the Uni
 
 **Add.** Building 40, The Faculty of Arts, Society, and Business (ASB), University of Wollongong NSW 2522 Australia
 
-<font size="+1"> <b> Membership </b> </font>
+## Membership
 
 [HEA fellowship](https://www.uow.edu.au/about/learning-teaching/wattle/members/) (Higher Education Academy) and [ISEaPA](https://iseapa.org) membership (International Society for Efficiency and Productivity Analysis)
 
-<font size="+1"> <b> Working Paper </b> </font>
+## Working Paper
 
 Du, K., Prokhorov, A. and Tran, K.C. (2025). Spatial Stochastic Frontier Model with Latent Classes
 
@@ -34,7 +37,7 @@ Du K. (2024). [Promoting Green Technical Efficiency: A Regional and Urban Agglom
 
 Wang, Y., Du, K. and O’Connor, A. (2018). Diversity in Entrepreneurship: Why it Matters for Public Policy, Trade Dynamics and Economic Growth. (Corresponding author)
 
-<font size="+1"> <b> Journal Articles </b> </font>
+## Journal Articles
 
 1. Du, K. and Zelenyuk, V. (2024). Likelihood-Ratio Test for Technological Differences in Two-Stage Data Envelopment Analysis for Panel Data, European Journal of Operational Research, 321(2): 644–663. (Corresponding author, ABDC A*)
 
@@ -54,11 +57,11 @@ Wang, Y., Du, K. and O’Connor, A. (2018). Diversity in Entrepreneurship: Why i
 
 *Note*: [Ranking of Australian Business Deans Council](https://abdc.edu.au/research/abdc-journal-list/) (ABDC) is a ranking of journal quality (2013 version) , in which A* means an academic journal in the top 6.9% (A: top 20.8% and B: top 28.4%) of 2,767 journals. 
 
-<font size="+1"> <b> Book Chapter </b> </font>
+## Book Chapter
 
 Du, K. (2016). Did Efficiency of Chinese Commercial Banks Increase after WTO Accession? Bias Corrected Analysis from 2000 to 2009, Chapter 6 in Andressen, C.A. (ed.) [China’s Changing Economy: Trends, Impacts and the Future](https://www.routledge.com/Chinas-Changing-Economy-Trends-Impacts-and-the-Future/Andressen/p/book/9780367026721), Routledge.
 
-<font size="+1"> <b> Recent Teaching </b> </font>
+## Recent Teaching
 
 I introduce students (with basic economic statistics) to how empirical researchers think about and apply [econometric methods](https://www.amazon.com.au/Introduction-Econometrics-Global-James-Stock/dp/1292264454/ref=asc_df_1292264454/?tag=googleshopdsk-22&linkCode=df0&hvadid=361164490305&hvpos=&hvnetw=g&hvrand=8780685880543615614&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9069264&hvtargid=pla-738083680938&psc=1) with the practical approach (from 2020). This is the link of my [teaching philosophy](docs/Teaching_Philosophy.html) and the course profiles.
 
@@ -74,7 +77,7 @@ ECON910 (*Economics for Professionals*) 2023 Trimester 1 and 3; ECON102 (*Econom
 
 ECON7310 (*Elements of Econometrics*) 2021 Semester 1; ECON7310 (*Elements of Econometrics*) 2020 Semester 1 [Lesson Plan (Draft)](docs/econ_7310_2020/materialist.html)
 
-<font size="+1"> <b> Grant and Awards </b> </font>
+## Grant and Awards
 
 2025 UOW Staff Internal Research Fund ($3,000 from UOW BAL Faculty)
 
@@ -96,7 +99,7 @@ ECON7310 (*Elements of Econometrics*) 2021 Semester 1; ECON7310 (*Elements of Ec
 
 2009 PhD scholarship, University of Adelaide
 
-<font size="+1"> <b> Referee Service </b> </font>
+## Referee Service
 
 *European Journal of Operational Research*; *Journal of Productivity Analysis*; *Annals of Operations Research*; *Pacific-Basin Finance Journal*; *Economic Modelling*; *International Review of Economics & Finance* as well as  *Emerging Markets Finance and Trade*
 

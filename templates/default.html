@@ -1,17 +1,23 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="$if(lang)$$lang$$else$en$endif$" xml:lang="$if(lang)$$lang$$else$en$endif$">
 <head>
   <meta charset="utf-8" />
   <meta name="generator" content="pandoc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-  <title>Page Not Found</title>
+  <title>$if(title-prefix)$$title-prefix$ – $endif$$pagetitle$</title>
+$if(description)$
+  <meta name="description" content="$description$" />
+$endif$
 
   <!-- Link previews. Set `description:` in a page's front matter to fill these.
        Open Graph requires absolute URLs, so this is the one place the
        prefer-relative-links rule in AGENTS.md cannot apply. -->
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Kai Du" />
-  <meta property="og:title" content="Page Not Found" />
+  <meta property="og:title" content="$pagetitle$" />
+$if(description)$
+  <meta property="og:description" content="$description$" />
+$endif$
   <meta property="og:image" content="https://imkaidu.net/photo.jpg" />
   <meta name="twitter:card" content="summary" />
 
@@ -31,6 +37,12 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400;1,700&amp;family=Roboto+Mono:wght@400;700&amp;display=swap" />
   <link rel="stylesheet" href="/css/custom.css" />
+$if(math)$
+  $math$
+$endif$
+$for(header-includes)$
+  $header-includes$
+$endfor$
 </head>
 <body>
 <nav>
@@ -45,15 +57,21 @@
 </nav>
 
 <main>
+$if(title)$
 <header id="title-block-header">
-    <h1 class="title">Page Not Found</h1>
+    <h1 class="title">$title$</h1>
+$if(subtitle)$
+    <p class="subtitle">$subtitle$</p>
+$endif$
 </header>
+$endif$
+$if(toc)$
+<nav id="$idprefix$TOC" role="doc-toc">
+$table-of-contents$
+</nav>
+$endif$
 
-<p>The page or file you’re looking for doesn’t exist here — it may have
-moved or been renamed.</p>
-<p>Try the <a href="/index.html">homepage</a>, or if you followed a link
-from elsewhere, let me know at <strong>mail@imkaidu.net</strong> and
-I’ll fix it.</p>
+$body$
 </main>
 </body>
 </html>

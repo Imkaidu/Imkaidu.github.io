@@ -1,6 +1,8 @@
 
 ---
 title: "Teaching Philosophy"
+pagetitle: "Teaching Philosophy - Kai Du"
+description: "The teaching philosophy of Kai Du, senior lecturer in economics at the University of Wollongong, on bringing econometric methods to students through a practical approach."
 ---
 
 ![](machine.jpg){width=100%}

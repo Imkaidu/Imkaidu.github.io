@@ -12,7 +12,7 @@ cd "${root}"
 # Web
 pandoc "${target}" \
     -o "${target%.*}.html" \
-    --template default.html \
+    --template "${root}/templates/default.html" \
     --highlight-style haddock \
     --standalone \
     --toc \
