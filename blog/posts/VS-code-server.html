@@ -11,7 +11,13 @@
   <!-- Link previews. Set `description:` in a page's front matter to fill these.
        Open Graph requires absolute URLs, so this is the one place the
        prefer-relative-links rule in AGENTS.md cannot apply. -->
-  <meta property="og:type" content="website" />
+  <!-- `url` is passed by script/generate.sh (-V url=...), derived from the file path. -->
+  <link rel="canonical" href="https://imkaidu.net/blog/posts/VS-code-server.html" />
+  <meta property="og:url" content="https://imkaidu.net/blog/posts/VS-code-server.html" />
+  <meta property="og:type" content="article" />
+  <meta property="article:published_time" content="2020-12-10" />
+  <meta property="article:modified_time" content="2026-10-03" />
+  <meta property="article:author" content="Kai Du" />
   <meta property="og:site_name" content="Kai Du" />
   <meta property="og:title" content="Setting up Visual Studio Code Server" />
   <meta property="og:description" content="Steps to set up a Visual Studio Code Server on an AWS Ubuntu instance." />

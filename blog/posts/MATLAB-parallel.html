@@ -11,7 +11,12 @@
   <!-- Link previews. Set `description:` in a page's front matter to fill these.
        Open Graph requires absolute URLs, so this is the one place the
        prefer-relative-links rule in AGENTS.md cannot apply. -->
-  <meta property="og:type" content="website" />
+  <!-- `url` is passed by script/generate.sh (-V url=...), derived from the file path. -->
+  <link rel="canonical" href="https://imkaidu.net/blog/posts/MATLAB-parallel.html" />
+  <meta property="og:url" content="https://imkaidu.net/blog/posts/MATLAB-parallel.html" />
+  <meta property="og:type" content="article" />
+  <meta property="article:published_time" content="2020-12-21" />
+  <meta property="article:author" content="Kai Du" />
   <meta property="og:site_name" content="Kai Du" />
   <meta property="og:title" content="Tips to use MATLAB parallel computing toolbox" />
   <meta property="og:description" content="Tips on choosing between parfeval, parfor and spmd in the MATLAB Parallel Computing Toolbox." />
@@ -51,6 +56,7 @@
 <header id="title-block-header">
     <h1 class="title">Tips to use MATLAB parallel computing toolbox</h1>
     <p class="byline">Kai Du &middot; <time datetime="2020-12-21">2020-12-21</time></p>
+    <p class="note">Written in 2020 and not re-checked since. MATLAB’s parallel tools have changed since then, so check the current documentation before relying on these tips.</p>
 </header>
 
 <p><img src="figures/structure1.jpg" style="width:100.0%" /></p>

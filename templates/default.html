@@ -18,7 +18,23 @@ $endif$
   <!-- Link previews. Set `description:` in a page's front matter to fill these.
        Open Graph requires absolute URLs, so this is the one place the
        prefer-relative-links rule in AGENTS.md cannot apply. -->
+$if(url)$
+  <!-- `url` is passed by script/generate.sh (-V url=...), derived from the file path. -->
+  <link rel="canonical" href="$url$" />
+  <meta property="og:url" content="$url$" />
+$endif$
+$if(date)$
+  <meta property="og:type" content="article" />
+  <meta property="article:published_time" content="$date$" />
+$if(updated)$
+  <meta property="article:modified_time" content="$updated$" />
+$endif$
+$for(author)$
+  <meta property="article:author" content="$author$" />
+$endfor$
+$else$
   <meta property="og:type" content="website" />
+$endif$
   <meta property="og:site_name" content="Kai Du" />
   <meta property="og:title" content="$pagetitle$" />
 $if(description)$
@@ -71,6 +87,9 @@ $if(subtitle)$
 $endif$
 $if(date)$
     <p class="byline">$for(author)$$author$$sep$, $endfor$$if(author)$ &middot; $endif$<time datetime="$date$">$date$</time>$if(updated)$ &middot; updated <time datetime="$updated$">$updated$</time>$endif$</p>
+$endif$
+$if(note)$
+    <p class="note">$note$</p>
 $endif$
 </header>
 $endif$

@@ -2,6 +2,7 @@
 title: "Haiku reads, Opus plans, Sonnet builds, Opus reviews: my Claude Code subagent setup"
 author: Kai Du
 date: 2026-10-03
+pagetitle: "A four-model Claude Code subagent setup - Kai Du"
 description: "How I route a Claude Code task by difficulty: a Haiku explorer, Opus planning, Sonnet implementation and an Opus reviewer, with a read-only guard hook, what I measured, and how I keep the setup from going stale."
 ---
 

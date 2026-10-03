@@ -52,9 +52,12 @@ description: "One sentence for link previews and the feed."
 ---
 ```
 
-Optional: `updated:` (shown on the page), `unlisted: true` (stays on the site
-but out of the index, feed and sitemap, and `noindex`; used for the two
-Matthew Low posts kept for the record), `nopdf: true` (skip PDF and slides for a
-page that cannot yet be typeset). Then run `script/generate-all.sh`; the blog
+Optional: `updated:` (shown on the page), `note:` (a caveat box under the
+byline, e.g. "written in 2020, not re-checked"), `pagetitle:` (a short title for
+the browser tab and link previews), `unlisted: true` (stays on the site but out
+of the index, feed and sitemap, and `noindex`; used for the two Matthew Low
+posts kept for the record), `slides: true` (also build a beamer deck; off by
+default), `nopdf: true` (skip PDF and slides for a page that cannot yet be
+typeset). Then run `script/generate-all.sh`; the blog
 index is generated between the `POSTS:START/END` markers in `blog/blog.md` —
 never edit that block by hand.

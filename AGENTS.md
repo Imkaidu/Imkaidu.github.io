@@ -56,11 +56,12 @@ harm it prevents.
 
 ## Build convention — pandoc, committed output
 
-Pages are authored in Markdown and rendered with pandoc into HTML, PDF, and
-beamer slides, all three of which are **committed alongside the source**:
+Pages are authored in Markdown and rendered with pandoc into HTML and PDF
+(plus beamer slides only for a page with `slides: true`), all **committed
+alongside the source**:
 
 ```bash
-script/generate.sh index.md     # one page -> .html + .pdf + -slides.pdf
+script/generate.sh index.md     # one page -> .html + .pdf (+ -slides.pdf if slides: true)
 script/generate-all.sh          # every *.md, max depth 4; log to results.out
 ```
 
@@ -83,6 +84,9 @@ script/generate-all.sh          # every *.md, max depth 4; log to results.out
   `description:`). Do not hand-edit them or the `POSTS:START/END` block in
   `blog/blog.md`. `unlisted: true` keeps a post on the site but out of all
   three (the two Matthew Low posts are kept this way, for the record).
+- The HTML template adds `<link rel=canonical>` / `og:url` from the file path
+  (passed by `generate.sh` as `-V url=`), `og:type: article` for any page with a
+  `date:`, and a `note:` box. Tables scroll inside themselves on narrow screens.
 - `.nojekyll` is present: GitHub Pages serves these files as-is rather than
   running Jekyll over them. Do not remove it.
 

@@ -44,9 +44,16 @@ figure {
   margin: 0em;
 }
 
+/* A table wider than the 600px column scrolls inside itself instead of
+   pushing the whole page sideways on a phone. width:max-content keeps a narrow
+   table shrink-wrapped and centred (display:block would otherwise stretch it). */
 table {
   border-collapse: collapse;
-  margin: auto;
+  display: block;
+  width: max-content;
+  max-width: 100%;
+  overflow-x: auto;
+  margin: 1em auto;
 }
 
 table, th, td {
@@ -199,7 +206,7 @@ ul > li > ul > li > a {
 /* Author and date line under a post title (templates/default.html). */
 .byline {
   color: var(--main-color);
-  margin: -0.5em 0 1.5em;
+  margin: 0.8em 0 1.5em;
 }
 
 button {
@@ -215,4 +222,14 @@ button {
 
 button:hover {
   cursor: pointer;
+}
+
+/* Free-text caveat under the byline (front matter `note:`), e.g. "written in
+   2020, not re-tested". Set apart so an old post's age is not missed. */
+.note {
+  color: var(--black-color);
+  background-color: var(--lightgray-color);
+  border-left: 3px solid var(--rule-color);
+  padding: 0.5em 0.8em;
+  margin: 0 0 1.5em;
 }
