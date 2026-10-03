@@ -1,7 +1,8 @@
 ---
 title: "Tips to use MATLAB parallel computing toolbox"
 author: Kai Du
-date: 21/12/2020
+date: 2020-12-21
+description: "Tips on choosing between parfeval, parfor and spmd in the MATLAB Parallel Computing Toolbox."
 ---
 
 ![](figures/structure1.jpg){width=100%}

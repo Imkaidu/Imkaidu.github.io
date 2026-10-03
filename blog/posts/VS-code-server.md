@@ -1,7 +1,9 @@
 ---
 title: "Setting up Visual Studio Code Server"
 author: Kai Du
-date: 10/12/2020
+date: 2020-12-10
+nopdf: true
+description: "Steps to set up a Visual Studio Code Server on an AWS Ubuntu instance."
 ---
 
 ![](figures/structure.jpg){width=100%}

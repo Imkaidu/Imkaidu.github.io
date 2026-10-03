@@ -73,6 +73,16 @@ script/generate-all.sh          # every *.md, max depth 4; log to results.out
   `.md` and re-run `script/generate.sh`. This is the same
   never-edit-generated-output rule the research repos apply to `.tex` tables
   and figures.
+- **A build failure must be visible.** `generate.sh` and `generate-all.sh` exit
+  1 and print `FAILED: <file>` if any format fails; pandoc errors used to leave
+  a stale committed PDF in place with no sign. Never push past one. A page that
+  genuinely cannot be typeset opts out with `nopdf: true` in its front matter
+  instead of failing silently.
+- **Blog index, `feed.xml` and `sitemap.xml` are generated** by
+  `script/build-index.py` from each post's front matter (ISO `date:`, `title:`,
+  `description:`). Do not hand-edit them or the `POSTS:START/END` block in
+  `blog/blog.md`. `unlisted: true` keeps a post on the site but out of all
+  three (the two Matthew Low posts are kept this way, for the record).
 - `.nojekyll` is present: GitHub Pages serves these files as-is rather than
   running Jekyll over them. Do not remove it.
 

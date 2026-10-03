@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Kai Du: blog</title>
+  <link href="https://imkaidu.net/blog/blog.html"/>
+  <link rel="self" href="https://imkaidu.net/feed.xml"/>
+  <id>https://imkaidu.net/</id>
+  <updated>2026-10-03T00:00:00Z</updated>
+  <author><name>Kai Du</name></author>
+  <entry>
+    <title>Haiku reads, Opus plans, Sonnet builds, Opus reviews: my Claude Code subagent setup</title>
+    <link href="https://imkaidu.net/blog/posts/agent-pipeline.html"/>
+    <id>https://imkaidu.net/blog/posts/agent-pipeline.html</id>
+    <published>2026-10-03T00:00:00Z</published>
+    <updated>2026-10-03T00:00:00Z</updated>
+    <summary>How I route a Claude Code task by difficulty: a Haiku explorer, Opus planning, Sonnet implementation and an Opus reviewer, with a read-only guard hook, what I measured, and how I keep the setup from going stale.</summary>
+  </entry>
+  <entry>
+    <title>Tips to use MATLAB parallel computing toolbox</title>
+    <link href="https://imkaidu.net/blog/posts/MATLAB-parallel.html"/>
+    <id>https://imkaidu.net/blog/posts/MATLAB-parallel.html</id>
+    <published>2020-12-21T00:00:00Z</published>
+    <updated>2020-12-21T00:00:00Z</updated>
+    <summary>Tips on choosing between parfeval, parfor and spmd in the MATLAB Parallel Computing Toolbox.</summary>
+  </entry>
+  <entry>
+    <title>Setting up Visual Studio Code Server</title>
+    <link href="https://imkaidu.net/blog/posts/VS-code-server.html"/>
+    <id>https://imkaidu.net/blog/posts/VS-code-server.html</id>
+    <published>2020-12-10T00:00:00Z</published>
+    <updated>2020-12-10T00:00:00Z</updated>
+    <summary>Steps to set up a Visual Studio Code Server on an AWS Ubuntu instance.</summary>
+  </entry>
+</feed>

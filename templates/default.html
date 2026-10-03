@@ -5,6 +5,12 @@
   <meta name="generator" content="pandoc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
   <title>$if(title-prefix)$$title-prefix$ – $endif$$pagetitle$</title>
+$if(unlisted)$
+  <!-- `unlisted: true` in front matter: kept on the site for the record, but
+       left out of the blog index, feed and sitemap, and asked not to be indexed. -->
+  <meta name="robots" content="noindex" />
+$endif$
+  <link rel="alternate" type="application/atom+xml" title="Kai Du" href="/feed.xml" />
 $if(description)$
   <meta name="description" content="$description$" />
 $endif$
@@ -62,6 +68,9 @@ $if(title)$
     <h1 class="title">$title$</h1>
 $if(subtitle)$
     <p class="subtitle">$subtitle$</p>
+$endif$
+$if(date)$
+    <p class="byline">$for(author)$$author$$sep$, $endfor$$if(author)$ &middot; $endif$<time datetime="$date$">$date$</time>$if(updated)$ &middot; updated <time datetime="$updated$">$updated$</time>$endif$</p>
 $endif$
 </header>
 $endif$

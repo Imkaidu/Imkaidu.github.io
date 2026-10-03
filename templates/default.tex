@@ -21,6 +21,7 @@
 % copy the slides build uses via -H. Keep the two lists in sync by hand.
 \usepackage{newunicodechar}
 \newunicodechar{●}{\textbullet}
+\newunicodechar{│}{\textbar}
 \newunicodechar{├}{\textbar}
 \newunicodechar{└}{\textbar}
 \newunicodechar{─}{-}
@@ -29,9 +30,16 @@
 \providecommand{\tightlist}{%
   \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
 
+$if(highlighting-macros)$
+$highlighting-macros$
+$endif$
+
 \begin{document}
 $if(title)$
 \title{$title$}
+% Show the front-matter date, never the build date: without \date LaTeX prints
+% today, which would stamp a 2020 post with the day the PDF was rebuilt.
+\date{$if(date)$$date$$endif$}
 \maketitle
 $endif$
 

@@ -31,8 +31,30 @@ and why.
 | Task | Command |
 |---|---|
 | Rebuild one page | `script/generate.sh <file>.md` |
-| Rebuild every page | `script/generate-all.sh` (writes `results.out`) |
+| Rebuild every page | `script/generate-all.sh` (writes `results.out`; **exits 1 and names the page if any step failed**) |
+| Refresh blog index, `feed.xml`, `sitemap.xml` | `script/build-index.py` (run by `generate-all.sh`; `--check` writes nothing) |
 | Publish | `git push origin master` — the push *is* the deploy |
 
 There is no test suite, no CI, and no staging environment. Preview locally by
-opening the generated `.html` before pushing.
+opening the generated `.html` before pushing. Do not push after a failed
+`generate-all.sh`: a failed PDF leaves the previous committed PDF in place.
+
+## Writing a blog post
+
+Add `blog/posts/<name>.md` with this front matter (see `AGENTS.md` for the rules):
+
+```yaml
+---
+title: "…"
+author: Kai Du
+date: 2026-10-03        # ISO 8601 only; the index, feed and sitemap read it
+description: "One sentence for link previews and the feed."
+---
+```
+
+Optional: `updated:` (shown on the page), `unlisted: true` (stays on the site
+but out of the index, feed and sitemap, and `noindex`; used for the two
+Matthew Low posts kept for the record), `nopdf: true` (skip PDF and slides for a
+page that cannot yet be typeset). Then run `script/generate-all.sh`; the blog
+index is generated between the `POSTS:START/END` markers in `blog/blog.md` —
+never edit that block by hand.

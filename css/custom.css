@@ -196,6 +196,12 @@ ul > li > ul > li > a {
   color: var(--main-color);
 }
 
+/* Author and date line under a post title (templates/default.html). */
+.byline {
+  color: var(--main-color);
+  margin: -0.5em 0 1.5em;
+}
+
 button {
   background-color: var(--bg-color);
   margin-left: auto;

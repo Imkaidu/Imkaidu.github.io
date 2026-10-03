@@ -1,7 +1,8 @@
 ---
 title: A full website setup with Pandoc and GitHub Pages
 author: Matthew Low
-date: 03/07/2020
+date: 2020-07-03
+unlisted: true
 ---
 
 One night, after being inspired by a number of [similar](http://wstyler.ucsd.edu/posts/pandoc_website.html) [projects](https://blog.lahteenmaki.net/goodbye-blogger-hello-pandoc-and-scripts.html) online, I decided to try reworking my personal website into a fully automated Pandoc and GitHub pages system. I had tried similar projects in the past (a full Markdown-based setup with LaTeX output was one of my [attempts](https://github.com/mattchrlw/anteckna)) but I never really got to a level with my setup that I was particularly happy with.

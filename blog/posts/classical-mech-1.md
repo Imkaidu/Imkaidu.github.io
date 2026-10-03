@@ -1,7 +1,8 @@
 ---
 title: "The Theoretical Minimum: Classical Mechanics, lecture 1"
 author: Matthew Low
-date: 21/07/2020
+date: 2020-07-21
+unlisted: true
 ---
 
 > These notes are from a series of lectures by Leonard Susskind, entitled [The Theoretical Minimum: Classical Mechanics](https://www.youtube.com/playlist?list=PL47F408D36D4CF129). There is also a book based on these lectures, but my notes are a lot more concise and are the result of furious scribbles taken during lectures.

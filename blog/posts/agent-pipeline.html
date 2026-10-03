@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Haiku reads, Opus plans, Sonnet builds, Opus reviews: my Claude Code subagent setup</title>
+  <link rel="alternate" type="application/atom+xml" title="Kai Du" href="/feed.xml" />
+  <meta name="description" content="How I route a Claude Code task by difficulty: a Haiku explorer, Opus planning, Sonnet implementation and an Opus reviewer, with a read-only guard hook, what I measured, and how I keep the setup from going stale." />
+
+  <!-- Link previews. Set `description:` in a page's front matter to fill these.
+       Open Graph requires absolute URLs, so this is the one place the
+       prefer-relative-links rule in AGENTS.md cannot apply. -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Kai Du" />
+  <meta property="og:title" content="Haiku reads, Opus plans, Sonnet builds, Opus reviews: my Claude Code subagent setup" />
+  <meta property="og:description" content="How I route a Claude Code task by difficulty: a Haiku explorer, Opus planning, Sonnet implementation and an Opus reviewer, with a read-only guard hook, what I measured, and how I keep the setup from going stale." />
+  <meta property="og:image" content="https://imkaidu.net/photo.jpg" />
+  <meta name="twitter:card" content="summary" />
+
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+  </style>
+  <!-- Fonts are requested here rather than via @import in custom.css: an
+       @import is only discovered after custom.css has been fetched and parsed,
+       which delays the font request by two round trips. Both families are
+       combined into one request. -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400;1,700&amp;family=Roboto+Mono:wght@400;700&amp;display=swap" />
+  <link rel="stylesheet" href="/css/custom.css" />
+</head>
+<body>
+<nav>
+  <div id="nav">
+    <h3 class="gray"><a href="/index.html">Kai Du</a></h3>
+      <div class="nav-buttons">
+        <a href="/index.html">Home</a>
+        <a href="/blog/blog.html">Blog</a>
+        <a href="https://github.com/ImKaiDu">GitHub</a>  
+      </div>
+  </div>
+</nav>
+
+<main>
+<header id="title-block-header">
+    <h1 class="title">Haiku reads, Opus plans, Sonnet builds, Opus reviews: my Claude Code subagent setup</h1>
+    <p class="byline">Kai Du &middot; <time datetime="2026-10-03">2026-10-03</time></p>
+</header>
+<nav id="TOC" role="doc-toc">
+<ul>
+<li><a href="#the-idea-in-one-table" id="toc-the-idea-in-one-table">The idea in one table</a></li>
+<li><a href="#what-the-two-agents-look-like" id="toc-what-the-two-agents-look-like">What the two agents look like</a></li>
+<li><a href="#how-i-use-it-day-to-day" id="toc-how-i-use-it-day-to-day">How I use it day to day</a></li>
+<li><a href="#the-part-where-haiku-is-the-weak-link" id="toc-the-part-where-haiku-is-the-weak-link">The part where Haiku is the weak link</a></li>
+<li><a href="#what-the-reviewer-is-told-to-check" id="toc-what-the-reviewer-is-told-to-check">What the reviewer is told to check</a></li>
+<li><a href="#what-changed-after-the-first-draft" id="toc-what-changed-after-the-first-draft">What changed after the first draft</a></li>
+<li><a href="#what-i-have-not-measured" id="toc-what-i-have-not-measured">What I have not measured</a></li>
+<li><a href="#keeping-it-from-going-stale" id="toc-keeping-it-from-going-stale">Keeping it from going stale</a></li>
+<li><a href="#what-i-would-tell-you-to-take-away" id="toc-what-i-would-tell-you-to-take-away">What I would tell you to take away</a></li>
+<li><a href="#sources" id="toc-sources">Sources</a></li>
+</ul>
+</nav>
+
+<p>For a while I ran Claude Code the lazy way: one strong model for everything. It worked, and it was expensive in the way that only shows up when the usage window runs out at 3 pm. Most of what a coding agent does is not hard. It greps, opens files and skims them. The hard parts are deciding what to change and checking afterwards that the change is right. So I split the work by difficulty and gave each stage the model that suits it.</p>
+<p>This post describes that setup, what I measured when I tested it, what I changed after the first draft failed in small ways, and how I stop it from going stale. Everything was tested on Claude Code 2.1.285 on 3 October 2026. Claude Code moves quickly, so check the field names against the current documentation before you copy anything.</p>
+<h2 id="the-idea-in-one-table">The idea in one table</h2>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr>
+<th>Stage</th>
+<th>Who</th>
+<th>How it is wired</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Read</td>
+<td><strong>Haiku</strong>, as a custom <code>Explore</code> agent</td>
+<td>A file in <code>~/.claude/agents/</code> that overrides the built-in <code>Explore</code>. Read-only</td>
+</tr>
+<tr>
+<td>Plan</td>
+<td><strong>Opus</strong>, main session in plan mode</td>
+<td>The <code>opusplan</code> model alias</td>
+</tr>
+<tr>
+<td>Build</td>
+<td><strong>Sonnet</strong>, main session after you approve the plan</td>
+<td>The same <code>opusplan</code> alias switches models when plan mode ends</td>
+</tr>
+<tr>
+<td>Review</td>
+<td><strong>Opus</strong>, as a custom <code>reviewer</code> agent</td>
+<td>A second file in <code>~/.claude/agents/</code>. Read-only</td>
+</tr>
+<tr>
+<td>Guard</td>
+<td>A hook script</td>
+<td>Allows only read-only shell commands for both agents</td>
+</tr>
+</tbody>
+</table>
+<p>Two things here are not obvious. First, there are only two custom agents. Planning and building are handled by <code>opusplan</code>, which is Opus in plan mode and Sonnet otherwise, so writing a “planner” and an “implementer” agent would just duplicate the alias. Second, I installed the agents at user level (<code>~/.claude/</code>), not in each repository. I work across several repositories that ignore <code>.claude/</code> in different ways, and per-repository copies would drift apart. A repository that wants a different reviewer can still add its own <code>.claude/agents/reviewer.md</code>, because project scope outranks user scope.</p>
+<p>One practical note: restart Claude Code after the first install. A running session does not notice a newly created <code>~/.claude/agents/</code> directory. After that, edits are picked up without a restart.</p>
+<h2 id="what-the-two-agents-look-like">What the two agents look like</h2>
+<p>The reader is the cheap one. This is the top of its file:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">name</span><span class="kw">:</span><span class="at"> Explore</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">description</span><span class="kw">:</span><span class="at"> Fast read-only codebase reader. Use before planning.</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">tools</span><span class="kw">:</span><span class="at"> Read, Grep, Glob, Bash</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">model</span><span class="kw">:</span><span class="at"> haiku</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="fu">omitClaudeMd</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="fu">maxTurns</span><span class="kw">:</span><span class="at"> </span><span class="dv">30</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span></code></pre></div>
+<p>Using the same name as the built-in agent overrides it, and the match is case-sensitive. <code>omitClaudeMd: true</code> stops it loading my large instruction files, which a cheap reader does not need. The body of the file is a mandatory output template, and I will come back to why.</p>
+<p>The reviewer is the expensive one:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">name</span><span class="kw">:</span><span class="at"> reviewer</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="fu">description</span><span class="kw">:</span><span class="at"> Independent review. Use once, before committing.</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="fu">tools</span><span class="kw">:</span><span class="at"> Read, Grep, Glob, Bash</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="fu">model</span><span class="kw">:</span><span class="at"> opus</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="fu">effort</span><span class="kw">:</span><span class="at"> high</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="fu">maxTurns</span><span class="kw">:</span><span class="at"> </span><span class="dv">40</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span></code></pre></div>
+<p>The description does real work (mine is longer than the one shown here). It tells the main session to call the reviewer once, after an approved plan has been implemented and before committing, and to skip trivial one-file edits. Opus tokens are the scarce resource, so I do not want a review after every edit.</p>
+<h2 id="how-i-use-it-day-to-day">How I use it day to day</h2>
+<ol type="1">
+<li>Start <code>claude</code>. The default model is already <code>opusplan</code>. Enter plan mode with Shift+Tab, <code>/plan</code>, or <code>--permission-mode plan</code>.</li>
+<li>Describe the task. Opus hands the reading to <code>Explore</code> and writes a plan. I read the plan and approve it, and Sonnet implements.</li>
+<li>When the work is done, I ask for the reviewer: “use the reviewer subagent”. <strong>I paste in the plan and anything I have already decided.</strong> A subagent does not see the conversation, so an unbriefed reviewer will cheerfully re-argue questions that were settled an hour ago.</li>
+<li>I fix what it reports and commit.</li>
+</ol>
+<p>Some escape hatches: if Sonnet fails the same step twice, <code>/model opus</code> for that step and then <code>/model opusplan</code> to go back. For a side task that needs the conversation so far, use <code>/subtask &lt;instruction&gt;</code>; the fork runs on the main session’s model, which is Sonnet during execution. On a very large task, re-enter plan mode after each milestone so Opus plans from the current state, not from the original brief.</p>
+<h2 id="the-part-where-haiku-is-the-weak-link">The part where Haiku is the weak link</h2>
+<p>The design has an obvious risk. Opus plans from what Haiku reports, so a confident but incomplete brief becomes a confident but incomplete plan. I therefore made the explorer say what it did not cover. Every brief must have <code>FACT</code> and <code>INFERENCE</code> labels with a <code>path:line</code> citation, and must end with two lists: <code>NOT FOUND</code> (things it looked for and could not find) and <code>NOT READ</code> (relevant-looking files it did not open).</p>
+<p>My first version of that prompt was a polite request, and Haiku followed it in 1 of 3 test briefs. Replacing the request with a fill-in template made it 3 of 3. On three blind questions with an answer key, there were no fabrications, every cited line was right, and the one trap question was answered correctly. One brief used absolute paths, and I still treat <code>NOT READ: none</code> as a claim to spot-check. Three questions is a thin sample; the real test is three real tasks, and I have not done those yet.</p>
+<h2 id="what-the-reviewer-is-told-to-check">What the reviewer is told to check</h2>
+<p>I wanted the reviewer to behave like a skeptical colleague, so its prompt is an ordered checklist: did the change match the plan; is there a silent numerical error (a sign, an off-by-one index, a reseeded random number generator, a changed constant); can results still be traced back to the code that produced them; did anything break at the call sites; is anything unverified; and only then, hygiene. Every finding must be marked <code>MEASURED</code> or <code>INFERRED</code>, and “nothing wrong” must come with a list of what was checked. The verdict is one of <code>APPROVE</code>, <code>APPROVE WITH NOTES</code> or <code>CHANGES REQUESTED</code>.</p>
+<h2 id="what-changed-after-the-first-draft">What changed after the first draft</h2>
+<p>I wrote the setup from an initial draft and then checked it against the documentation and an end-to-end test. The changes I would flag for anyone doing the same:</p>
+<ul>
+<li><strong>Read-only by prompt is not read-only.</strong> My draft told the reviewer’s shell to be read-only in its instructions. A prompt is advice, not a control. I added a <code>PreToolUse</code> hook on Bash that allows a short list of read-only commands and refuses everything else with exit code 2. In a test, the reviewer was refused on <code>echo hi &gt; file</code> and on <code>git commit</code>, while <code>git status</code> and <code>git log</code> ran without a permission prompt. A 36-case unit battery of the guard passed (10 allow, 26 deny). It is a guardrail against accidents and prompt drift, not a sandbox: it does not stop the agent reading sensitive files, because read access is the point.</li>
+<li><strong>The explorer needed a shell after all.</strong> I had given it only <code>Read, Grep, Glob</code>, which lost <code>git log</code> and <code>git blame</code>. I added <code>Bash</code> back, behind the same guard.</li>
+<li><strong>No tests from the reviewer.</strong> An allowlist cannot know each repository’s test command, and I do not want a reviewer launching long-running or remote jobs. It lists suggested checks for the main session to run.</li>
+<li><strong>Turn limits.</strong> Without them a confused Opus session can run up a bill. The reviewer stops at 40 turns and the explorer at 30.</li>
+<li><strong>A false claim in the draft.</strong> It said subagents cannot start further subagents. In this version they can, to a depth of three. Nothing in this setup depends on nesting, but I would not have known without checking.</li>
+<li><strong>The effort setting.</strong> A top-level <code>effortLevel</code> does not set defaults for the newest Opus and Sonnet; per-model <code>modelSettings</code> does. The reviewer’s own <code>effort: high</code> overrides the session anyway.</li>
+</ul>
+<p>I also left one environment variable unset on purpose. <code>CLAUDE_CODE_MAX_CONCURRENT_SUBAGENTS</code> looks like the obvious way to cap parallel agents, but I measured that it counts the custom <code>Explore</code> and rejects an over-limit call with a do-not-retry error instead of queueing it. A cap of 2 would make a third parallel explorer fail in the middle of planning, while not covering forks or workflow agents. I keep to two explorers and one reviewer at a time by habit instead. If a usage window is ever exhausted by fan-out, the cap is the first thing I will try.</p>
+<h2 id="what-i-have-not-measured">What I have not measured</h2>
+<p>I would rather list these than imply the setup is proven:</p>
+<ul>
+<li>The live <code>opusplan</code> handover when you approve a plan interactively. Headless runs cannot approve a plan, though I did confirm that plan mode ran Opus 5.5 and execution ran Sonnet 5.5.</li>
+<li>Haiku’s brief quality over real work, as above.</li>
+<li>Whether per-model effort settings are honoured per phase under <code>opusplan</code>. The documentation says effort carries across phases.</li>
+</ul>
+<h2 id="keeping-it-from-going-stale">Keeping it from going stale</h2>
+<p>A setup like this decays quietly: an unknown frontmatter field is silently ignored, so a renamed field fails without an error. I run a review every 30 days, and on any minor release or new model. A small install script reports whether the installed copies match my canonical ones, whether the review is overdue, and whether the Claude Code version moved. The review itself is short:</p>
+<ol type="1">
+<li>Re-read the two documentation pages below, and check that the field names, the model aliases and the descriptions of <code>opusplan</code> and the Explore override are unchanged.</li>
+<li>Re-run the self-test: have the reviewer try <code>git status</code>, an <code>echo</code> redirect and a <code>git commit</code>, and read the model IDs out of the <code>stream-json</code> output. Expect the first allowed, the others blocked, and both Haiku and Opus present. Also ask a fresh session to list its subagent types and expect exactly one <code>Explore</code> and one <code>reviewer</code>; a duplicate name in one directory loads non-deterministically.</li>
+<li>Check quality, not just plumbing: verify the <code>path:line</code> citations in three recent explorer briefs, and ask of the last reviewer verdicts which findings were real, which were noise, and what a later check found that the reviewer missed.</li>
+<li>Look at cost. If review is eating the window, narrow the reviewer’s description or move small diffs to Sonnet at <code>effort: high</code>. If Haiku briefs prove unreliable, change <code>model: haiku</code> to <code>sonnet</code>; it is a one-line edit.</li>
+</ol>
+<h2 id="what-i-would-tell-you-to-take-away">What I would tell you to take away</h2>
+<p>Route by difficulty, not by habit. Make the cheap agent report its blind spots, because the expensive one will trust it. Treat a prompt as advice and use a hook where you need a guarantee. Brief the reviewer, because it starts with no memory of what you decided. And date your setup, so that you know when to distrust it.</p>
+<h2 id="sources">Sources</h2>
+<ul>
+<li>Claude Code documentation on <a href="https://code.claude.com/docs/en/sub-agents">subagents</a> (frontmatter fields, scope priority, overriding the built-in agents, hooks, <code>/subtask</code>, nesting) and on <a href="https://code.claude.com/docs/en/model-config">model configuration</a> (<code>opusplan</code>, aliases, effort, <code>modelSettings</code>). These are the authority.</li>
+<li>Secondary write-ups I found useful for ideas: <a href="https://www.mindstudio.ai/blog/save-tokens-claude-code-opus-plan-mode">MindStudio on saving tokens with Opus plan mode</a>, <a href="https://tembo.io/blog/claude-code-subagents">Tembo</a>, <a href="https://glukhov.org/ai-devtools/claude-code/claude-code-subagents/">Glukhov</a> and <a href="https://blog.dailydoseofds.com/p/sub-agents-in-claude-code">Daily Dose of DS</a>.</li>
+</ul>
+</main>
+</body>
+</html>
