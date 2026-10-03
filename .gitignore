@@ -8,3 +8,7 @@ results.out
 
 # editor backups
 *.bak
+
+# local editor/tool files (not part of the published site)
+*.log
+*.code-workspace

@@ -2,7 +2,7 @@
 title: "Setting up Visual Studio Code Server"
 author: Kai Du
 date: 2020-12-10
-nopdf: true
+updated: 2026-10-03
 description: "Steps to set up a Visual Studio Code Server on an AWS Ubuntu instance."
 ---
 
@@ -10,30 +10,40 @@ description: "Steps to set up a Visual Studio Code Server on an AWS Ubuntu insta
 
 > This blog will explain how to set up a visual studio code server in an AWS instance (Ubuntu 18.04). The steps mentioned here are basically the commands I executed in my instance (launched using ami-0dba2cb6798deb6d8 64-bit x86) with security group rules allowing port 22,80 and 443 for all.
 
-**Step 1:** sudo apt update
+**Note (October 2026):** this post was written in 2020 and has not been re-tested. Ubuntu 18.04 and code-server 3.4.1 are long out of date, so use current versions and check the [code-server documentation](https://coder.com/docs/code-server) before following these steps. `Test1234` is only an example: choose your own strong password, and do not leave ports open to everyone on a real server.
 
-**Step 2:** wget https://github.com/cdr/code-server/releases/download/3.4.1/code-server-3.4.1-linux-x86_64.tar.gz
+**Step 1:** `sudo apt update`
 
-**Step 3:** tar xvzf code-server-3.4.1-linux-x86_64.tar.gz
+**Step 2:** `wget https://github.com/cdr/code-server/releases/download/3.4.1/code-server-3.4.1-linux-x86_64.tar.gz`
 
-**Step 4:** sudo mkdir -p ~/.config/code-server
+**Step 3:** `tar xvzf code-server-3.4.1-linux-x86_64.tar.gz`
 
-**Step 5:** sudo nano ~/.config/code-server/config.yaml
+**Step 4:** `sudo mkdir -p ~/.config/code-server`
 
-- - ->sudo cat ~/.config/code-server/config.yaml
+**Step 5:** `sudo nano ~/.config/code-server/config.yaml`
 
-Output: ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Paste in the config below, save, and check it with:
+
+```bash
+sudo cat ~/.config/code-server/config.yaml
+```
+
+Output:
+
+```text
 bind-addr: 127.0.0.1:8080
 auth: password            
 password: Test1234         
 cert: false
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+```
 
-**Step 6:** cd ~/code-server-3.4.1-linux-x86_64/bin
+**Step 6:** `cd ~/code-server-3.4.1-linux-x86_64/bin`
 
-**Step 7:** ./code-server
+**Step 7:** `./code-server`
 
-Output:~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Output:
+
+```text
 info  Using config file ~/.config/code-server/config.yaml
 info  Using user-data-dir ~/.local/share/code-server
 info  code-server 3.4.1 48f7c2724827e526eeaa6c2c151c520f48a61259
@@ -41,14 +51,20 @@ info  HTTP server listening on http://127.0.0.1:8080
 info      - Using password from ~/.config/code-server/config.yaml
 info      - To disable use `--auth none`
 info    - Not serving HTTPS
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-[Ctrl+C to stope this service]
+```
+[Ctrl+C to stop this service]
 
-**Step 8:** sudo nano /lib/systemd/system/code-server.service
+**Step 8:** `sudo nano /lib/systemd/system/code-server.service`
 
-- - -> sudo cat /lib/systemd/system/code-server.service
+Paste in the unit file below, save, and check it with:
 
-Output:~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+```bash
+sudo cat /lib/systemd/system/code-server.service
+```
+
+Output:
+
+```text
 [Unit]
 Description=code-server
 After=nginx.service
@@ -61,23 +77,27 @@ Restart=always
 
 [Install]
 WantedBy=multi-user.target
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+```
 
-**Step 9:** sudo mkdir /var/lib/code-server
+**Step 9:** `sudo mkdir /var/lib/code-server`
 
-**Step 10:** sudo systemctl daemon-reload
+**Step 10:** `sudo systemctl daemon-reload`
 
-**Step 11:** sudo systemctl start code-server
+**Step 11:** `sudo systemctl start code-server`
 
-**Step 12:** sudo systemctl enable code-server
+**Step 12:** `sudo systemctl enable code-server`
 
-Output:~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Output:
+
+```text
 Created symlink /etc/systemd/system/multi-user.target.wants/code-server.service → /lib/systemd/system/code-server.service.
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+```
 
-**Step 13:** sudo systemctl status code-server
+**Step 13:** `sudo systemctl status code-server`
 
-Output:~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Output:
+
+```text
 ● code-server.service - code-server
      Loaded: loaded (/lib/systemd/system/code-server.service; enabled; vendor preset: enabled)
      Active: active (running) since Wed 2020-10-07 03:06:01 UTC; 22s ago
@@ -97,15 +117,21 @@ Oct 07 03:06:01 ip-172-31-18-5 code-server[2237]: info  HTTP server listening on
 Oct 07 03:06:01 ip-172-31-18-5 code-server[2237]: info      - Using password from $PASSWORD
 Oct 07 03:06:01 ip-172-31-18-5 code-server[2237]: info      - To disable use `--auth none`
 Oct 07 03:06:01 ip-172-31-18-5 code-server[2237]: info    - Not serving HTTPS
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+```
 
-**Step 14:** sudo apt install nginx -y
+**Step 14:** `sudo apt install nginx -y`
 
-**Step 15:** sudo nano /etc/nginx/sites-available/code-server.conf
+**Step 15:** `sudo nano /etc/nginx/sites-available/code-server.conf`
 
-- - - - - -> sudo cat /etc/nginx/sites-available/code-server.conf
+Paste in the server block below, save, and check it with:
 
-Output:~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+```bash
+sudo cat /etc/nginx/sites-available/code-server.conf
+```
+
+Output:
+
+```text
 server {
    listen 80;
    listen [::]:80;
@@ -118,29 +144,33 @@ server {
       proxy_set_header Accept-Encoding gzip;
    }
 }
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+```
 [ *NOTE:* Remember to change “54.XXX.XX.253” to the public IP of your instance ]
 
-**Step 16:** cd /etc/nginx/sites-available/
+**Step 16:** `cd /etc/nginx/sites-available/`
 
-**Step 17:** (OPTIONAL) sudo mv default BackUp_default
+**Step 17:** (OPTIONAL) `sudo mv default BackUp_default`
 
-**Step 18:** sudo rm /etc/nginx/sites-enabled/default
+**Step 18:** `sudo rm /etc/nginx/sites-enabled/default`
 
-**Step 19:** sudo ln -s /etc/nginx/sites-available/code-server.conf /etc/nginx/sites-enabled/code-server.conf
+**Step 19:** `sudo ln -s /etc/nginx/sites-available/code-server.conf /etc/nginx/sites-enabled/code-server.conf`
 
-**Step 20:** sudo systemctl start nginx
+**Step 20:** `sudo systemctl start nginx`
 
-**Step 21:** sudo systemctl enable nginx
+**Step 21:** `sudo systemctl enable nginx`
 
-Output:~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Output:
+
+```text
 Synchronizing state of nginx.service with SysV service script with /lib/systemd/systemd-sysv-install.
 Executing: /lib/systemd/systemd-sysv-install enable nginx
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+```
 
-**Step 22:** sudo systemctl status nginx
+**Step 22:** `sudo systemctl status nginx`
 
-Output:~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Output:
+
+```text
 ● nginx.service - A high performance web server and a reverse proxy server
      Loaded: loaded (/lib/systemd/system/nginx.service; enabled; vendor preset: enabled)
      Active: active (running) since Wed 2020-10-07 03:06:47 UTC; 3min 12s ago
@@ -154,19 +184,23 @@ Output:~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Oct 07 03:06:46 ip-172-31-18-5 systemd[1]: Starting A high performance web server and a reverse proxy server...
 Oct 07 03:06:47 ip-172-31-18-5 systemd[1]: Started A high performance web server and a reverse proxy server.
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+```
 
-**Step 23:** sudo systemctl daemon-reload
-**Step 24:** Refresh  both the services by starting and stopping them. You can follow the below commands in order:-
-- - - - - -> sudo systemctl stop nginx
-- - - - - -> sudo systemctl stop code-server
-- - - - - -> sudo systemctl daemon-reload
-- - - - - -> sudo systemctl start code-server
-- - - - - -> sudo systemctl start nginx
-- - - - - -> sudo systemctl enable code-server
-- - - - - -> sudo systemctl enable nginx
-- - - - - -> sudo systemctl status nginx <=== To check if nginx is running
-- - - - - -> sudo systemctl status code-server <=== To check if the code-server is active
+**Step 23:** `sudo systemctl daemon-reload`
+
+**Step 24:** Refresh both the services by starting and stopping them. You can follow the commands below in order:
+
+```bash
+sudo systemctl stop nginx
+sudo systemctl stop code-server
+sudo systemctl daemon-reload
+sudo systemctl start code-server
+sudo systemctl start nginx
+sudo systemctl enable code-server
+sudo systemctl enable nginx
+sudo systemctl status nginx  # To check if nginx is running
+sudo systemctl status code-server  # To check if the code-server is active
+```
 
 **Step 25:** Open browser and try accessing the Public IP of the instance
 
