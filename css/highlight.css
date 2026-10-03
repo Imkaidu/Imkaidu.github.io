@@ -1,0 +1,17 @@
+/* Code-block syntax colours, themed through variables so light and dark share
+   one set of rules (the values live in custom.css next to the page colours).
+   Token classes are pandoc's Skylighting short names. Replaces the per-style
+   <style> block pandoc emits, which this site's template never included, so
+   fenced code used to render uncoloured. Every light/dark pair is >= 5.9:1 /
+   >= 7:1 against its background (WCAG AA needs 4.5:1). */
+
+code span.al, code span.er { color: var(--syn-alert); font-weight: bold; }          /* Alert, Error */
+code span.an, code span.co, code span.cv,
+code span.do, code span.in, code span.wa { color: var(--syn-comment); }              /* Comments, notes */
+code span.cf, code span.kw { color: var(--syn-keyword); }                            /* Keywords, control flow */
+code span.ch, code span.sc, code span.ss,
+code span.st, code span.vs { color: var(--syn-string); }                             /* Strings, chars */
+code span.ot, code span.pp { color: var(--syn-other); }                              /* Other, preprocessor */
+
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }

@@ -1,9 +1,14 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<html class="no-js" xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="generator" content="pandoc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="color-scheme" content="light dark" />
+  <meta name="theme-color" content="#FFFFFF" media="(prefers-color-scheme: light)" />
+  <meta name="theme-color" content="#151515" media="(prefers-color-scheme: dark)" />
+  <!-- Applies the saved Auto/Light/Dark choice before first paint (no white flash). -->
+  <script src="/js/theme.js"></script>
   <title>The Theoretical Minimum: Classical Mechanics, lecture 1</title>
   <!-- `unlisted: true` in front matter: kept on the site for the record, but
        left out of the blog index, feed and sitemap, and asked not to be indexed. -->
@@ -40,6 +45,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400;1,700&amp;family=Roboto+Mono:wght@400;700&amp;display=swap" />
   <link rel="stylesheet" href="/css/custom.css" />
+  <link rel="stylesheet" href="/css/highlight.css" />
   <script defer="" src="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.js"></script>
   <script>document.addEventListener("DOMContentLoaded", function () {
  var mathElements = document.getElementsByClassName("math");
@@ -58,18 +64,25 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css" />
 </head>
 <body>
-<nav>
+<a class="skip-link" href="#main">Skip to content</a>
+<nav aria-label="Main">
   <div id="nav">
     <h3 class="gray"><a href="/index.html">Kai Du</a></h3>
       <div class="nav-buttons">
         <a href="/index.html">Home</a>
         <a href="/blog/blog.html">Blog</a>
-        <a href="https://github.com/ImKaiDu">GitHub</a>  
+        <a href="https://github.com/ImKaiDu">GitHub</a>
+        <select id="theme-select" aria-label="Colour theme">
+          <option value="auto">Auto</option>
+          <option value="light">Light</option>
+          <option value="dark">Dark</option>
+        </select>
       </div>
   </div>
 </nav>
 
-<main>
+<main id="main">
+<p class="backlink"><a href="/blog/blog.html">&larr; All posts</a></p>
 <header id="title-block-header">
     <h1 class="title">The Theoretical Minimum: Classical Mechanics, lecture 1</h1>
     <p class="byline">Matthew Low &middot; <time datetime="2020-07-21">2020-07-21</time></p>
@@ -233,5 +246,9 @@
 <p><span class="math display">a_x = -\omega^2 \cos (\omega t) ,\quad a_y = -\omega^2 \sin (\omega t).</span></p>
 <p>Note that acceleration is parallel to the position vector, but is inwards (as is the case with centrifugal acceleration).</p>
 </main>
+
+<footer>
+  <p><a href="mailto:mail@imkaidu.net">mail@imkaidu.net</a> &middot; <a href="/feed.xml">Feed</a> &middot; <a href="https://github.com/ImKaiDu">GitHub</a></p>
+</footer>
 </body>
 </html>

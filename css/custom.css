@@ -12,6 +12,14 @@
   --gray-color: #BBBBBB;
   --lightgray-color: #0000000A;
   --bg-color: #FFFFFF;
+  /* Strong borders (boxes, buttons): was a literal `black`. */
+  --ink-border: #000000;
+  /* Code-block syntax colours, used by css/highlight.css. */
+  --syn-alert: #cc0000;
+  --syn-comment: #00701a;
+  --syn-keyword: #0000ff;
+  --syn-string: #007070;
+  --syn-other: #b43000;
   /* Cyan 700 */
   --cyan-color: rgb(12, 132, 196);
   --magenta-color: rgb(191, 13, 92);
@@ -19,7 +27,51 @@
   --cyan-light: rgba(12, 132, 196, 0.2);
   --magenta-light: rgba(191, 13, 92, 0.2);
   --yellow-light: rgba(248, 232, 56, 0.2);
+  /* Lets the browser theme scrollbars and form controls to match. */
+  color-scheme: light dark;
 }
+
+/* Dark palette. Defined twice on purpose: once for "Auto" (the visitor's
+   system setting, unless they chose Light) and once for an explicit Dark
+   choice (js/theme.js sets data-theme). Keep the two blocks identical.
+   Pairs checked against #151515: text 14.6:1, secondary text 7.7:1, syntax
+   colours >= 7:1. --rule-color/--gray-color are decorative borders only. */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --black-color: #E6E6E6;
+    --main-color: #A8A8A8;
+    --rule-color: #777777;
+    --gray-color: #444444;
+    --lightgray-color: #FFFFFF12;
+    --bg-color: #151515;
+    --ink-border: #E6E6E6;
+    --syn-alert: #FF7B72;
+    --syn-comment: #8FA3B3;
+    --syn-keyword: #6CB6FF;
+    --syn-string: #7EC699;
+    --syn-other: #F2A65A;
+  }
+  :root:not([data-theme="light"]) img { filter: brightness(0.9); }
+}
+
+:root[data-theme="light"] { color-scheme: light; }
+
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --black-color: #E6E6E6;
+  --main-color: #A8A8A8;
+  --rule-color: #777777;
+  --gray-color: #444444;
+  --lightgray-color: #FFFFFF12;
+  --bg-color: #151515;
+  --ink-border: #E6E6E6;
+  --syn-alert: #FF7B72;
+  --syn-comment: #8FA3B3;
+  --syn-keyword: #6CB6FF;
+  --syn-string: #7EC699;
+  --syn-other: #F2A65A;
+}
+:root[data-theme="dark"] img { filter: brightness(0.9); }
 
 body {
   font-family: 'Roboto', sans-serif;
@@ -56,7 +108,9 @@ table {
   margin: 1em auto;
 }
 
-table, th, td {
+/* Cells only: the <table> is display:block (above), so a border on it would
+   draw a second frame around the cell grid. */
+th, td {
   border: 1px solid var(--gray-color);
   padding: 0.5em;
 }
@@ -69,14 +123,14 @@ code {
 pre {
   /* background-color: var(--lightgray-color); */
   background: var(--bg-color);
-  border: 1px solid black;
+  border: 1px solid var(--ink-border);
   padding: 1em;
   overflow-x: scroll;
 }
 
 blockquote {
   background: var(--bg-color);
-  border: 1px solid black;
+  border: 1px solid var(--ink-border);
   /* border-left: 10px solid var(--gray-color); */
   margin: 0px;
   margin-bottom: 10px;
@@ -95,7 +149,7 @@ h1 {
   font-size: 2em;
   display: inline-block;
   padding: 0.5em;
-  border: 1px solid black;
+  border: 1px solid var(--ink-border);
   margin-bottom: 0em;
   /* letter-spacing: -0.02em; */
 }
@@ -138,7 +192,7 @@ a {
 
 a:hover {
   background-color: var(--black-color);
-  color: white;
+  color: var(--bg-color);
 }
 
 #nav a {
@@ -148,7 +202,7 @@ a:hover {
 
 #nav a:hover {
   background-color: var(--main-color);
-  color: white;
+  color: var(--bg-color);
 }
 
 #nav h3 {
@@ -210,10 +264,11 @@ ul > li > ul > li > a {
 }
 
 button {
+  color: var(--black-color);
   background-color: var(--bg-color);
   margin-left: auto;
   margin-right: 0px;
-  border: 1px solid black;
+  border: 1px solid var(--ink-border);
   border-radius: 0px;
   padding: 0.5em;
   font-family: inherit;
@@ -233,3 +288,48 @@ button:hover {
   padding: 0.5em 0.8em;
   margin: 0 0 1.5em;
 }
+
+/* Colour-theme picker in the nav (templates/default.html, js/theme.js). A native
+   <select> keeps it keyboard- and screen-reader-accessible and narrow enough for
+   a phone-width nav. Without JavaScript it is inert, so it is hidden. */
+#theme-select {
+  font: inherit;
+  color: var(--main-color);
+  background-color: var(--bg-color);
+  border: 1px solid var(--rule-color);
+  border-radius: 0;
+  padding: 0.25em 0.4em;
+  margin-left: 0.5em;
+}
+.no-js #theme-select { display: none; }
+
+/* "Skip to content": off-screen until it receives keyboard focus. */
+.skip-link {
+  position: absolute;
+  left: -999px;
+  top: 0;
+  padding: 0.5em 1em;
+  background: var(--bg-color);
+  color: var(--black-color);
+  border: 1px solid var(--ink-border);
+  z-index: 10;
+}
+.skip-link:focus { left: 0.5em; top: 0.5em; }
+
+/* "← All posts" above a post title. */
+.backlink {
+  margin: 0 0 0.8em;
+  color: var(--main-color);
+}
+.backlink a { color: var(--main-color); }
+.backlink a:hover { color: var(--bg-color); }
+
+footer {
+  margin-top: 3em;
+  padding-top: 1em;
+  border-top: 1px solid var(--gray-color);
+  color: var(--main-color);
+}
+footer p { margin: 0.3em 0; }
+footer a { color: var(--main-color); }
+footer a:hover { color: var(--bg-color); }

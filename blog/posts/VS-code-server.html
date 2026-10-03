@@ -1,9 +1,14 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<html class="no-js" xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="generator" content="pandoc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="color-scheme" content="light dark" />
+  <meta name="theme-color" content="#FFFFFF" media="(prefers-color-scheme: light)" />
+  <meta name="theme-color" content="#151515" media="(prefers-color-scheme: dark)" />
+  <!-- Applies the saved Auto/Light/Dark choice before first paint (no white flash). -->
+  <script src="/js/theme.js"></script>
   <title>Setting up Visual Studio Code Server</title>
   <link rel="alternate" type="application/atom+xml" title="Kai Du" href="/feed.xml" />
   <meta name="description" content="Steps to set up a Visual Studio Code Server on an AWS Ubuntu instance." />
@@ -40,20 +45,28 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400;1,700&amp;family=Roboto+Mono:wght@400;700&amp;display=swap" />
   <link rel="stylesheet" href="/css/custom.css" />
+  <link rel="stylesheet" href="/css/highlight.css" />
 </head>
 <body>
-<nav>
+<a class="skip-link" href="#main">Skip to content</a>
+<nav aria-label="Main">
   <div id="nav">
     <h3 class="gray"><a href="/index.html">Kai Du</a></h3>
       <div class="nav-buttons">
         <a href="/index.html">Home</a>
         <a href="/blog/blog.html">Blog</a>
-        <a href="https://github.com/ImKaiDu">GitHub</a>  
+        <a href="https://github.com/ImKaiDu">GitHub</a>
+        <select id="theme-select" aria-label="Colour theme">
+          <option value="auto">Auto</option>
+          <option value="light">Light</option>
+          <option value="dark">Dark</option>
+        </select>
       </div>
   </div>
 </nav>
 
-<main>
+<main id="main">
+<p class="backlink"><a href="/blog/blog.html">&larr; All posts</a></p>
 <header id="title-block-header">
     <h1 class="title">Setting up Visual Studio Code Server</h1>
     <p class="byline">Kai Du &middot; <time datetime="2020-12-10">2020-12-10</time> &middot; updated <time datetime="2026-10-03">2026-10-03</time></p>
@@ -186,5 +199,9 @@ Oct 07 03:06:47 ip-172-31-18-5 systemd[1]: Started A high performance web server
 <p><strong>Step 25:</strong> Open browser and try accessing the Public IP of the instance</p>
 <p><em>Then</em>, the VS code server should work now.</p>
 </main>
+
+<footer>
+  <p><a href="mailto:mail@imkaidu.net">mail@imkaidu.net</a> &middot; <a href="/feed.xml">Feed</a> &middot; <a href="https://github.com/ImKaiDu">GitHub</a></p>
+</footer>
 </body>
 </html>

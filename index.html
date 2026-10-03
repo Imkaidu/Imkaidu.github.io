@@ -1,9 +1,14 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<html class="no-js" xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="generator" content="pandoc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="color-scheme" content="light dark" />
+  <meta name="theme-color" content="#FFFFFF" media="(prefers-color-scheme: light)" />
+  <meta name="theme-color" content="#151515" media="(prefers-color-scheme: dark)" />
+  <!-- Applies the saved Auto/Light/Dark choice before first paint (no white flash). -->
+  <script src="/js/theme.js"></script>
   <title>Kai Du - Senior Lecturer in Economics, University of Wollongong</title>
   <link rel="alternate" type="application/atom+xml" title="Kai Du" href="/feed.xml" />
   <meta name="description" content="Kai Du is a senior lecturer at the University of Wollongong School of Business. Research in productivity and efficiency analysis: data envelopment analysis and stochastic frontier analysis." />
@@ -37,20 +42,27 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400;1,700&amp;family=Roboto+Mono:wght@400;700&amp;display=swap" />
   <link rel="stylesheet" href="/css/custom.css" />
+  <link rel="stylesheet" href="/css/highlight.css" />
 </head>
 <body>
-<nav>
+<a class="skip-link" href="#main">Skip to content</a>
+<nav aria-label="Main">
   <div id="nav">
     <h3 class="gray"><a href="/index.html">Kai Du</a></h3>
       <div class="nav-buttons">
         <a href="/index.html">Home</a>
         <a href="/blog/blog.html">Blog</a>
-        <a href="https://github.com/ImKaiDu">GitHub</a>  
+        <a href="https://github.com/ImKaiDu">GitHub</a>
+        <select id="theme-select" aria-label="Colour theme">
+          <option value="auto">Auto</option>
+          <option value="light">Light</option>
+          <option value="dark">Dark</option>
+        </select>
       </div>
   </div>
 </nav>
 
-<main>
+<main id="main">
 <header id="title-block-header">
     <h1 class="title">Welcome</h1>
 </header>
@@ -104,5 +116,9 @@
 <h2 id="referee-service">Referee Service</h2>
 <p><em>European Journal of Operational Research</em>; <em>Journal of Productivity Analysis</em>; <em>Annals of Operations Research</em>; <em>Pacific-Basin Finance Journal</em>; <em>Economic Modelling</em>; <em>International Review of Economics &amp; Finance</em> as well as <em>Emerging Markets Finance and Trade</em></p>
 </main>
+
+<footer>
+  <p><a href="mailto:mail@imkaidu.net">mail@imkaidu.net</a> &middot; <a href="/feed.xml">Feed</a> &middot; <a href="https://github.com/ImKaiDu">GitHub</a></p>
+</footer>
 </body>
 </html>

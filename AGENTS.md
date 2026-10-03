@@ -87,6 +87,17 @@ script/generate-all.sh          # every *.md, max depth 4; log to results.out
 - The HTML template adds `<link rel=canonical>` / `og:url` from the file path
   (passed by `generate.sh` as `-V url=`), `og:type: article` for any page with a
   `date:`, and a `note:` box. Tables scroll inside themselves on narrow screens.
+- **Colour theme: Auto / Light / Dark.** All page colours are variables at the top
+  of `css/custom.css`; never write a literal `black`, `white` or hex in a rule.
+  The dark palette is defined twice -- under `prefers-color-scheme: dark` (for
+  Auto) and under `:root[data-theme="dark"]` (explicit choice) -- and the two
+  blocks must stay identical. `js/theme.js` (loaded in `<head>`, so there is no
+  white flash) applies the saved choice; with JavaScript off the page simply
+  follows the system and the picker is hidden. Code colours are variables too
+  (`css/highlight.css`); check any new colour pair against WCAG AA (4.5:1) in
+  both themes. PDFs stay light.
+- Every page has a skip link, a labelled nav and a footer; dated pages get an
+  "All posts" link above the title.
 - `.nojekyll` is present: GitHub Pages serves these files as-is rather than
   running Jekyll over them. Do not remove it.
 

@@ -1,9 +1,14 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<html class="no-js" xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="generator" content="pandoc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="color-scheme" content="light dark" />
+  <meta name="theme-color" content="#FFFFFF" media="(prefers-color-scheme: light)" />
+  <meta name="theme-color" content="#151515" media="(prefers-color-scheme: dark)" />
+  <!-- Applies the saved Auto/Light/Dark choice before first paint (no white flash). -->
+  <script src="/js/theme.js"></script>
   <title>Tips to use MATLAB parallel computing toolbox</title>
   <link rel="alternate" type="application/atom+xml" title="Kai Du" href="/feed.xml" />
   <meta name="description" content="Tips on choosing between parfeval, parfor and spmd in the MATLAB Parallel Computing Toolbox." />
@@ -39,20 +44,28 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400;1,700&amp;family=Roboto+Mono:wght@400;700&amp;display=swap" />
   <link rel="stylesheet" href="/css/custom.css" />
+  <link rel="stylesheet" href="/css/highlight.css" />
 </head>
 <body>
-<nav>
+<a class="skip-link" href="#main">Skip to content</a>
+<nav aria-label="Main">
   <div id="nav">
     <h3 class="gray"><a href="/index.html">Kai Du</a></h3>
       <div class="nav-buttons">
         <a href="/index.html">Home</a>
         <a href="/blog/blog.html">Blog</a>
-        <a href="https://github.com/ImKaiDu">GitHub</a>  
+        <a href="https://github.com/ImKaiDu">GitHub</a>
+        <select id="theme-select" aria-label="Colour theme">
+          <option value="auto">Auto</option>
+          <option value="light">Light</option>
+          <option value="dark">Dark</option>
+        </select>
       </div>
   </div>
 </nav>
 
-<main>
+<main id="main">
+<p class="backlink"><a href="/blog/blog.html">&larr; All posts</a></p>
 <header id="title-block-header">
     <h1 class="title">Tips to use MATLAB parallel computing toolbox</h1>
     <p class="byline">Kai Du &middot; <time datetime="2020-12-21">2020-12-21</time></p>
@@ -79,5 +92,9 @@
 <p>In this post, I share my experience to use these three commands. The general rule is the tradeoff between the time to deploy the codes in each worker and the time to run the codes in each worker. It might be more reasonable to fully use all workers <em>first</em> and <em>then</em> keep them running as long as possible. Thus, I prefer to use <em>parfor</em>, rather than <em>parfeval</em> if the number of tasks is less than the number of workers. When the number of tasks is more than (or equals to) the number of workers, <em>parfeval</em> works faster than <em>parfor</em>. Second, <em>parfor</em> only works when the tasks are independent but <em>parfeval</em> works for the `dependent’ tasks.</p>
 <p>Finally, it does not mean we have to use both of <em>parfor</em> and <em>parfeval</em> when the time to finish each task is very small. In fact, it might not a bad idea to use <em>for</em> for some very small jobs and then use <em>parfor</em> or <em>parfeval</em> for its `parent’ loops.</p>
 </main>
+
+<footer>
+  <p><a href="mailto:mail@imkaidu.net">mail@imkaidu.net</a> &middot; <a href="/feed.xml">Feed</a> &middot; <a href="https://github.com/ImKaiDu">GitHub</a></p>
+</footer>
 </body>
 </html>
