@@ -26,16 +26,22 @@ One practical note: restart Claude Code after the first install. A running sessi
 
 ## What the two agents look like
 
-The reader is the cheap one. This is the top of its file:
+The reader is the cheap one. This is an excerpt of its frontmatter (the cosmetic `color:` is left out). The `hooks:` block wires in the read-only guard described below:
 
 ```yaml
 ---
 name: Explore
-description: Fast read-only codebase reader. Use before planning.
+description: Fast read-only codebase reader (Haiku). Use proactively before planning.
 tools: Read, Grep, Glob, Bash
 model: haiku
 omitClaudeMd: true
 maxTurns: 30
+hooks:
+  PreToolUse:
+    - matcher: "Bash"
+      hooks:
+        - type: command
+          command: "bash \"$HOME/.claude/hooks/reviewer_bash_guard.sh\""
 ---
 ```
 
@@ -51,6 +57,12 @@ tools: Read, Grep, Glob, Bash
 model: opus
 effort: high
 maxTurns: 40
+hooks:
+  PreToolUse:
+    - matcher: "Bash"
+      hooks:
+        - type: command
+          command: "bash \"$HOME/.claude/hooks/reviewer_bash_guard.sh\""
 ---
 ```
 

@@ -132,15 +132,21 @@
 <p>Two things here are not obvious. First, there are only two custom agents. Planning and building are handled by <code>opusplan</code>, which is Opus in plan mode and Sonnet otherwise, so writing a “planner” and an “implementer” agent would just duplicate the alias. Second, I installed the agents at user level (<code>~/.claude/</code>), not in each repository. I work across several repositories that ignore <code>.claude/</code> in different ways, and per-repository copies would drift apart. A repository that wants a different reviewer can still add its own <code>.claude/agents/reviewer.md</code>, because project scope outranks user scope.</p>
 <p>One practical note: restart Claude Code after the first install. A running session does not notice a newly created <code>~/.claude/agents/</code> directory. After that, edits are picked up without a restart.</p>
 <h2 id="what-the-two-agents-look-like">What the two agents look like</h2>
-<p>The reader is the cheap one. This is the top of its file:</p>
+<p>The reader is the cheap one. This is an excerpt of its frontmatter (the cosmetic <code>color:</code> is left out). The <code>hooks:</code> block wires in the read-only guard described below:</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">name</span><span class="kw">:</span><span class="at"> Explore</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">description</span><span class="kw">:</span><span class="at"> Fast read-only codebase reader. Use before planning.</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">description</span><span class="kw">:</span><span class="at"> Fast read-only codebase reader (Haiku). Use proactively before planning.</span></span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">tools</span><span class="kw">:</span><span class="at"> Read, Grep, Glob, Bash</span></span>
 <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">model</span><span class="kw">:</span><span class="at"> haiku</span></span>
 <span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="fu">omitClaudeMd</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
 <span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="fu">maxTurns</span><span class="kw">:</span><span class="at"> </span><span class="dv">30</span></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span></code></pre></div>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="fu">hooks</span><span class="kw">:</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">PreToolUse</span><span class="kw">:</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="kw">-</span><span class="at"> </span><span class="fu">matcher</span><span class="kw">:</span><span class="at"> </span><span class="st">&quot;Bash&quot;</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">hooks</span><span class="kw">:</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="at">        </span><span class="kw">-</span><span class="at"> </span><span class="fu">type</span><span class="kw">:</span><span class="at"> command</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="at">          </span><span class="fu">command</span><span class="kw">:</span><span class="at"> </span><span class="st">&quot;bash </span><span class="sc">\&quot;</span><span class="st">$HOME/.claude/hooks/reviewer_bash_guard.sh</span><span class="sc">\&quot;</span><span class="st">&quot;</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span></code></pre></div>
 <p>Using the same name as the built-in agent overrides it, and the match is case-sensitive. <code>omitClaudeMd: true</code> stops it loading my large instruction files, which a cheap reader does not need. The body of the file is a mandatory output template, and I will come back to why.</p>
 <p>The reviewer is the expensive one:</p>
 <div class="sourceCode" id="cb2"><pre class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span>
@@ -150,7 +156,13 @@
 <span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="fu">model</span><span class="kw">:</span><span class="at"> opus</span></span>
 <span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="fu">effort</span><span class="kw">:</span><span class="at"> high</span></span>
 <span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="fu">maxTurns</span><span class="kw">:</span><span class="at"> </span><span class="dv">40</span></span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span></code></pre></div>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="fu">hooks</span><span class="kw">:</span></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">PreToolUse</span><span class="kw">:</span></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="kw">-</span><span class="at"> </span><span class="fu">matcher</span><span class="kw">:</span><span class="at"> </span><span class="st">&quot;Bash&quot;</span></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">hooks</span><span class="kw">:</span></span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a><span class="at">        </span><span class="kw">-</span><span class="at"> </span><span class="fu">type</span><span class="kw">:</span><span class="at"> command</span></span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a><span class="at">          </span><span class="fu">command</span><span class="kw">:</span><span class="at"> </span><span class="st">&quot;bash </span><span class="sc">\&quot;</span><span class="st">$HOME/.claude/hooks/reviewer_bash_guard.sh</span><span class="sc">\&quot;</span><span class="st">&quot;</span></span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span></code></pre></div>
 <p>The description does real work (mine is longer than the one shown here). It tells the main session to call the reviewer once, after an approved plan has been implemented and before committing, and to skip trivial one-file edits. Opus tokens are the scarce resource, so I do not want a review after every edit.</p>
 <h2 id="how-i-use-it-day-to-day">How I use it day to day</h2>
 <ol type="1">
