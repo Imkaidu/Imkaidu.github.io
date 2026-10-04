@@ -26,7 +26,7 @@ One practical note: restart Claude Code after the first install. A running sessi
 
 ## What the two agents look like
 
-The reader is the cheap one. This is an excerpt of its frontmatter (the cosmetic `color:` is left out). The `hooks:` block wires in the read-only guard described below:
+The reader is the cheap one. This is an excerpt of its frontmatter (the description is shortened and the cosmetic `color:` is left out). The `hooks:` block wires in the read-only guard described below:
 
 ```yaml
 ---
@@ -47,7 +47,7 @@ hooks:
 
 Using the same name as the built-in agent overrides it, and the match is case-sensitive. `omitClaudeMd: true` stops it loading my large instruction files, which a cheap reader does not need. The body of the file is a mandatory output template, and I will come back to why.
 
-The reviewer is the expensive one:
+The reviewer is the expensive one (same excerpting: the description is shortened and `color:` is left out):
 
 ```yaml
 ---
