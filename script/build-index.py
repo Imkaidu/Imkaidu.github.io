@@ -79,6 +79,8 @@ def new_blog_md(posts):
 def feed_xml(posts):
     updated = max((p["updated"] for p in posts), default="1970-01-01")
     out = ['<?xml version="1.0" encoding="utf-8"?>',
+           # Renders the feed as a readable page in a browser; readers ignore it.
+           '<?xml-stylesheet type="text/xsl" href="/feed.xsl"?>',
            '<feed xmlns="http://www.w3.org/2005/Atom">',
            f"  <title>{escape(SITE_TITLE)}: blog</title>",
            f'  <link href="{BASE}/blog/blog.html"/>',
