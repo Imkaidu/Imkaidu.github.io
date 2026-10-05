@@ -2,6 +2,7 @@
 title: "Haiku reads, Opus plans, Sonnet builds, Opus reviews: my Claude Code subagent setup"
 author: Kai Du
 date: 2026-10-03
+updated: 2026-10-05
 pagetitle: "A four-model Claude Code subagent setup - Kai Du"
 description: "How I route a Claude Code task by difficulty: a Haiku explorer, Opus planning, Sonnet implementation and an Opus reviewer, with a read-only guard hook, what I measured, and how I keep the setup from going stale."
 ---
@@ -70,7 +71,7 @@ The description does real work (mine is longer than the one shown here). It tell
 
 ## How I use it day to day
 
-1. Start `claude`. The default model is already `opusplan`. Enter plan mode with Shift+Tab, `/plan`, or `--permission-mode plan`.
+1. Start `claude` on the `opusplan` model (`/model opusplan`, or set it as your default; without it the session runs one model throughout and the Opus-plans, Sonnet-builds split does not happen). Enter plan mode with Shift+Tab, `/plan`, or `--permission-mode plan`.
 2. Describe the task. Opus hands the reading to `Explore` and writes a plan. I read the plan and approve it, and Sonnet implements.
 3. When the work is done, I ask for the reviewer: "use the reviewer subagent". **I paste in the plan and anything I have already decided.** A subagent does not see the conversation, so an unbriefed reviewer will cheerfully re-argue questions that were settled an hour ago.
 4. I fix what it reports and commit.
@@ -85,7 +86,9 @@ My first version of that prompt was a polite request, and Haiku followed it in 1
 
 ## What the reviewer is told to check
 
-I wanted the reviewer to behave like a skeptical colleague, so its prompt is an ordered checklist: did the change match the plan; is there a silent numerical error (a sign, an off-by-one index, a reseeded random number generator, a changed constant); can results still be traced back to the code that produced them; did anything break at the call sites; is anything unverified; and only then, hygiene. Every finding must be marked `MEASURED` or `INFERRED`, and "nothing wrong" must come with a list of what was checked. The verdict is one of `APPROVE`, `APPROVE WITH NOTES` or `CHANGES REQUESTED`.
+I wanted the reviewer to behave like a skeptical colleague, so its prompt is an ordered checklist: did the change match the plan; where the repository has numerical code, is there a silent numerical error (a sign, an off-by-one index, a reseeded random number generator, a changed constant); where it produces results, can they still be traced back to the code that produced them; did anything break at the call sites; is anything unverified; and only then, hygiene. Every finding must be marked `MEASURED` or `INFERRED`, and before it is reported the reviewer must re-open the cited line and confirm it says what the finding claims. "Nothing wrong" must come with a list of what was checked, and checks that do not apply to the repository are reported as N/A rather than padded out with invented findings. The verdict is one of `APPROVE`, `APPROVE WITH NOTES` or `CHANGES REQUESTED`.
+
+The "where the repository has" qualifiers are an update. I first wrote the checklist for my MATLAB research repositories, where a silently wrong number is the worst failure. Because the reviewer is installed user-level, it also reviews this website, and half the checklist did not apply there. I made the one global reviewer repository-neutral instead of adding a second per-repository copy that would drift. When I ran it on the site's last two commits, it marked the numerical and provenance checks N/A, confirmed exactly one feed link per page, and reported one real, minor finding: a rebuild had committed ten PDFs whose only change was an embedded timestamp.
 
 ## What changed after the first draft
 

@@ -5,14 +5,14 @@
   <link href="https://imkaidu.net/blog/blog.html"/>
   <link rel="self" href="https://imkaidu.net/feed.xml"/>
   <id>https://imkaidu.net/</id>
-  <updated>2026-10-03T00:00:00Z</updated>
+  <updated>2026-10-05T00:00:00Z</updated>
   <author><name>Kai Du</name></author>
   <entry>
     <title>Haiku reads, Opus plans, Sonnet builds, Opus reviews: my Claude Code subagent setup</title>
     <link href="https://imkaidu.net/blog/posts/agent-pipeline.html"/>
     <id>https://imkaidu.net/blog/posts/agent-pipeline.html</id>
     <published>2026-10-03T00:00:00Z</published>
-    <updated>2026-10-03T00:00:00Z</updated>
+    <updated>2026-10-05T00:00:00Z</updated>
     <summary>How I route a Claude Code task by difficulty: a Haiku explorer, Opus planning, Sonnet implementation and an Opus reviewer, with a read-only guard hook, what I measured, and how I keep the setup from going stale.</summary>
   </entry>
   <entry>
