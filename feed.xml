@@ -8,12 +8,12 @@
   <updated>2026-10-13T00:00:00Z</updated>
   <author><name>Kai Du</name></author>
   <entry>
-    <title>Designing an AI video pipeline that Claude Code can run: the LLM chooses, the code computes</title>
+    <title>Designing an AI video pipeline: the LLM chooses, the code computes</title>
     <link href="https://imkaidu.net/blog/posts/ai-video-pipeline.html"/>
     <id>https://imkaidu.net/blog/posts/ai-video-pipeline.html</id>
     <published>2026-10-13T00:00:00Z</published>
     <updated>2026-10-13T00:00:00Z</updated>
-    <summary>A design for turning a topic into a narrated explainer video with Claude Code: audio as the master clock, the LLM returning cut points instead of timestamps, two approval gates before any paid call, and the tool choices I settled on.</summary>
+    <summary>A tool-agnostic design for turning a topic into a narrated explainer video: audio as the master clock, the LLM returning cut points instead of timestamps, two approval gates before any paid call, and how it maps onto an agent such as Claude Code.</summary>
   </entry>
   <entry>
     <title>Haiku reads, Opus plans, Sonnet builds, Opus reviews: my Claude Code subagent setup</title>

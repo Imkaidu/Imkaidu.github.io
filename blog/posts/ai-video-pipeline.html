@@ -9,9 +9,9 @@
   <meta name="theme-color" content="#151515" media="(prefers-color-scheme: dark)" />
   <!-- Applies the saved Auto/Light/Dark choice before first paint (no white flash). -->
   <script src="/js/theme.js"></script>
-  <title>An AI video pipeline for Claude Code - Kai Du</title>
+  <title>Designing an AI video pipeline - Kai Du</title>
   <link rel="alternate" type="application/atom+xml" title="Kai Du" href="/feed.xml" />
-  <meta name="description" content="A design for turning a topic into a narrated explainer video with Claude Code: audio as the master clock, the LLM returning cut points instead of timestamps, two approval gates before any paid call, and the tool choices I settled on." />
+  <meta name="description" content="A tool-agnostic design for turning a topic into a narrated explainer video: audio as the master clock, the LLM returning cut points instead of timestamps, two approval gates before any paid call, and how it maps onto an agent such as Claude Code." />
 
   <!-- Link previews. Set `description:` in a page's front matter to fill these.
        Open Graph requires absolute URLs, so this is the one place the
@@ -23,8 +23,8 @@
   <meta property="article:published_time" content="2026-10-13" />
   <meta property="article:author" content="Kai Du" />
   <meta property="og:site_name" content="Kai Du" />
-  <meta property="og:title" content="An AI video pipeline for Claude Code - Kai Du" />
-  <meta property="og:description" content="A design for turning a topic into a narrated explainer video with Claude Code: audio as the master clock, the LLM returning cut points instead of timestamps, two approval gates before any paid call, and the tool choices I settled on." />
+  <meta property="og:title" content="Designing an AI video pipeline - Kai Du" />
+  <meta property="og:description" content="A tool-agnostic design for turning a topic into a narrated explainer video: audio as the master clock, the LLM returning cut points instead of timestamps, two approval gates before any paid call, and how it maps onto an agent such as Claude Code." />
   <meta property="og:image" content="https://imkaidu.net/photo.jpg" />
   <meta name="twitter:card" content="summary" />
 
@@ -67,145 +67,106 @@
 <main id="main">
 <p class="backlink"><a href="/blog/blog.html">&larr; All posts</a></p>
 <header id="title-block-header">
-    <h1 class="title">Designing an AI video pipeline that Claude Code can run: the LLM chooses, the code computes</h1>
+    <h1 class="title">Designing an AI video pipeline: the LLM chooses, the code computes</h1>
     <p class="byline">Kai Du &middot; <time datetime="2026-10-13">2026-10-13</time></p>
-    <p class="note">This is a design, not a report. I have written it down and checked it against my own earlier draft, but I have not built or run the pipeline yet. Tool names, prices and licence terms change quickly, so check them before you copy anything.</p>
+    <p class="note">This is a design, not a report. I have not built or run the pipeline yet. Tool names, prices and licence terms change quickly, so check them before you copy anything.</p>
 </header>
 <nav id="TOC" role="doc-toc">
 <ul>
-<li><a href="#the-idea-in-one-line" id="toc-the-idea-in-one-line">The idea in one line</a></li>
-<li><a href="#what-was-wrong-with-the-first-sketch" id="toc-what-was-wrong-with-the-first-sketch">What was wrong with the first sketch</a></li>
-<li><a href="#the-pipeline" id="toc-the-pipeline">The pipeline</a></li>
-<li><a href="#two-gates-before-any-money-is-spent" id="toc-two-gates-before-any-money-is-spent">Two gates before any money is spent</a></li>
-<li><a href="#how-it-maps-onto-claude-code" id="toc-how-it-maps-onto-claude-code">How it maps onto Claude Code</a></li>
-<li><a href="#the-five-decisions-and-why" id="toc-the-five-decisions-and-why">The five decisions, and why</a></li>
-<li><a href="#what-i-would-still-check" id="toc-what-i-would-still-check">What I would still check</a></li>
+<li><a href="#the-principle-the-llm-chooses-the-code-computes" id="toc-the-principle-the-llm-chooses-the-code-computes">The principle: the LLM chooses, the code computes</a></li>
+<li><a href="#scope" id="toc-scope">Scope</a></li>
+<li><a href="#the-pipeline" id="toc-the-pipeline">The pipeline</a>
+<ul>
+<li><a href="#script" id="toc-script">1. Script</a></li>
+<li><a href="#speech" id="toc-speech">2. Speech</a></li>
+<li><a href="#alignment-audio-is-the-master-clock" id="toc-alignment-audio-is-the-master-clock">3. Alignment: audio is the master clock</a></li>
+<li><a href="#beatsheet-the-model-returns-cut-points-not-timestamps" id="toc-beatsheet-the-model-returns-cut-points-not-timestamps">4. Beatsheet: the model returns cut points, not timestamps</a></li>
+<li><a href="#cost-and-the-second-gate" id="toc-cost-and-the-second-gate">5. Cost, and the second gate</a></li>
+<li><a href="#assets" id="toc-assets">6. Assets</a></li>
+<li><a href="#visual-qa" id="toc-visual-qa">7. Visual QA</a></li>
+<li><a href="#render" id="toc-render">8. Render</a></li>
+</ul></li>
+<li><a href="#two-gates-and-the-hook-that-enforces-them" id="toc-two-gates-and-the-hook-that-enforces-them">Two gates, and the hook that enforces them</a></li>
+<li><a href="#mapping-it-onto-an-agent-such-as-claude-code" id="toc-mapping-it-onto-an-agent-such-as-claude-code">Mapping it onto an agent such as Claude Code</a></li>
+<li><a href="#what-to-check-before-publishing-a-video" id="toc-what-to-check-before-publishing-a-video">What to check before publishing a video</a></li>
+<li><a href="#build-order-and-definition-of-done" id="toc-build-order-and-definition-of-done">Build order and definition of done</a></li>
 </ul>
 </nav>
 
-<p>I wanted a repeatable way to turn a topic and a few sources into a three-minute narrated explainer video. My first plan was a one-page sketch: write a script with an LLM, read it aloud with text-to-speech, transcribe the audio for timestamps, ask an LLM to turn the timestamps into a storyboard, generate the pictures, and assemble the video. The shape was right. When I reviewed it critically, though, several details were wrong or could not be built as written. This post is the corrected design, and the reasoning behind each correction.</p>
-<h2 id="the-idea-in-one-line">The idea in one line</h2>
-<p><strong>The LLM chooses; the code computes.</strong> Claude decides what the script says, where the scenes cut and whether the pictures look right. Python does everything with a right answer: speech synthesis, timing arithmetic, cost estimates and rendering. Almost every fix below is an application of that split.</p>
-<h2 id="what-was-wrong-with-the-first-sketch">What was wrong with the first sketch</h2>
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<thead>
-<tr>
-<th>Problem in the sketch</th>
-<th>What I changed</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>“3 minutes is about 600–750 words”</td>
-<td>That is 200–250 words per minute, far faster than speech. At about 155 wpm, 3 minutes is roughly 465 words. (The figure looks like a Chinese character count carried over to English.)</td>
-</tr>
-<tr>
-<td>The LLM was asked to write timestamps with “no gaps”</td>
-<td>Models break that constraint silently. The LLM now returns only cut points as word indices, and code derives the times</td>
-</tr>
-<tr>
-<td>Whisper transcribes the audio to get timings</td>
-<td>I already know the script. Forced alignment against the known text avoids mis-transcriptions</td>
-</tr>
-<tr>
-<td>Word timestamps requested, then saved as <code>.srt</code></td>
-<td>An SRT keeps only segment-level times. The word-level <code>words.json</code> is the master clock, and SRT is a derived export</td>
-</tr>
-<tr>
-<td>The LLM also emitted a combined voiceover string</td>
-<td>Duplicated text can drift from the sections. Code joins the sections instead</td>
-</tr>
-<tr>
-<td>Midjourney through a script</td>
-<td>There is no official API, so scripted use depends on unofficial wrappers</td>
-</tr>
-<tr>
-<td>No approval step</td>
-<td>Nothing stopped a bad script from reaching paid image and video generation</td>
-</tr>
-</tbody>
-</table>
+<p>I want a repeatable way to turn a topic and a few sources into a three-minute narrated explainer video, with an AI model doing the judgement work and ordinary code doing the rest. This post describes the pipeline I settled on. The design does not depend on any one vendor: every AI service sits behind a small interface and can be swapped. I use Claude Code as the worked example for orchestration, but the same structure works with any agent framework, or with plain scripts and a person at the keyboard.</p>
+<h2 id="the-principle-the-llm-chooses-the-code-computes">The principle: the LLM chooses, the code computes</h2>
+<p>A language model is good at deciding what a script should say, where a scene should cut, and whether a picture looks right. It is unreliable at arithmetic and at obeying hard constraints such as “no gaps between timestamps”. So the pipeline splits the work:</p>
+<ul>
+<li><strong>The model decides:</strong> the script, the cut points, the visual prompts, the quality review.</li>
+<li><strong>Code computes:</strong> speech synthesis, timing, cost estimates, validation and rendering.</li>
+</ul>
+<p>Everything below follows from that split.</p>
+<h2 id="scope">Scope</h2>
+<p>I fixed the scope first, because it drives later choices.</p>
+<ul>
+<li><strong>Format: 16:9, about three minutes.</strong> A full run is roughly 60 scenes, so a failed run is expensive. I develop against a 30–60 second cut and only then run the full length. Vertical video is a second project, not a setting: captions, framing and prompts all change.</li>
+<li><strong>Language: English.</strong> The speech, alignment and image tools I want all work well in English.</li>
+<li><strong>Word budget: about 155 words per minute.</strong> Three minutes is roughly 465 words, and the validator holds the script to within a few percent of that.</li>
+</ul>
 <h2 id="the-pipeline">The pipeline</h2>
 <pre><code>brief → script → fact-check → [approve script]
       → speech → align → beatsheet → validate
       → cost estimate → [approve spend]
       → assets → visual QA → render → final QA and packaging</code></pre>
-<p><strong>Audio is the master clock.</strong> The script is synthesised first, per section, so section boundaries come for free and one bad section can be redone alone. Forced alignment then produces <code>words.json</code>, with a start and end time for every word. Every visual is anchored to those times.</p>
-<p><strong>The beatsheet is word-indexed.</strong> The director step sees the script and a transcript numbered by word (<code>0: Why</code>, <code>1: do</code>, …), and returns scenes like this:</p>
+<p>Each stage reads files and writes files. A manifest records, per stage, the input hash and the output, so a re-run skips anything unchanged.</p>
+<h3 id="script">1. Script</h3>
+<p>The model receives the brief (topic, audience, sources, target length) and a style file. It returns structured sections, each with its spoken text and the factual claims it makes. Code, not the model, joins the sections into the full voiceover, so the two can never drift apart. A validator checks the word budget, a hook of about eight spoken words, and that the spoken text has no brackets or stage directions.</p>
+<p>A separate fact-checking pass compares each claim with the sources and flags anything unsupported before any money is spent.</p>
+<h3 id="speech">2. Speech</h3>
+<p>The script is synthesised <strong>section by section</strong> and then joined. That gives section boundaries for free and lets me redo one bad section alone. Numbers, units and acronyms are normalised first, with a small pronunciation lexicon for names the engine gets wrong, and the final track is loudness-normalised.</p>
+<p>The speech engine sits behind one function: text and voice in, audio and (if available) word timings out. I develop on a free engine, edge-tts, because it costs nothing to iterate and returns word timings I can cross-check. It uses an unofficial endpoint with unclear commercial terms, so I treat it as a development tool and plan to switch to a commercial engine such as ElevenLabs or Fish Audio before publishing anything.</p>
+<h3 id="alignment-audio-is-the-master-clock">3. Alignment: audio is the master clock</h3>
+<p>I already know exactly what the voice says, so I use <strong>forced alignment</strong> against the known script (for example WhisperX or stable-ts) rather than transcribing the audio blind. The output is <code>words.json</code>: every word with a start and end time. Every visual later is anchored to those times. Subtitle files are just a derived export, because an SRT keeps only segment-level times and would throw the word-level clock away. Captions are chunked separately for reading (at most two lines of about 42 characters), independently of how scenes are cut.</p>
+<h3 id="beatsheet-the-model-returns-cut-points-not-timestamps">4. Beatsheet: the model returns cut points, not timestamps</h3>
+<p>The director step sees the script and a transcript numbered by word (<code>0: Why</code>, <code>1: do</code>, …), and returns scenes that refer to word indices:</p>
 <div class="sourceCode" id="cb2"><pre class="sourceCode json"><code class="sourceCode json"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span><span class="dt">&quot;scene&quot;</span><span class="fu">:</span> <span class="dv">1</span><span class="fu">,</span> <span class="dt">&quot;first_word&quot;</span><span class="fu">:</span> <span class="dv">0</span><span class="fu">,</span> <span class="dt">&quot;last_word&quot;</span><span class="fu">:</span> <span class="dv">8</span><span class="fu">,</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a> <span class="dt">&quot;visual_type&quot;</span><span class="fu">:</span> <span class="st">&quot;still&quot;</span><span class="fu">,</span> <span class="dt">&quot;visual_prompt&quot;</span><span class="fu">:</span> <span class="st">&quot;Close-up of a confused cartoon character at a laptop&quot;</span><span class="fu">,</span></span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a> <span class="dt">&quot;motion_prompt&quot;</span><span class="fu">:</span> <span class="st">&quot;slow push-in&quot;</span><span class="fu">,</span> <span class="dt">&quot;on_screen_text&quot;</span><span class="fu">:</span> <span class="kw">null</span><span class="fu">}</span></span></code></pre></div>
-<p>A small validator then does the arithmetic. It checks that scenes cover every word with no gaps, converts word indices to times, snaps to the 30 fps frame grid, enforces 2–5 seconds per scene, and confirms the total matches the audio length. If it fails, the error goes back to Claude once; a second failure stops the run. The style words (“flat vector illustration”) live only in a style file and are appended at generation time, so they cannot conflict with the prompts.</p>
-<p><strong>Cost-shaped visuals.</strong> A three-minute video at three seconds a scene is about 60 scenes. Image-to-video on all of them would be expensive and slow, so most scenes are a still with a camera move, and a small capped number are real video clips. Scenes that are really diagrams or text are not generated at all.</p>
-<h2 id="two-gates-before-any-money-is-spent">Two gates before any money is spent</h2>
+<p>A short validator then does the arithmetic. It checks that scenes cover every word with no gaps, converts indices to times, snaps to the frame grid, enforces two to five seconds per scene, and confirms the total equals the audio length. If validation fails, the error text goes back to the model once. A second failure stops the run and asks me.</p>
+<p>Two details keep the prompts clean. Style words (“flat vector illustration”) live only in the style file and are appended at generation time, so they cannot conflict with scene prompts. And a prompt describes subject and action only: literal and physical, not abstract.</p>
+<h3 id="cost-and-the-second-gate">5. Cost, and the second gate</h3>
+<p>A script counts the images, video seconds and speech characters, multiplies by a price file, and writes an estimate. If it is over the cap, the run fails. Only after I approve it does the marker file appear that lets the paid steps run.</p>
+<h3 id="assets">6. Assets</h3>
+<p>A three-minute video at three seconds a scene is about 60 scenes. Generating video for every one is slow and costly, so most scenes are a still image with a camera move, and a small, capped number are real generated video clips. Stock footage, where used, comes from a licensed source with the licence recorded.</p>
+<p>For images I use a hosted Flux model through an API, behind one <code>generate_image()</code> function. Hosting matters because generating 60 images on a laptop is slow, and the function boundary means I can change model or provider without touching anything else. Each scene gets a fixed seed, recorded in the manifest, plus a shared character and style sheet to keep the look consistent.</p>
+<p>One rule matters more than the model choice: <strong>image models garble text, so text is never generated.</strong> Scenes that are really diagrams, titles or interface mock-ups make no image call at all. They are drawn by the compositor from structured data.</p>
+<h3 id="visual-qa">7. Visual QA</h3>
+<p>The pipeline builds a contact sheet, one labelled frame per scene, and a model that can read images checks it for style consistency, legibility, artefacts and whether each picture matches its prompt. Failed scenes are regenerated individually, at most twice, and then come to me.</p>
+<h3 id="render">8. Render</h3>
+<p>For assembly I use Remotion, a React-based video renderer, for compositing, and ffmpeg for audio mixing, loudness and checks. The reason is the visual types. Animated word-highlight captions, transitions and text or interface scenes are motion graphics. In ffmpeg they turn into fragile filter graphs; in Remotion they are components that read the compiled JSON. The renderer reads only <code>beats.json</code>, <code>words.json</code> and the asset folder, with no network and no model, so a render is reproducible, and anything that honours that contract could replace it. Remotion’s licence is free for individuals and small teams and paid for larger companies, so I will read the terms against my situation before publishing.</p>
+<p>The final stage checks duration, loudness, black frames and caption safe areas, and the model drafts the packaging: title options, description, chapters from the section boundaries, a thumbnail concept and the AI-content disclosure line.</p>
+<h2 id="two-gates-and-the-hook-that-enforces-them">Two gates, and the hook that enforces them</h2>
 <ol type="1">
-<li><strong>Approve the script.</strong> Claude’s fact-checker compares each claim in the script with the sources and flags the unsupported ones. I read the script before any speech is synthesised.</li>
-<li><strong>Approve the spend.</strong> A script counts the images, video seconds and speech characters, multiplies by a price file, and writes an estimate. If it exceeds the cap it fails. Only my approval creates the marker file that lets the paid scripts run.</li>
+<li><strong>Approve the script</strong>, after the fact-check and before any speech is synthesised.</li>
+<li><strong>Approve the spend</strong>, after the cost estimate and before any paid generation.</li>
 </ol>
-<p>A hook enforces this, and I like the reasoning for it: a guard earns its place by naming the specific irreversible harm it prevents. Here the harm is paid API calls made without approval or over budget. A second hook validates every JSON artefact against its schema as it is written, so a malformed file cannot reach a paid stage. Editing the script after the first gate invalidates everything downstream and removes the approvals.</p>
-<h2 id="how-it-maps-onto-claude-code">How it maps onto Claude Code</h2>
+<p>Editing the script after the first gate invalidates every later stage and removes both approvals. Two small guards enforce this. One blocks the paid steps unless the approval marker exists and the estimate is under the cap. The other validates each JSON file against its schema when it is written, so a malformed file cannot reach a paid stage. A guard should earn its place by naming the specific irreversible harm it prevents; here that harm is spending money without approval or on bad input.</p>
+<h2 id="mapping-it-onto-an-agent-such-as-claude-code">Mapping it onto an agent such as Claude Code</h2>
+<p>Nothing above requires Claude Code, but it fits well:</p>
 <ul>
-<li><strong>Skills.</strong> The two prompts from the first sketch become real <code>SKILL.md</code> files: a script-writer and a beat-director, each pointing at its JSON schema.</li>
-<li><strong>Subagents.</strong> A read-only fact-checker, and a visual-QA agent. The QA agent gets a contact sheet (one labelled frame per scene, built with ffmpeg) and checks style consistency, legibility and whether each picture matches its prompt. Claude can read images, so this works. Bad scenes are regenerated individually, at most twice, and then they come to me.</li>
-<li><strong>Plan mode</strong> for the two gates, and a few slash commands to scaffold a job, resume it, and print its status and spend.</li>
-<li><strong>A manifest</strong> records, per stage, the input hash and the output, plus seeds and per-scene costs. Re-running skips anything unchanged, which matters because image and video APIs are asynchronous and sometimes fail halfway.</li>
+<li><strong>Skills</strong> hold the two judgement prompts, the script-writer and the beat-director, each pointing at its JSON schema.</li>
+<li><strong>Subagents</strong> run the fact-checker and the visual-QA reviewer. Keeping contact sheets and source dumps in separate contexts stops them filling the main session.</li>
+<li><strong>Hooks</strong> implement the two guards. They run whatever the model decides, which is why they, not instructions in a prompt, protect the budget.</li>
+<li><strong>Plan mode</strong> is the natural place for the two approvals.</li>
+<li><strong>Slash commands</strong> scaffold a job, resume it from the manifest, and print its status and spend.</li>
+<li><strong>Headless mode</strong> can run the two model stages unattended in a batch.</li>
 </ul>
-<p>The pipeline lives in its own repository. It is not a good fit for this site’s repository, whose rules deliberately forbid adding build machinery.</p>
-<h2 id="the-five-decisions-and-why">The five decisions, and why</h2>
-<table>
-<colgroup>
-<col style="width: 33%" />
-<col style="width: 33%" />
-<col style="width: 33%" />
-</colgroup>
-<thead>
-<tr>
-<th>Decision</th>
-<th>Choice</th>
-<th>Why</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Format</td>
-<td>16:9, 3 minutes, developed against a 30–60 second cut</td>
-<td>Failed runs are expensive at 60 scenes, so test short. Vertical video is a second pass, not a setting: captions, framing and prompts all change</td>
-</tr>
-<tr>
-<td>Language</td>
-<td>English</td>
-<td>The tools I want all work well in English</td>
-</tr>
-<tr>
-<td>Speech</td>
-<td>edge-tts while developing; ElevenLabs or Fish Audio to publish, behind one interface</td>
-<td>edge-tts is free and returns word timings, but it uses an unofficial endpoint with unclear commercial terms</td>
-</tr>
-<tr>
-<td>Images</td>
-<td>Flux through a hosted API, behind one function</td>
-<td>Local Flux on a laptop is slow for batches of 60. Image models garble text, so text and diagram scenes are rendered by the compositor</td>
-</tr>
-<tr>
-<td>Assembly</td>
-<td>Remotion for compositing, ffmpeg for audio and checks</td>
-<td>Animated captions, transitions and text or UI scenes are real motion graphics. In ffmpeg they become fragile filter graphs; in Remotion they are components reading the compiled JSON</td>
-</tr>
-</tbody>
-</table>
-<p>I changed my mind on the last one. My first draft defaulted to ffmpeg, then I noticed that its own storyboard had visual types ffmpeg handles badly. Remotion has a licence that is free for individuals and small teams and paid for larger companies, so I will read the terms against my situation before publishing anything.</p>
-<h2 id="what-i-would-still-check">What I would still check</h2>
+<p>In another stack the same roles are filled by whatever your framework calls prompts, sub-agents, middleware and human-in-the-loop checkpoints. I keep the pipeline in its own repository, separate from this site, since this site deliberately has no build machinery.</p>
+<h2 id="what-to-check-before-publishing-a-video">What to check before publishing a video</h2>
 <ul>
-<li><strong>Rights.</strong> Stock voices only, no cloning of real people. Record the licence of every music, effect and stock-footage asset in the manifest.</li>
+<li><strong>Voices.</strong> Use stock voices only. Do not clone a real person without documented consent.</li>
+<li><strong>Licences.</strong> Record the licence of every music, effect and stock-footage asset, and confirm that the image model’s terms allow commercial use of its output.</li>
 <li><strong>Disclosure.</strong> Add the platform’s AI-content label and put the line in the description.</li>
-<li><strong>Drift.</strong> If a speech or image model version changes, outputs are not guaranteed to reproduce. The manifest records versions so I notice.</li>
-<li><strong>Build order.</strong> Schemas and the validator first, since they are pure code and cost nothing. Then speech and alignment on a 30-second sample, the Claude stages as a dry run that ends at the cost estimate, and only then image generation and the Remotion scenes, one component at a time.</li>
+<li><strong>Drift.</strong> If a speech or image model version changes, outputs may not reproduce. The manifest records versions so I notice.</li>
 </ul>
-<p>The definition of done is one full video produced from a brief with exactly two human approvals, no hand-edited timestamps, a resumable manifest, and actual spend within 10% of the estimate. When I have built it I will write a follow-up with what broke.</p>
+<h2 id="build-order-and-definition-of-done">Build order and definition of done</h2>
+<p>Build the parts that cost nothing first: schemas, the beatsheet validator and test fixtures. Then speech and alignment on a 30-second sample, then the model stages as a dry run that ends at the cost estimate. Only then add image generation and the Remotion scenes, one component at a time, starting with stills and captions because they cover most scenes.</p>
+<p>The pipeline is done when one full video comes out of a brief with exactly two human approvals, no hand-edited timestamps, a resumable manifest, and actual spend within 10% of the estimate. When I have built it I will write a follow-up on what broke.</p>
 </main>
 
 <footer>
