@@ -5,8 +5,16 @@
   <link href="https://imkaidu.net/blog/blog.html"/>
   <link rel="self" href="https://imkaidu.net/feed.xml"/>
   <id>https://imkaidu.net/</id>
-  <updated>2026-10-05T00:00:00Z</updated>
+  <updated>2026-10-13T00:00:00Z</updated>
   <author><name>Kai Du</name></author>
+  <entry>
+    <title>Designing an AI video pipeline that Claude Code can run: the LLM chooses, the code computes</title>
+    <link href="https://imkaidu.net/blog/posts/ai-video-pipeline.html"/>
+    <id>https://imkaidu.net/blog/posts/ai-video-pipeline.html</id>
+    <published>2026-10-13T00:00:00Z</published>
+    <updated>2026-10-13T00:00:00Z</updated>
+    <summary>A design for turning a topic into a narrated explainer video with Claude Code: audio as the master clock, the LLM returning cut points instead of timestamps, two approval gates before any paid call, and the tool choices I settled on.</summary>
+  </entry>
   <entry>
     <title>Haiku reads, Opus plans, Sonnet builds, Opus reviews: my Claude Code subagent setup</title>
     <link href="https://imkaidu.net/blog/posts/agent-pipeline.html"/>

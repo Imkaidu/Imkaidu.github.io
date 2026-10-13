@@ -8,6 +8,8 @@ Here are my blog posts, newest first. (There aren't many yet.) You can also subs
 
 <!-- POSTS:START -->
 
+- `2026-10-13` [Designing an AI video pipeline that Claude Code can run: the LLM chooses, the code computes](posts/ai-video-pipeline.html)
+
 - `2026-10-03` [Haiku reads, Opus plans, Sonnet builds, Opus reviews: my Claude Code subagent setup](posts/agent-pipeline.html)
 
 - `2020-12-21` [Tips to use MATLAB parallel computing toolbox](posts/MATLAB-parallel.html)
